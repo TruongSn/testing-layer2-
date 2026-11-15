@@ -1,0 +1,58 @@
+{
+  "version": "lifemate-full-dependency-graph-v3.0.0",
+  "status_counts": {
+    "VERIFIED": 72,
+    "NEEDS_REVIEW": 77,
+    "INSUFFICIENT_EVIDENCE": 35,
+    "REJECTED": 6
+  },
+  "candidate_cycles": [
+    [
+      "exchange_rate.convert"
+    ],
+    [
+      "contacts.get"
+    ],
+    [
+      "maps.get_route"
+    ],
+    [
+      "package_tracking.track"
+    ],
+    [
+      "ride_hailing.get_ride"
+    ]
+  ],
+  "cycle_policy": "Runtime recursion stack + maximum depth; self edges rejected",
+  "tool_coverage": {
+    "audited": 147,
+    "total": 147
+  },
+  "structural_relations": 1623,
+  "dependency_candidates": 190,
+  "data_schema_audit": {
+    "format": "JSONL",
+    "samples": 1545,
+    "label_calls": 3541,
+    "label_failed_results": 0,
+    "history_calls": 3661,
+    "history_failed_results": 0,
+    "schema_errors": [
+      {
+        "sample": "train_1060",
+        "origin": "history",
+        "tool": "calendar.list_events",
+        "errors": [
+          ".date: unknown argument"
+        ]
+      }
+    ]
+  },
+  "technical_verified_is_runtime_approved": false,
+  "limitations": [
+    "No hidden state, GPU execution, or official ToolEnv validation was performed locally.",
+    "Resource state requirements without an explicit predicate remain review candidates.",
+    "Semantic identity must be checked again against current goal at runtime."
+  ],
+  "approval_report": []
+}

@@ -1,0 +1,156 @@
+{
+  "scope": "OFFLINE_CONTRACT_REVIEW_NOT_GPU_OR_OFFICIAL_TOOLENV_VALIDATION",
+  "candidates_reviewed": 190,
+  "status_counts": {
+    "VERIFIED": 80,
+    "NEEDS_REVIEW": 70,
+    "INSUFFICIENT_EVIDENCE": 34,
+    "REJECTED": 6
+  },
+  "runtime_disposition_counts": {
+    "ACTIVE_SAFE_READ": 59,
+    "FALLBACK": 131
+  },
+  "audited_tools": 147,
+  "runtime_proposed_safe_read_edges": 59,
+  "disabled_edge_reasons": {
+    "Needs same-appliance cycle membership predicate; current resolver must abstain": 1,
+    "membership_predicate_requires_parent_subject_review_not_value_copy": 4,
+    "order_only_does_not_establish_causality_or_predicate": 61,
+    "No safe automatic scope established for sensitive financial/security/medical data or unsupported action context; keep Policy/B042 fallback": 14,
+    "resource_token_or_exact_value_is_not_semantic_proof": 3,
+    "no_unique_contract_supported_output_path": 34,
+    "self_dependency_cannot_bootstrap_itself": 5,
+    "Root collection alias; use reviewed per-index element dependency; never broadcast a scalar": 3,
+    "resource_token_or_exact_value_is_not_semantic_proof; nested_array_row_and_parent_entity_binding_require_review": 1,
+    "Needs restaurant/order join and occurrence/state binding": 1,
+    "Needs assignee membership validation; no automatic assignment inference": 1,
+    "Competing broader producer; narrow news.search is active, headlines evidence remains Policy-only": 1,
+    "membership_predicate_requires_parent_subject_review_not_value_copy; nested_array_row_and_parent_entity_binding_require_review": 1,
+    "automatic_prerequisite_must_be_read": 1
+  },
+  "candidate_cycles": [
+    [
+      "exchange_rate.convert"
+    ],
+    [
+      "contacts.get"
+    ],
+    [
+      "maps.get_route"
+    ],
+    [
+      "package_tracking.track"
+    ],
+    [
+      "ride_hailing.get_ride"
+    ]
+  ],
+  "source_integrity": [
+    {
+      "path": "inputs/LifeMate_B042_Progress_Retry_Controller_Kaggle.ipynb",
+      "exists": true,
+      "sha256": "1e80fe50cab2eb195b665094d8f6560dd5215c09ce5dc001d56fb9403a6e00de",
+      "expected_sha256": "1e80fe50cab2eb195b665094d8f6560dd5215c09ce5dc001d56fb9403a6e00de",
+      "bytes_match": true
+    },
+    {
+      "path": "inputs/Spec.md",
+      "exists": true,
+      "sha256": "b13ecc83e805c1e5531da6a5aac3f3621fdd12cee40e1814b82711b915bec731",
+      "expected_sha256": "b13ecc83e805c1e5531da6a5aac3f3621fdd12cee40e1814b82711b915bec731",
+      "bytes_match": true
+    },
+    {
+      "path": "previous_graph/curated_graph_v21.json",
+      "exists": true,
+      "sha256": "341c4a63ac8a904c7964821b0516d3b9fd3e982c21dcb8e86de7d36c20c71ec1",
+      "expected_sha256": "341c4a63ac8a904c7964821b0516d3b9fd3e982c21dcb8e86de7d36c20c71ec1",
+      "bytes_match": true
+    },
+    {
+      "path": "previous_graph/validated_graph.json",
+      "exists": true,
+      "sha256": "a0baeb44162e7ae4e99fa5da30f5acb97fd66fbad85b3555b60011512a74b46b",
+      "expected_sha256": "a0baeb44162e7ae4e99fa5da30f5acb97fd66fbad85b3555b60011512a74b46b",
+      "bytes_match": true
+    },
+    {
+      "path": "previous_graph/manual_review_queue_v2.csv",
+      "exists": true,
+      "sha256": "56d5f7717306356c757f04bae558f9b8d6b7f19fcfa0929398bec4060fdeae27",
+      "expected_sha256": "56d5f7717306356c757f04bae558f9b8d6b7f19fcfa0929398bec4060fdeae27",
+      "bytes_match": true
+    },
+    {
+      "path": "previous_graph/metadata_value_flow_evidence.csv",
+      "exists": true,
+      "sha256": "dcdc4a720daf19db474e62adab55f714f6d70d2c64eaa588ea064e17b52e1aa9",
+      "expected_sha256": "dcdc4a720daf19db474e62adab55f714f6d70d2c64eaa588ea064e17b52e1aa9",
+      "bytes_match": true
+    },
+    {
+      "path": "previous_graph/empirical_enrichment_candidates.csv",
+      "exists": true,
+      "sha256": "ff7a100218ba1ebd33324b5a083900ffb408925ea19c868bd313781cbf6229d6",
+      "expected_sha256": "ff7a100218ba1ebd33324b5a083900ffb408925ea19c868bd313781cbf6229d6",
+      "bytes_match": true
+    },
+    {
+      "path": "previous_graph/schema_fields.csv",
+      "exists": true,
+      "sha256": "6e57250a231df46b8f3ffdd20cd25d1ff64eab8e67e5c148678b582206106f6a",
+      "expected_sha256": "6e57250a231df46b8f3ffdd20cd25d1ff64eab8e67e5c148678b582206106f6a",
+      "bytes_match": true
+    },
+    {
+      "path": "previous_graph/one_of_alternatives.json",
+      "exists": true,
+      "sha256": "47513c30b914a9de482c469afb914094b26c3b0c7cf4aec177c13203b2e2da13",
+      "expected_sha256": "47513c30b914a9de482c469afb914094b26c3b0c7cf4aec177c13203b2e2da13",
+      "bytes_match": true
+    },
+    {
+      "path": "reference_notebooks/LifeMate_Graph_Validation_v2_Kaggle.ipynb",
+      "exists": true,
+      "sha256": "79f6ad5e8ba7d747ff23cfb12f87559f68e2e734e058e41fda6548fc9a24cdec",
+      "expected_sha256": "79f6ad5e8ba7d747ff23cfb12f87559f68e2e734e058e41fda6548fc9a24cdec",
+      "bytes_match": true
+    },
+    {
+      "path": "reference_notebooks/LifeMate_Graph_Curation_v21_Kaggle.ipynb",
+      "exists": true,
+      "sha256": "12ee465d0a702879548ff782c92f4f4f38d07eef353073dd42130379ec64cee5",
+      "expected_sha256": "12ee465d0a702879548ff782c92f4f4f38d07eef353073dd42130379ec64cee5",
+      "bytes_match": true
+    },
+    {
+      "path": "inputs/train_tools_catalog.json",
+      "exists": true,
+      "sha256": "a994984bb580d7e0d60166641858901d428549682ba3614dbf9269037a33cce0",
+      "expected_sha256": null,
+      "bytes_match": null,
+      "baseline": "first v3 build; not in recovered manifest"
+    },
+    {
+      "path": "inputs/train.jsonl",
+      "exists": true,
+      "sha256": "24c42c79fbe8db932fe9817d041c0d0ca422ac8177b413cc1be0cda1fd8941a8",
+      "expected_sha256": null,
+      "bytes_match": null,
+      "baseline": "first v3 build; not in recovered manifest"
+    }
+  ],
+  "original_graph_unchanged": true,
+  "runtime_gates": "Separate CPU results: reports/cpu_test_results.json and reports/final/cpu_mechanism_report.json",
+  "known_data_schema_errors": [
+    {
+      "sample": "train_1060",
+      "origin": "history",
+      "tool": "calendar.list_events",
+      "errors": [
+        ".date: unknown argument"
+      ]
+    }
+  ]
+}

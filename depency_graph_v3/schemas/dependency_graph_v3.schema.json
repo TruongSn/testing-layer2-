@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LifeMate field-level dependency graph v3",
+  "type": "object",
+  "required": ["version", "schema_version", "source_digests", "catalog_digest", "nodes", "relations", "dependencies", "tools"],
+  "properties": {
+    "version": {"type": "string"},
+    "schema_version": {"const": 3},
+    "source_digests": {"type": "object", "additionalProperties": {"type": "string", "pattern": "^[a-f0-9]{64}$"}},
+    "catalog_digest": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "tools": {"type": "object"},
+    "nodes": {"type": "array", "items": {"type": "object", "required": ["id", "type"], "properties": {
+      "id": {"type": "string"}, "type": {"enum": ["TOOL", "ARGUMENT", "OUTPUT_FIELD", "RESOURCE", "ENTITY_TYPE", "PRECONDITION"]}
+    }}},
+    "relations": {"type": "array", "items": {"type": "object", "required": ["from", "to", "type"], "properties": {
+      "from": {"type": "string"}, "to": {"type": "string"}, "type": {"enum": ["PRODUCES", "CONSUMES", "REQUIRES_DATA_FROM", "REFERENCES_RESOURCE", "CONDITIONAL_DEPENDENCY", "ALTERNATIVE_INPUT", "INVALIDATES_EVIDENCE"]}
+    }}},
+    "dependencies": {"type": "array", "items": {"$ref": "#/$defs/dependency"}}
+  },
+  "$defs": {
+    "dependency": {
+      "type": "object",
+      "required": ["edge_id", "producer_tool", "consumer_tool", "source_output_path", "target_argument_path", "dependency_type", "required_when", "alternative_branches", "subject_type", "subject_binding_rule", "selection_strategy", "evidence_sources", "evidence_tier", "validation_status", "operator_decision", "runtime_enabled", "risk_level", "notes"],
+      "properties": {
+        "edge_id": {"type": "string"}, "producer_tool": {"type": "string"}, "consumer_tool": {"type": "string"},
+        "source_output_path": {"type": ["string", "null"]}, "target_argument_path": {"type": "string"},
+        "dependency_type": {"enum": ["CONDITIONAL_DEPENDENCY", "CONTEXT_PREREQUISITE", "RESOURCE_STATE_PRECONDITION", "UNVERIFIED_RELATIONSHIP"]},
+        "required_when": {"type": "object"}, "alternative_branches": {"type": "array"},
+        "subject_type": {"type": "string"}, "subject_binding_rule": {"type": "object"},
+        "selection_strategy": {"type": "string"}, "evidence_sources": {"type": "array"}, "evidence_tier": {"type": "string"},
+        "validation_status": {"enum": ["VERIFIED", "NEEDS_REVIEW", "REJECTED", "INSUFFICIENT_EVIDENCE"]},
+        "operator_decision": {"enum": ["PENDING", "APPROVED", "REJECTED"]}, "runtime_enabled": {"type": "boolean"},
+        "risk_level": {"type": "string"}, "notes": {"type": "array"}
+      }
+    }
+  }
+}

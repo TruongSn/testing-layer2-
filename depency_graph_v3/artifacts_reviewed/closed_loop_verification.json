@@ -1,0 +1,3988 @@
+{
+  "status": "PASS",
+  "authorization_scope": "PRODUCTION",
+  "fake_toolenv": true,
+  "scripted_policy": true,
+  "qwen_gpu_tested": false,
+  "closed_loop_cases": 19,
+  "compiled_payload_sha256": "ad7a10901094748b561dc07b9822d0db67743c0edae2648f54606eee754d7712",
+  "write_execution": "Only explicit scripted Policy CALL proposals pass through original B042 guards and invoke",
+  "traces": [
+    {
+      "edge_id": "dep:167320b6f27d9b86421a",
+      "producer": "chat_ott.list_chats",
+      "consumer": "chat_ott.read_chat",
+      "request": "Thực hiện chat_ott.read_chat cho Nhóm dự án.",
+      "actual_calls": [
+        {
+          "name": "chat_ott.list_chats",
+          "arguments": {}
+        },
+        {
+          "name": "chat_ott.read_chat",
+          "arguments": {
+            "chat_id": "fx_chat_id"
+          }
+        }
+      ],
+      "graph_reads": 1,
+      "graph_events": [
+        {
+          "target_tool": "chat_ott.read_chat",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "NEED_READ",
+          "arguments": {},
+          "reason": "Approved missing prerequisite",
+          "read_tool": "chat_ott.list_chats",
+          "read_arguments": {},
+          "proofs": {},
+          "edge_ids": [
+            "dep:167320b6f27d9b86421a"
+          ],
+          "unresolved_slots": [
+            "chat_id"
+          ],
+          "elapsed_ms": 0.045599997974932194
+        },
+        {
+          "target_tool": "chat_ott.read_chat",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "chat_id": "fx_chat_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "chat_id": {
+              "source": "tool_observation",
+              "tool": "chat_ott.list_chats",
+              "path": "chats[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "name": "Nhóm dự án"
+              },
+              "edge_id": "dep:167320b6f27d9b86421a"
+            }
+          },
+          "edge_ids": [
+            "dep:167320b6f27d9b86421a"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.05320000491337851
+        },
+        {
+          "target_tool": "chat_ott.read_chat",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "chat_id": "fx_chat_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "chat_id": {
+              "source": "tool_observation",
+              "tool": "chat_ott.list_chats",
+              "path": "chats[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "name": "Nhóm dự án"
+              },
+              "edge_id": "dep:167320b6f27d9b86421a"
+            }
+          },
+          "edge_ids": [
+            "dep:167320b6f27d9b86421a"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.07159999950090423
+        }
+      ],
+      "steps": [
+        {
+          "step_index": 0,
+          "tool_name": "chat_ott.list_chats",
+          "final_arguments": {},
+          "origin": "b043_graph_read",
+          "graph_resolution": {
+            "status": "NEED_READ",
+            "arguments": {},
+            "reason": "Approved missing prerequisite",
+            "read_tool": "chat_ott.list_chats",
+            "read_arguments": {},
+            "proofs": {},
+            "edge_ids": [
+              "dep:167320b6f27d9b86421a"
+            ],
+            "unresolved_slots": [
+              "chat_id"
+            ],
+            "elapsed_ms": 0.045599997974932194
+          },
+          "reason": "Approved missing prerequisite",
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "chats": [
+              {
+                "id": "fx_chat_id",
+                "name": "Nhóm dự án"
+              }
+            ]
+          },
+          "outcome": "b043_graph_read_executed"
+        },
+        {
+          "step_index": 1,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"call\", \"name\": \"chat_ott.read_chat\", \"arguments\": {}}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "call",
+            "name": "chat_ott.read_chat",
+            "arguments": {}
+          },
+          "tool_name": "chat_ott.read_chat",
+          "safe_optional_cleanup": [],
+          "final_arguments": {
+            "chat_id": "fx_chat_id"
+          },
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "done": true
+          },
+          "outcome": "model_executed"
+        },
+        {
+          "step_index": 2,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"stop\"}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "stop"
+          },
+          "outcome": "model_stop"
+        }
+      ],
+      "validation_audit": [
+        {
+          "name": "chat_ott.list_chats",
+          "arguments": {},
+          "errors": []
+        },
+        {
+          "name": "chat_ott.read_chat",
+          "arguments": {
+            "chat_id": "fx_chat_id"
+          },
+          "errors": []
+        }
+      ]
+    },
+    {
+      "edge_id": "dep:4ed4fe3e33cabfc99185",
+      "producer": "contacts.search",
+      "consumer": "contacts.get",
+      "request": "Thực hiện contacts.get cho Mai.",
+      "actual_calls": [
+        {
+          "name": "contacts.search",
+          "arguments": {
+            "query": "Mai"
+          }
+        },
+        {
+          "name": "contacts.get",
+          "arguments": {
+            "contact_id": "fx_contact_id"
+          }
+        }
+      ],
+      "graph_reads": 1,
+      "graph_events": [
+        {
+          "target_tool": "contacts.get",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "NEED_READ",
+          "arguments": {},
+          "reason": "Approved missing prerequisite",
+          "read_tool": "contacts.search",
+          "read_arguments": {
+            "query": "Mai"
+          },
+          "proofs": {},
+          "edge_ids": [
+            "dep:4ed4fe3e33cabfc99185"
+          ],
+          "unresolved_slots": [
+            "contact_id"
+          ],
+          "elapsed_ms": 0.04510000144364312
+        },
+        {
+          "target_tool": "contacts.get",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "contact_id": "fx_contact_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "contact_id": {
+              "source": "tool_observation",
+              "tool": "contacts.search",
+              "path": "contacts[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "name": "Mai"
+              },
+              "edge_id": "dep:4ed4fe3e33cabfc99185"
+            }
+          },
+          "edge_ids": [
+            "dep:4ed4fe3e33cabfc99185"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.04539999645203352
+        },
+        {
+          "target_tool": "contacts.get",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "contact_id": "fx_contact_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "contact_id": {
+              "source": "tool_observation",
+              "tool": "contacts.search",
+              "path": "contacts[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "name": "Mai"
+              },
+              "edge_id": "dep:4ed4fe3e33cabfc99185"
+            }
+          },
+          "edge_ids": [
+            "dep:4ed4fe3e33cabfc99185"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.06900000153109431
+        }
+      ],
+      "steps": [
+        {
+          "step_index": 0,
+          "tool_name": "contacts.search",
+          "final_arguments": {
+            "query": "Mai"
+          },
+          "origin": "b043_graph_read",
+          "graph_resolution": {
+            "status": "NEED_READ",
+            "arguments": {},
+            "reason": "Approved missing prerequisite",
+            "read_tool": "contacts.search",
+            "read_arguments": {
+              "query": "Mai"
+            },
+            "proofs": {},
+            "edge_ids": [
+              "dep:4ed4fe3e33cabfc99185"
+            ],
+            "unresolved_slots": [
+              "contact_id"
+            ],
+            "elapsed_ms": 0.04510000144364312
+          },
+          "reason": "Approved missing prerequisite",
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "contacts": [
+              {
+                "id": "fx_contact_id",
+                "name": "Mai"
+              }
+            ]
+          },
+          "outcome": "b043_graph_read_executed"
+        },
+        {
+          "step_index": 1,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"call\", \"name\": \"contacts.get\", \"arguments\": {}}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "call",
+            "name": "contacts.get",
+            "arguments": {}
+          },
+          "tool_name": "contacts.get",
+          "safe_optional_cleanup": [],
+          "final_arguments": {
+            "contact_id": "fx_contact_id"
+          },
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "done": true
+          },
+          "outcome": "model_executed"
+        },
+        {
+          "step_index": 2,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"stop\"}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "stop"
+          },
+          "outcome": "model_stop"
+        }
+      ],
+      "validation_audit": [
+        {
+          "name": "contacts.search",
+          "arguments": {
+            "query": "Mai"
+          },
+          "errors": []
+        },
+        {
+          "name": "contacts.get",
+          "arguments": {
+            "contact_id": "fx_contact_id"
+          },
+          "errors": []
+        }
+      ]
+    },
+    {
+      "edge_id": "dep:5de495d7fc89a9ddae30",
+      "producer": "contacts.search",
+      "consumer": "sms.read_recent",
+      "request": "Thực hiện sms.read_recent cho Mai.",
+      "actual_calls": [
+        {
+          "name": "contacts.search",
+          "arguments": {
+            "query": "Mai"
+          }
+        },
+        {
+          "name": "sms.read_recent",
+          "arguments": {
+            "contact_id": "fx_contact_id"
+          }
+        }
+      ],
+      "graph_reads": 1,
+      "graph_events": [
+        {
+          "target_tool": "sms.read_recent",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "NEED_READ",
+          "arguments": {},
+          "reason": "Approved missing prerequisite",
+          "read_tool": "contacts.search",
+          "read_arguments": {
+            "query": "Mai"
+          },
+          "proofs": {},
+          "edge_ids": [
+            "dep:5de495d7fc89a9ddae30"
+          ],
+          "unresolved_slots": [
+            "contact_id"
+          ],
+          "elapsed_ms": 0.047900000936351717
+        },
+        {
+          "target_tool": "sms.read_recent",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "contact_id": "fx_contact_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "contact_id": {
+              "source": "tool_observation",
+              "tool": "contacts.search",
+              "path": "contacts[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "name": "Mai"
+              },
+              "edge_id": "dep:5de495d7fc89a9ddae30"
+            }
+          },
+          "edge_ids": [
+            "dep:5de495d7fc89a9ddae30"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.048000001697801054
+        },
+        {
+          "target_tool": "sms.read_recent",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "contact_id": "fx_contact_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "contact_id": {
+              "source": "tool_observation",
+              "tool": "contacts.search",
+              "path": "contacts[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "name": "Mai"
+              },
+              "edge_id": "dep:5de495d7fc89a9ddae30"
+            }
+          },
+          "edge_ids": [
+            "dep:5de495d7fc89a9ddae30"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.07119999645510688
+        }
+      ],
+      "steps": [
+        {
+          "step_index": 0,
+          "tool_name": "contacts.search",
+          "final_arguments": {
+            "query": "Mai"
+          },
+          "origin": "b043_graph_read",
+          "graph_resolution": {
+            "status": "NEED_READ",
+            "arguments": {},
+            "reason": "Approved missing prerequisite",
+            "read_tool": "contacts.search",
+            "read_arguments": {
+              "query": "Mai"
+            },
+            "proofs": {},
+            "edge_ids": [
+              "dep:5de495d7fc89a9ddae30"
+            ],
+            "unresolved_slots": [
+              "contact_id"
+            ],
+            "elapsed_ms": 0.047900000936351717
+          },
+          "reason": "Approved missing prerequisite",
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "contacts": [
+              {
+                "id": "fx_contact_id",
+                "name": "Mai"
+              }
+            ]
+          },
+          "outcome": "b043_graph_read_executed"
+        },
+        {
+          "step_index": 1,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"call\", \"name\": \"sms.read_recent\", \"arguments\": {}}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "call",
+            "name": "sms.read_recent",
+            "arguments": {}
+          },
+          "tool_name": "sms.read_recent",
+          "safe_optional_cleanup": [],
+          "final_arguments": {
+            "contact_id": "fx_contact_id"
+          },
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "done": true
+          },
+          "outcome": "model_executed"
+        },
+        {
+          "step_index": 2,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"stop\"}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "stop"
+          },
+          "outcome": "model_stop"
+        }
+      ],
+      "validation_audit": [
+        {
+          "name": "contacts.search",
+          "arguments": {
+            "query": "Mai"
+          },
+          "errors": []
+        },
+        {
+          "name": "sms.read_recent",
+          "arguments": {
+            "contact_id": "fx_contact_id"
+          },
+          "errors": []
+        }
+      ]
+    },
+    {
+      "edge_id": "dep:b338cd916f8067caf1ac",
+      "producer": "email.list",
+      "consumer": "email.read",
+      "request": "Thực hiện email.read cho Báo cáo tuần.",
+      "actual_calls": [
+        {
+          "name": "email.list",
+          "arguments": {}
+        },
+        {
+          "name": "email.read",
+          "arguments": {
+            "email_id": "fx_email_id"
+          }
+        }
+      ],
+      "graph_reads": 1,
+      "graph_events": [
+        {
+          "target_tool": "email.read",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "NEED_READ",
+          "arguments": {},
+          "reason": "Approved missing prerequisite",
+          "read_tool": "email.list",
+          "read_arguments": {},
+          "proofs": {},
+          "edge_ids": [
+            "dep:b338cd916f8067caf1ac"
+          ],
+          "unresolved_slots": [
+            "email_id"
+          ],
+          "elapsed_ms": 0.055999997130129486
+        },
+        {
+          "target_tool": "email.read",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "email_id": "fx_email_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "email_id": {
+              "source": "tool_observation",
+              "tool": "email.list",
+              "path": "emails[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "subject": "Báo cáo tuần"
+              },
+              "edge_id": "dep:b338cd916f8067caf1ac"
+            }
+          },
+          "edge_ids": [
+            "dep:b338cd916f8067caf1ac"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.06130000110715628
+        },
+        {
+          "target_tool": "email.read",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "email_id": "fx_email_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "email_id": {
+              "source": "tool_observation",
+              "tool": "email.list",
+              "path": "emails[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "subject": "Báo cáo tuần"
+              },
+              "edge_id": "dep:b338cd916f8067caf1ac"
+            }
+          },
+          "edge_ids": [
+            "dep:b338cd916f8067caf1ac"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.10140000085812062
+        }
+      ],
+      "steps": [
+        {
+          "step_index": 0,
+          "tool_name": "email.list",
+          "final_arguments": {},
+          "origin": "b043_graph_read",
+          "graph_resolution": {
+            "status": "NEED_READ",
+            "arguments": {},
+            "reason": "Approved missing prerequisite",
+            "read_tool": "email.list",
+            "read_arguments": {},
+            "proofs": {},
+            "edge_ids": [
+              "dep:b338cd916f8067caf1ac"
+            ],
+            "unresolved_slots": [
+              "email_id"
+            ],
+            "elapsed_ms": 0.055999997130129486
+          },
+          "reason": "Approved missing prerequisite",
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "emails": [
+              {
+                "id": "fx_email_id",
+                "subject": "Báo cáo tuần"
+              }
+            ]
+          },
+          "outcome": "b043_graph_read_executed"
+        },
+        {
+          "step_index": 1,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"call\", \"name\": \"email.read\", \"arguments\": {}}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "call",
+            "name": "email.read",
+            "arguments": {}
+          },
+          "tool_name": "email.read",
+          "safe_optional_cleanup": [],
+          "final_arguments": {
+            "email_id": "fx_email_id"
+          },
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "done": true
+          },
+          "outcome": "model_executed"
+        },
+        {
+          "step_index": 2,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"stop\"}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "stop"
+          },
+          "outcome": "model_stop"
+        }
+      ],
+      "validation_audit": [
+        {
+          "name": "email.list",
+          "arguments": {},
+          "errors": []
+        },
+        {
+          "name": "email.read",
+          "arguments": {
+            "email_id": "fx_email_id"
+          },
+          "errors": []
+        }
+      ]
+    },
+    {
+      "edge_id": "dep:29fb23b97b4e120d82a4",
+      "producer": "food_delivery.list_restaurants",
+      "consumer": "food_delivery.get_menu",
+      "request": "Thực hiện food_delivery.get_menu cho Quán ăn mẫu.",
+      "actual_calls": [
+        {
+          "name": "food_delivery.list_restaurants",
+          "arguments": {}
+        },
+        {
+          "name": "food_delivery.get_menu",
+          "arguments": {
+            "restaurant_id": "fx_restaurant_id"
+          }
+        }
+      ],
+      "graph_reads": 1,
+      "graph_events": [
+        {
+          "target_tool": "food_delivery.get_menu",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "NEED_READ",
+          "arguments": {},
+          "reason": "Approved missing prerequisite",
+          "read_tool": "food_delivery.list_restaurants",
+          "read_arguments": {},
+          "proofs": {},
+          "edge_ids": [
+            "dep:29fb23b97b4e120d82a4"
+          ],
+          "unresolved_slots": [
+            "restaurant_id"
+          ],
+          "elapsed_ms": 0.04169999738223851
+        },
+        {
+          "target_tool": "food_delivery.get_menu",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "restaurant_id": "fx_restaurant_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "restaurant_id": {
+              "source": "tool_observation",
+              "tool": "food_delivery.list_restaurants",
+              "path": "restaurants[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "name": "Quán ăn mẫu"
+              },
+              "edge_id": "dep:29fb23b97b4e120d82a4"
+            }
+          },
+          "edge_ids": [
+            "dep:29fb23b97b4e120d82a4"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.04820000322069973
+        },
+        {
+          "target_tool": "food_delivery.get_menu",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "restaurant_id": "fx_restaurant_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "restaurant_id": {
+              "source": "tool_observation",
+              "tool": "food_delivery.list_restaurants",
+              "path": "restaurants[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "name": "Quán ăn mẫu"
+              },
+              "edge_id": "dep:29fb23b97b4e120d82a4"
+            }
+          },
+          "edge_ids": [
+            "dep:29fb23b97b4e120d82a4"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.06679999933112413
+        }
+      ],
+      "steps": [
+        {
+          "step_index": 0,
+          "tool_name": "food_delivery.list_restaurants",
+          "final_arguments": {},
+          "origin": "b043_graph_read",
+          "graph_resolution": {
+            "status": "NEED_READ",
+            "arguments": {},
+            "reason": "Approved missing prerequisite",
+            "read_tool": "food_delivery.list_restaurants",
+            "read_arguments": {},
+            "proofs": {},
+            "edge_ids": [
+              "dep:29fb23b97b4e120d82a4"
+            ],
+            "unresolved_slots": [
+              "restaurant_id"
+            ],
+            "elapsed_ms": 0.04169999738223851
+          },
+          "reason": "Approved missing prerequisite",
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "restaurants": [
+              {
+                "id": "fx_restaurant_id",
+                "name": "Quán ăn mẫu"
+              }
+            ]
+          },
+          "outcome": "b043_graph_read_executed"
+        },
+        {
+          "step_index": 1,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"call\", \"name\": \"food_delivery.get_menu\", \"arguments\": {}}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "call",
+            "name": "food_delivery.get_menu",
+            "arguments": {}
+          },
+          "tool_name": "food_delivery.get_menu",
+          "safe_optional_cleanup": [],
+          "final_arguments": {
+            "restaurant_id": "fx_restaurant_id"
+          },
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "done": true
+          },
+          "outcome": "model_executed"
+        },
+        {
+          "step_index": 2,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"stop\"}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "stop"
+          },
+          "outcome": "model_stop"
+        }
+      ],
+      "validation_audit": [
+        {
+          "name": "food_delivery.list_restaurants",
+          "arguments": {},
+          "errors": []
+        },
+        {
+          "name": "food_delivery.get_menu",
+          "arguments": {
+            "restaurant_id": "fx_restaurant_id"
+          },
+          "errors": []
+        }
+      ]
+    },
+    {
+      "edge_id": "dep:7b288e9221651ae63745",
+      "producer": "learning.list_courses",
+      "consumer": "learning.log_progress",
+      "request": "Thực hiện learning.log_progress cho Khóa học mẫu. Ghi 15 phút.",
+      "actual_calls": [
+        {
+          "name": "learning.list_courses",
+          "arguments": {}
+        },
+        {
+          "name": "learning.log_progress",
+          "arguments": {
+            "minutes": 15,
+            "course_id": "fx_course_id"
+          }
+        }
+      ],
+      "graph_reads": 1,
+      "graph_events": [
+        {
+          "target_tool": "learning.log_progress",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "NEED_READ",
+          "arguments": {
+            "minutes": 15
+          },
+          "reason": "Approved missing prerequisite",
+          "read_tool": "learning.list_courses",
+          "read_arguments": {},
+          "proofs": {
+            "minutes": {
+              "source": "current_user",
+              "span": [
+                54,
+                56
+              ]
+            }
+          },
+          "edge_ids": [
+            "dep:7b288e9221651ae63745"
+          ],
+          "unresolved_slots": [
+            "course_id"
+          ],
+          "elapsed_ms": 0.0470000013592653
+        },
+        {
+          "target_tool": "learning.log_progress",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "minutes": 15,
+            "course_id": "fx_course_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "minutes": {
+              "source": "current_user",
+              "span": [
+                54,
+                56
+              ]
+            },
+            "course_id": {
+              "source": "tool_observation",
+              "tool": "learning.list_courses",
+              "path": "courses[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "name": "Khóa học mẫu"
+              },
+              "edge_id": "dep:7b288e9221651ae63745"
+            }
+          },
+          "edge_ids": [
+            "dep:7b288e9221651ae63745"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.06040000153006986
+        },
+        {
+          "target_tool": "learning.log_progress",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "minutes": 15,
+            "course_id": "fx_course_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "minutes": {
+              "source": "current_user",
+              "span": [
+                54,
+                56
+              ]
+            },
+            "course_id": {
+              "source": "tool_observation",
+              "tool": "learning.list_courses",
+              "path": "courses[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "name": "Khóa học mẫu"
+              },
+              "edge_id": "dep:7b288e9221651ae63745"
+            }
+          },
+          "edge_ids": [
+            "dep:7b288e9221651ae63745"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.0810999990790151
+        }
+      ],
+      "steps": [
+        {
+          "step_index": 0,
+          "tool_name": "learning.list_courses",
+          "final_arguments": {},
+          "origin": "b043_graph_read",
+          "graph_resolution": {
+            "status": "NEED_READ",
+            "arguments": {
+              "minutes": 15
+            },
+            "reason": "Approved missing prerequisite",
+            "read_tool": "learning.list_courses",
+            "read_arguments": {},
+            "proofs": {
+              "minutes": {
+                "source": "current_user",
+                "span": [
+                  54,
+                  56
+                ]
+              }
+            },
+            "edge_ids": [
+              "dep:7b288e9221651ae63745"
+            ],
+            "unresolved_slots": [
+              "course_id"
+            ],
+            "elapsed_ms": 0.0470000013592653
+          },
+          "reason": "Approved missing prerequisite",
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "courses": [
+              {
+                "id": "fx_course_id",
+                "name": "Khóa học mẫu"
+              }
+            ]
+          },
+          "outcome": "b043_graph_read_executed"
+        },
+        {
+          "step_index": 1,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"call\", \"name\": \"learning.log_progress\", \"arguments\": {\"minutes\": 15}}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "call",
+            "name": "learning.log_progress",
+            "arguments": {
+              "minutes": 15
+            }
+          },
+          "tool_name": "learning.log_progress",
+          "safe_optional_cleanup": [],
+          "final_arguments": {
+            "minutes": 15,
+            "course_id": "fx_course_id"
+          },
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "done": true
+          },
+          "outcome": "model_executed"
+        },
+        {
+          "step_index": 2,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"stop\"}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "stop"
+          },
+          "outcome": "model_stop"
+        }
+      ],
+      "validation_audit": [
+        {
+          "name": "learning.list_courses",
+          "arguments": {},
+          "errors": []
+        },
+        {
+          "name": "learning.log_progress",
+          "arguments": {
+            "minutes": 15,
+            "course_id": "fx_course_id"
+          },
+          "errors": []
+        }
+      ]
+    },
+    {
+      "edge_id": "dep:3230b7d988b2a5a1d11d",
+      "producer": "library.search",
+      "consumer": "library.reserve",
+      "request": "Thực hiện library.reserve cho Cuốn sách mẫu.",
+      "actual_calls": [
+        {
+          "name": "library.search",
+          "arguments": {
+            "query": "Cuốn sách mẫu"
+          }
+        },
+        {
+          "name": "library.reserve",
+          "arguments": {
+            "book_id": "fx_book_id"
+          }
+        }
+      ],
+      "graph_reads": 1,
+      "graph_events": [
+        {
+          "target_tool": "library.reserve",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "NEED_READ",
+          "arguments": {},
+          "reason": "Approved missing prerequisite",
+          "read_tool": "library.search",
+          "read_arguments": {
+            "query": "Cuốn sách mẫu"
+          },
+          "proofs": {},
+          "edge_ids": [
+            "dep:3230b7d988b2a5a1d11d"
+          ],
+          "unresolved_slots": [
+            "book_id"
+          ],
+          "elapsed_ms": 0.04770000668941066
+        },
+        {
+          "target_tool": "library.reserve",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "book_id": "fx_book_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "book_id": {
+              "source": "tool_observation",
+              "tool": "library.search",
+              "path": "books[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "title": "Cuốn sách mẫu"
+              },
+              "edge_id": "dep:3230b7d988b2a5a1d11d"
+            }
+          },
+          "edge_ids": [
+            "dep:3230b7d988b2a5a1d11d"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.050499998906161636
+        },
+        {
+          "target_tool": "library.reserve",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "book_id": "fx_book_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "book_id": {
+              "source": "tool_observation",
+              "tool": "library.search",
+              "path": "books[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "title": "Cuốn sách mẫu"
+              },
+              "edge_id": "dep:3230b7d988b2a5a1d11d"
+            }
+          },
+          "edge_ids": [
+            "dep:3230b7d988b2a5a1d11d"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.07199999527074397
+        }
+      ],
+      "steps": [
+        {
+          "step_index": 0,
+          "tool_name": "library.search",
+          "final_arguments": {
+            "query": "Cuốn sách mẫu"
+          },
+          "origin": "b043_graph_read",
+          "graph_resolution": {
+            "status": "NEED_READ",
+            "arguments": {},
+            "reason": "Approved missing prerequisite",
+            "read_tool": "library.search",
+            "read_arguments": {
+              "query": "Cuốn sách mẫu"
+            },
+            "proofs": {},
+            "edge_ids": [
+              "dep:3230b7d988b2a5a1d11d"
+            ],
+            "unresolved_slots": [
+              "book_id"
+            ],
+            "elapsed_ms": 0.04770000668941066
+          },
+          "reason": "Approved missing prerequisite",
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "books": [
+              {
+                "id": "fx_book_id",
+                "title": "Cuốn sách mẫu"
+              }
+            ]
+          },
+          "outcome": "b043_graph_read_executed"
+        },
+        {
+          "step_index": 1,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"call\", \"name\": \"library.reserve\", \"arguments\": {}}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "call",
+            "name": "library.reserve",
+            "arguments": {}
+          },
+          "tool_name": "library.reserve",
+          "safe_optional_cleanup": [],
+          "final_arguments": {
+            "book_id": "fx_book_id"
+          },
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "done": true
+          },
+          "outcome": "model_executed"
+        },
+        {
+          "step_index": 2,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"stop\"}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "stop"
+          },
+          "outcome": "model_stop"
+        }
+      ],
+      "validation_audit": [
+        {
+          "name": "library.search",
+          "arguments": {
+            "query": "Cuốn sách mẫu"
+          },
+          "errors": []
+        },
+        {
+          "name": "library.reserve",
+          "arguments": {
+            "book_id": "fx_book_id"
+          },
+          "errors": []
+        }
+      ]
+    },
+    {
+      "edge_id": "dep:dcef86a1d29246d7cdc9",
+      "producer": "maps.search_place",
+      "consumer": "maps.save_place",
+      "request": "Thực hiện maps.save_place cho Quán ăn mẫu. Đặt nhãn Quen.",
+      "actual_calls": [
+        {
+          "name": "maps.search_place",
+          "arguments": {
+            "query": "Quán ăn mẫu"
+          }
+        },
+        {
+          "name": "maps.save_place",
+          "arguments": {
+            "label": "Quen",
+            "place_id": "fx_place_id"
+          }
+        }
+      ],
+      "graph_reads": 1,
+      "graph_events": [
+        {
+          "target_tool": "maps.save_place",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "NEED_READ",
+          "arguments": {
+            "label": "Quen"
+          },
+          "reason": "Approved missing prerequisite",
+          "read_tool": "maps.search_place",
+          "read_arguments": {
+            "query": "Quán ăn mẫu"
+          },
+          "proofs": {
+            "label": {
+              "source": "current_user",
+              "span": [
+                52,
+                56
+              ]
+            }
+          },
+          "edge_ids": [
+            "dep:dcef86a1d29246d7cdc9"
+          ],
+          "unresolved_slots": [
+            "place_id"
+          ],
+          "elapsed_ms": 0.05539999983739108
+        },
+        {
+          "target_tool": "maps.save_place",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "label": "Quen",
+            "place_id": "fx_place_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "label": {
+              "source": "current_user",
+              "span": [
+                52,
+                56
+              ]
+            },
+            "place_id": {
+              "source": "tool_observation",
+              "tool": "maps.search_place",
+              "path": "places[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "name": "Quán ăn mẫu"
+              },
+              "edge_id": "dep:dcef86a1d29246d7cdc9"
+            }
+          },
+          "edge_ids": [
+            "dep:dcef86a1d29246d7cdc9"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.06549999670824036
+        },
+        {
+          "target_tool": "maps.save_place",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "label": "Quen",
+            "place_id": "fx_place_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "label": {
+              "source": "current_user",
+              "span": [
+                52,
+                56
+              ]
+            },
+            "place_id": {
+              "source": "tool_observation",
+              "tool": "maps.search_place",
+              "path": "places[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "name": "Quán ăn mẫu"
+              },
+              "edge_id": "dep:dcef86a1d29246d7cdc9"
+            }
+          },
+          "edge_ids": [
+            "dep:dcef86a1d29246d7cdc9"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.08570000500185415
+        }
+      ],
+      "steps": [
+        {
+          "step_index": 0,
+          "tool_name": "maps.search_place",
+          "final_arguments": {
+            "query": "Quán ăn mẫu"
+          },
+          "origin": "b043_graph_read",
+          "graph_resolution": {
+            "status": "NEED_READ",
+            "arguments": {
+              "label": "Quen"
+            },
+            "reason": "Approved missing prerequisite",
+            "read_tool": "maps.search_place",
+            "read_arguments": {
+              "query": "Quán ăn mẫu"
+            },
+            "proofs": {
+              "label": {
+                "source": "current_user",
+                "span": [
+                  52,
+                  56
+                ]
+              }
+            },
+            "edge_ids": [
+              "dep:dcef86a1d29246d7cdc9"
+            ],
+            "unresolved_slots": [
+              "place_id"
+            ],
+            "elapsed_ms": 0.05539999983739108
+          },
+          "reason": "Approved missing prerequisite",
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "places": [
+              {
+                "id": "fx_place_id",
+                "name": "Quán ăn mẫu"
+              }
+            ]
+          },
+          "outcome": "b043_graph_read_executed"
+        },
+        {
+          "step_index": 1,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"call\", \"name\": \"maps.save_place\", \"arguments\": {\"label\": \"Quen\"}}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "call",
+            "name": "maps.save_place",
+            "arguments": {
+              "label": "Quen"
+            }
+          },
+          "tool_name": "maps.save_place",
+          "safe_optional_cleanup": [],
+          "final_arguments": {
+            "label": "Quen",
+            "place_id": "fx_place_id"
+          },
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "done": true
+          },
+          "outcome": "model_executed"
+        },
+        {
+          "step_index": 2,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"stop\"}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "stop"
+          },
+          "outcome": "model_stop"
+        }
+      ],
+      "validation_audit": [
+        {
+          "name": "maps.search_place",
+          "arguments": {
+            "query": "Quán ăn mẫu"
+          },
+          "errors": []
+        },
+        {
+          "name": "maps.save_place",
+          "arguments": {
+            "label": "Quen",
+            "place_id": "fx_place_id"
+          },
+          "errors": []
+        }
+      ]
+    },
+    {
+      "edge_id": "dep:01982c9c796feada0aaf",
+      "producer": "music.list_tracks",
+      "consumer": "music.add_to_playlist",
+      "request": "Thêm Bài hát mẫu vào Danh sách mẫu.",
+      "actual_calls": [
+        {
+          "name": "music.list_tracks",
+          "arguments": {}
+        },
+        {
+          "name": "music.add_to_playlist",
+          "arguments": {
+            "track_id": "fx_track_id",
+            "playlist_id": "fx_playlist_id"
+          }
+        }
+      ],
+      "graph_reads": 1,
+      "graph_events": [
+        {
+          "target_tool": "music.add_to_playlist",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "NEED_READ",
+          "arguments": {},
+          "reason": "Approved missing prerequisite",
+          "read_tool": "music.list_tracks",
+          "read_arguments": {},
+          "proofs": {},
+          "edge_ids": [
+            "dep:1bea69b98068677fcdb5"
+          ],
+          "unresolved_slots": [
+            "track_id"
+          ],
+          "elapsed_ms": 0.04769999941345304
+        },
+        {
+          "target_tool": "music.add_to_playlist",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "track_id": "fx_track_id",
+            "playlist_id": "fx_playlist_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "track_id": {
+              "source": "tool_observation",
+              "tool": "music.list_tracks",
+              "path": "tracks[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "title": "Bài hát mẫu"
+              },
+              "edge_id": "dep:1bea69b98068677fcdb5"
+            },
+            "playlist_id": {
+              "source": "tool_observation",
+              "tool": "music.list_tracks",
+              "path": "playlists[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "name": "Danh sách mẫu"
+              },
+              "edge_id": "dep:01982c9c796feada0aaf"
+            }
+          },
+          "edge_ids": [
+            "dep:1bea69b98068677fcdb5",
+            "dep:01982c9c796feada0aaf"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.08240000170189887
+        },
+        {
+          "target_tool": "music.add_to_playlist",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "track_id": "fx_track_id",
+            "playlist_id": "fx_playlist_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "track_id": {
+              "source": "tool_observation",
+              "tool": "music.list_tracks",
+              "path": "tracks[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "title": "Bài hát mẫu"
+              },
+              "edge_id": "dep:1bea69b98068677fcdb5"
+            },
+            "playlist_id": {
+              "source": "tool_observation",
+              "tool": "music.list_tracks",
+              "path": "playlists[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "name": "Danh sách mẫu"
+              },
+              "edge_id": "dep:01982c9c796feada0aaf"
+            }
+          },
+          "edge_ids": [
+            "dep:1bea69b98068677fcdb5",
+            "dep:01982c9c796feada0aaf"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.09059999865712598
+        }
+      ],
+      "steps": [
+        {
+          "step_index": 0,
+          "tool_name": "music.list_tracks",
+          "final_arguments": {},
+          "origin": "b043_graph_read",
+          "graph_resolution": {
+            "status": "NEED_READ",
+            "arguments": {},
+            "reason": "Approved missing prerequisite",
+            "read_tool": "music.list_tracks",
+            "read_arguments": {},
+            "proofs": {},
+            "edge_ids": [
+              "dep:1bea69b98068677fcdb5"
+            ],
+            "unresolved_slots": [
+              "track_id"
+            ],
+            "elapsed_ms": 0.04769999941345304
+          },
+          "reason": "Approved missing prerequisite",
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "playlists": [
+              {
+                "id": "fx_playlist_id",
+                "name": "Danh sách mẫu"
+              }
+            ],
+            "tracks": [
+              {
+                "id": "fx_track_id",
+                "title": "Bài hát mẫu"
+              }
+            ]
+          },
+          "outcome": "b043_graph_read_executed"
+        },
+        {
+          "step_index": 1,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"call\", \"name\": \"music.add_to_playlist\", \"arguments\": {}}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "call",
+            "name": "music.add_to_playlist",
+            "arguments": {}
+          },
+          "tool_name": "music.add_to_playlist",
+          "safe_optional_cleanup": [],
+          "final_arguments": {
+            "track_id": "fx_track_id",
+            "playlist_id": "fx_playlist_id"
+          },
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "done": true
+          },
+          "outcome": "model_executed"
+        },
+        {
+          "step_index": 2,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"stop\"}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "stop"
+          },
+          "outcome": "model_stop"
+        }
+      ],
+      "validation_audit": [
+        {
+          "name": "music.list_tracks",
+          "arguments": {},
+          "errors": []
+        },
+        {
+          "name": "music.add_to_playlist",
+          "arguments": {
+            "track_id": "fx_track_id",
+            "playlist_id": "fx_playlist_id"
+          },
+          "errors": []
+        }
+      ]
+    },
+    {
+      "edge_id": "dep:1bea69b98068677fcdb5",
+      "producer": "music.list_tracks",
+      "consumer": "music.add_to_playlist",
+      "request": "Thêm Bài hát mẫu vào Danh sách mẫu.",
+      "actual_calls": [
+        {
+          "name": "music.list_tracks",
+          "arguments": {}
+        },
+        {
+          "name": "music.add_to_playlist",
+          "arguments": {
+            "track_id": "fx_track_id",
+            "playlist_id": "fx_playlist_id"
+          }
+        }
+      ],
+      "graph_reads": 1,
+      "graph_events": [
+        {
+          "target_tool": "music.add_to_playlist",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "NEED_READ",
+          "arguments": {},
+          "reason": "Approved missing prerequisite",
+          "read_tool": "music.list_tracks",
+          "read_arguments": {},
+          "proofs": {},
+          "edge_ids": [
+            "dep:1bea69b98068677fcdb5"
+          ],
+          "unresolved_slots": [
+            "track_id"
+          ],
+          "elapsed_ms": 0.045900000259280205
+        },
+        {
+          "target_tool": "music.add_to_playlist",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "track_id": "fx_track_id",
+            "playlist_id": "fx_playlist_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "track_id": {
+              "source": "tool_observation",
+              "tool": "music.list_tracks",
+              "path": "tracks[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "title": "Bài hát mẫu"
+              },
+              "edge_id": "dep:1bea69b98068677fcdb5"
+            },
+            "playlist_id": {
+              "source": "tool_observation",
+              "tool": "music.list_tracks",
+              "path": "playlists[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "name": "Danh sách mẫu"
+              },
+              "edge_id": "dep:01982c9c796feada0aaf"
+            }
+          },
+          "edge_ids": [
+            "dep:1bea69b98068677fcdb5",
+            "dep:01982c9c796feada0aaf"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.08030000026337802
+        },
+        {
+          "target_tool": "music.add_to_playlist",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "track_id": "fx_track_id",
+            "playlist_id": "fx_playlist_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "track_id": {
+              "source": "tool_observation",
+              "tool": "music.list_tracks",
+              "path": "tracks[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "title": "Bài hát mẫu"
+              },
+              "edge_id": "dep:1bea69b98068677fcdb5"
+            },
+            "playlist_id": {
+              "source": "tool_observation",
+              "tool": "music.list_tracks",
+              "path": "playlists[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "name": "Danh sách mẫu"
+              },
+              "edge_id": "dep:01982c9c796feada0aaf"
+            }
+          },
+          "edge_ids": [
+            "dep:1bea69b98068677fcdb5",
+            "dep:01982c9c796feada0aaf"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.10119999933522195
+        }
+      ],
+      "steps": [
+        {
+          "step_index": 0,
+          "tool_name": "music.list_tracks",
+          "final_arguments": {},
+          "origin": "b043_graph_read",
+          "graph_resolution": {
+            "status": "NEED_READ",
+            "arguments": {},
+            "reason": "Approved missing prerequisite",
+            "read_tool": "music.list_tracks",
+            "read_arguments": {},
+            "proofs": {},
+            "edge_ids": [
+              "dep:1bea69b98068677fcdb5"
+            ],
+            "unresolved_slots": [
+              "track_id"
+            ],
+            "elapsed_ms": 0.045900000259280205
+          },
+          "reason": "Approved missing prerequisite",
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "playlists": [
+              {
+                "id": "fx_playlist_id",
+                "name": "Danh sách mẫu"
+              }
+            ],
+            "tracks": [
+              {
+                "id": "fx_track_id",
+                "title": "Bài hát mẫu"
+              }
+            ]
+          },
+          "outcome": "b043_graph_read_executed"
+        },
+        {
+          "step_index": 1,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"call\", \"name\": \"music.add_to_playlist\", \"arguments\": {}}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "call",
+            "name": "music.add_to_playlist",
+            "arguments": {}
+          },
+          "tool_name": "music.add_to_playlist",
+          "safe_optional_cleanup": [],
+          "final_arguments": {
+            "track_id": "fx_track_id",
+            "playlist_id": "fx_playlist_id"
+          },
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "done": true
+          },
+          "outcome": "model_executed"
+        },
+        {
+          "step_index": 2,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"stop\"}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "stop"
+          },
+          "outcome": "model_stop"
+        }
+      ],
+      "validation_audit": [
+        {
+          "name": "music.list_tracks",
+          "arguments": {},
+          "errors": []
+        },
+        {
+          "name": "music.add_to_playlist",
+          "arguments": {
+            "track_id": "fx_track_id",
+            "playlist_id": "fx_playlist_id"
+          },
+          "errors": []
+        }
+      ]
+    },
+    {
+      "edge_id": "dep:cd4e089fabac42496834",
+      "producer": "music.list_tracks",
+      "consumer": "music.play",
+      "request": "Thực hiện music.play cho Danh sách mẫu.",
+      "actual_calls": [
+        {
+          "name": "music.list_tracks",
+          "arguments": {}
+        },
+        {
+          "name": "music.play",
+          "arguments": {
+            "playlist_id": "fx_playlist_id"
+          }
+        }
+      ],
+      "graph_reads": 1,
+      "graph_events": [
+        {
+          "target_tool": "music.play",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "NEED_READ",
+          "arguments": {},
+          "reason": "Approved missing prerequisite",
+          "read_tool": "music.list_tracks",
+          "read_arguments": {},
+          "proofs": {},
+          "edge_ids": [
+            "dep:cd4e089fabac42496834"
+          ],
+          "unresolved_slots": [
+            "playlist_id"
+          ],
+          "elapsed_ms": 0.057600002037361264
+        },
+        {
+          "target_tool": "music.play",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "playlist_id": "fx_playlist_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "playlist_id": {
+              "source": "tool_observation",
+              "tool": "music.list_tracks",
+              "path": "playlists[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "name": "Danh sách mẫu"
+              },
+              "edge_id": "dep:cd4e089fabac42496834"
+            }
+          },
+          "edge_ids": [
+            "dep:cd4e089fabac42496834"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.06430000212276354
+        },
+        {
+          "target_tool": "music.play",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "playlist_id": "fx_playlist_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "playlist_id": {
+              "source": "tool_observation",
+              "tool": "music.list_tracks",
+              "path": "playlists[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "name": "Danh sách mẫu"
+              },
+              "edge_id": "dep:cd4e089fabac42496834"
+            }
+          },
+          "edge_ids": [
+            "dep:cd4e089fabac42496834"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.09809999755816534
+        }
+      ],
+      "steps": [
+        {
+          "step_index": 0,
+          "tool_name": "music.list_tracks",
+          "final_arguments": {},
+          "origin": "b043_graph_read",
+          "graph_resolution": {
+            "status": "NEED_READ",
+            "arguments": {},
+            "reason": "Approved missing prerequisite",
+            "read_tool": "music.list_tracks",
+            "read_arguments": {},
+            "proofs": {},
+            "edge_ids": [
+              "dep:cd4e089fabac42496834"
+            ],
+            "unresolved_slots": [
+              "playlist_id"
+            ],
+            "elapsed_ms": 0.057600002037361264
+          },
+          "reason": "Approved missing prerequisite",
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "playlists": [
+              {
+                "id": "fx_playlist_id",
+                "name": "Danh sách mẫu"
+              }
+            ]
+          },
+          "outcome": "b043_graph_read_executed"
+        },
+        {
+          "step_index": 1,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"call\", \"name\": \"music.play\", \"arguments\": {}}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "call",
+            "name": "music.play",
+            "arguments": {}
+          },
+          "tool_name": "music.play",
+          "safe_optional_cleanup": [],
+          "final_arguments": {
+            "playlist_id": "fx_playlist_id"
+          },
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "done": true
+          },
+          "outcome": "model_executed"
+        },
+        {
+          "step_index": 2,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"stop\"}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "stop"
+          },
+          "outcome": "model_stop"
+        }
+      ],
+      "validation_audit": [
+        {
+          "name": "music.list_tracks",
+          "arguments": {},
+          "errors": []
+        },
+        {
+          "name": "music.play",
+          "arguments": {
+            "playlist_id": "fx_playlist_id"
+          },
+          "errors": []
+        }
+      ]
+    },
+    {
+      "edge_id": "dep:a40a9d89d6218083cb85",
+      "producer": "music.list_tracks",
+      "consumer": "music.play",
+      "request": "Thực hiện music.play cho Bài hát mẫu.",
+      "actual_calls": [
+        {
+          "name": "music.list_tracks",
+          "arguments": {}
+        },
+        {
+          "name": "music.play",
+          "arguments": {
+            "track_id": "fx_track_id"
+          }
+        }
+      ],
+      "graph_reads": 1,
+      "graph_events": [
+        {
+          "target_tool": "music.play",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "NEED_READ",
+          "arguments": {},
+          "reason": "Approved missing prerequisite",
+          "read_tool": "music.list_tracks",
+          "read_arguments": {},
+          "proofs": {},
+          "edge_ids": [
+            "dep:a40a9d89d6218083cb85"
+          ],
+          "unresolved_slots": [
+            "track_id"
+          ],
+          "elapsed_ms": 0.05439999949885532
+        },
+        {
+          "target_tool": "music.play",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "track_id": "fx_track_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "track_id": {
+              "source": "tool_observation",
+              "tool": "music.list_tracks",
+              "path": "tracks[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "title": "Bài hát mẫu"
+              },
+              "edge_id": "dep:a40a9d89d6218083cb85"
+            }
+          },
+          "edge_ids": [
+            "dep:a40a9d89d6218083cb85"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.06160000339150429
+        },
+        {
+          "target_tool": "music.play",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "track_id": "fx_track_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "track_id": {
+              "source": "tool_observation",
+              "tool": "music.list_tracks",
+              "path": "tracks[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "title": "Bài hát mẫu"
+              },
+              "edge_id": "dep:a40a9d89d6218083cb85"
+            }
+          },
+          "edge_ids": [
+            "dep:a40a9d89d6218083cb85"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.09439999848837033
+        }
+      ],
+      "steps": [
+        {
+          "step_index": 0,
+          "tool_name": "music.list_tracks",
+          "final_arguments": {},
+          "origin": "b043_graph_read",
+          "graph_resolution": {
+            "status": "NEED_READ",
+            "arguments": {},
+            "reason": "Approved missing prerequisite",
+            "read_tool": "music.list_tracks",
+            "read_arguments": {},
+            "proofs": {},
+            "edge_ids": [
+              "dep:a40a9d89d6218083cb85"
+            ],
+            "unresolved_slots": [
+              "track_id"
+            ],
+            "elapsed_ms": 0.05439999949885532
+          },
+          "reason": "Approved missing prerequisite",
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "tracks": [
+              {
+                "id": "fx_track_id",
+                "title": "Bài hát mẫu"
+              }
+            ]
+          },
+          "outcome": "b043_graph_read_executed"
+        },
+        {
+          "step_index": 1,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"call\", \"name\": \"music.play\", \"arguments\": {}}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "call",
+            "name": "music.play",
+            "arguments": {}
+          },
+          "tool_name": "music.play",
+          "safe_optional_cleanup": [],
+          "final_arguments": {
+            "track_id": "fx_track_id"
+          },
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "done": true
+          },
+          "outcome": "model_executed"
+        },
+        {
+          "step_index": 2,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"stop\"}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "stop"
+          },
+          "outcome": "model_stop"
+        }
+      ],
+      "validation_audit": [
+        {
+          "name": "music.list_tracks",
+          "arguments": {},
+          "errors": []
+        },
+        {
+          "name": "music.play",
+          "arguments": {
+            "track_id": "fx_track_id"
+          },
+          "errors": []
+        }
+      ]
+    },
+    {
+      "edge_id": "dep:29ca53ea8511a207c06a",
+      "producer": "news.search",
+      "consumer": "news.save",
+      "request": "Thực hiện news.save cho Bài báo mẫu.",
+      "actual_calls": [
+        {
+          "name": "news.search",
+          "arguments": {
+            "query": "Bài báo mẫu"
+          }
+        },
+        {
+          "name": "news.save",
+          "arguments": {
+            "article_id": "fx_article_id"
+          }
+        }
+      ],
+      "graph_reads": 1,
+      "graph_events": [
+        {
+          "target_tool": "news.save",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "NEED_READ",
+          "arguments": {},
+          "reason": "Approved missing prerequisite",
+          "read_tool": "news.search",
+          "read_arguments": {
+            "query": "Bài báo mẫu"
+          },
+          "proofs": {},
+          "edge_ids": [
+            "dep:29ca53ea8511a207c06a"
+          ],
+          "unresolved_slots": [
+            "article_id"
+          ],
+          "elapsed_ms": 0.05040000542066991
+        },
+        {
+          "target_tool": "news.save",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "article_id": "fx_article_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "article_id": {
+              "source": "tool_observation",
+              "tool": "news.search",
+              "path": "articles[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "title": "Bài báo mẫu"
+              },
+              "edge_id": "dep:29ca53ea8511a207c06a"
+            }
+          },
+          "edge_ids": [
+            "dep:29ca53ea8511a207c06a"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.05160000000614673
+        },
+        {
+          "target_tool": "news.save",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "article_id": "fx_article_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "article_id": {
+              "source": "tool_observation",
+              "tool": "news.search",
+              "path": "articles[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "title": "Bài báo mẫu"
+              },
+              "edge_id": "dep:29ca53ea8511a207c06a"
+            }
+          },
+          "edge_ids": [
+            "dep:29ca53ea8511a207c06a"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.0895000048330985
+        }
+      ],
+      "steps": [
+        {
+          "step_index": 0,
+          "tool_name": "news.search",
+          "final_arguments": {
+            "query": "Bài báo mẫu"
+          },
+          "origin": "b043_graph_read",
+          "graph_resolution": {
+            "status": "NEED_READ",
+            "arguments": {},
+            "reason": "Approved missing prerequisite",
+            "read_tool": "news.search",
+            "read_arguments": {
+              "query": "Bài báo mẫu"
+            },
+            "proofs": {},
+            "edge_ids": [
+              "dep:29ca53ea8511a207c06a"
+            ],
+            "unresolved_slots": [
+              "article_id"
+            ],
+            "elapsed_ms": 0.05040000542066991
+          },
+          "reason": "Approved missing prerequisite",
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "articles": [
+              {
+                "id": "fx_article_id",
+                "title": "Bài báo mẫu"
+              }
+            ]
+          },
+          "outcome": "b043_graph_read_executed"
+        },
+        {
+          "step_index": 1,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"call\", \"name\": \"news.save\", \"arguments\": {}}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "call",
+            "name": "news.save",
+            "arguments": {}
+          },
+          "tool_name": "news.save",
+          "safe_optional_cleanup": [],
+          "final_arguments": {
+            "article_id": "fx_article_id"
+          },
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "done": true
+          },
+          "outcome": "model_executed"
+        },
+        {
+          "step_index": 2,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"stop\"}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "stop"
+          },
+          "outcome": "model_stop"
+        }
+      ],
+      "validation_audit": [
+        {
+          "name": "news.search",
+          "arguments": {
+            "query": "Bài báo mẫu"
+          },
+          "errors": []
+        },
+        {
+          "name": "news.save",
+          "arguments": {
+            "article_id": "fx_article_id"
+          },
+          "errors": []
+        }
+      ]
+    },
+    {
+      "edge_id": "dep:a16db1ceeff849448088",
+      "producer": "notes.list",
+      "consumer": "notes.append",
+      "request": "Thực hiện notes.append cho Ghi chú mẫu. Thêm nội dung mới.",
+      "actual_calls": [
+        {
+          "name": "notes.list",
+          "arguments": {}
+        },
+        {
+          "name": "notes.append",
+          "arguments": {
+            "content": "nội dung mới",
+            "note_id": "fx_note_id"
+          }
+        }
+      ],
+      "graph_reads": 1,
+      "graph_events": [
+        {
+          "target_tool": "notes.append",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "NEED_READ",
+          "arguments": {
+            "content": "nội dung mới"
+          },
+          "reason": "Approved missing prerequisite",
+          "read_tool": "notes.list",
+          "read_arguments": {},
+          "proofs": {
+            "content": {
+              "source": "current_user",
+              "span": [
+                45,
+                57
+              ]
+            }
+          },
+          "edge_ids": [
+            "dep:a16db1ceeff849448088"
+          ],
+          "unresolved_slots": [
+            "note_id"
+          ],
+          "elapsed_ms": 0.050900001951958984
+        },
+        {
+          "target_tool": "notes.append",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "content": "nội dung mới",
+            "note_id": "fx_note_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "content": {
+              "source": "current_user",
+              "span": [
+                45,
+                57
+              ]
+            },
+            "note_id": {
+              "source": "tool_observation",
+              "tool": "notes.list",
+              "path": "notes[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "title": "Ghi chú mẫu"
+              },
+              "edge_id": "dep:a16db1ceeff849448088"
+            }
+          },
+          "edge_ids": [
+            "dep:a16db1ceeff849448088"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.07190000178525224
+        },
+        {
+          "target_tool": "notes.append",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "content": "nội dung mới",
+            "note_id": "fx_note_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "content": {
+              "source": "current_user",
+              "span": [
+                45,
+                57
+              ]
+            },
+            "note_id": {
+              "source": "tool_observation",
+              "tool": "notes.list",
+              "path": "notes[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "title": "Ghi chú mẫu"
+              },
+              "edge_id": "dep:a16db1ceeff849448088"
+            }
+          },
+          "edge_ids": [
+            "dep:a16db1ceeff849448088"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.08499999967170879
+        }
+      ],
+      "steps": [
+        {
+          "step_index": 0,
+          "tool_name": "notes.list",
+          "final_arguments": {},
+          "origin": "b043_graph_read",
+          "graph_resolution": {
+            "status": "NEED_READ",
+            "arguments": {
+              "content": "nội dung mới"
+            },
+            "reason": "Approved missing prerequisite",
+            "read_tool": "notes.list",
+            "read_arguments": {},
+            "proofs": {
+              "content": {
+                "source": "current_user",
+                "span": [
+                  45,
+                  57
+                ]
+              }
+            },
+            "edge_ids": [
+              "dep:a16db1ceeff849448088"
+            ],
+            "unresolved_slots": [
+              "note_id"
+            ],
+            "elapsed_ms": 0.050900001951958984
+          },
+          "reason": "Approved missing prerequisite",
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "notes": [
+              {
+                "id": "fx_note_id",
+                "title": "Ghi chú mẫu"
+              }
+            ]
+          },
+          "outcome": "b043_graph_read_executed"
+        },
+        {
+          "step_index": 1,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"call\", \"name\": \"notes.append\", \"arguments\": {\"content\": \"nội dung mới\"}}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "call",
+            "name": "notes.append",
+            "arguments": {
+              "content": "nội dung mới"
+            }
+          },
+          "tool_name": "notes.append",
+          "safe_optional_cleanup": [],
+          "final_arguments": {
+            "content": "nội dung mới",
+            "note_id": "fx_note_id"
+          },
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "done": true
+          },
+          "outcome": "model_executed"
+        },
+        {
+          "step_index": 2,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"stop\"}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "stop"
+          },
+          "outcome": "model_stop"
+        }
+      ],
+      "validation_audit": [
+        {
+          "name": "notes.list",
+          "arguments": {},
+          "errors": []
+        },
+        {
+          "name": "notes.append",
+          "arguments": {
+            "content": "nội dung mới",
+            "note_id": "fx_note_id"
+          },
+          "errors": []
+        }
+      ]
+    },
+    {
+      "edge_id": "dep:8ba0cf9b47d00e2b57e1",
+      "producer": "podcast_radio.search",
+      "consumer": "podcast_radio.queue",
+      "request": "Thực hiện podcast_radio.queue cho Tập podcast mẫu.",
+      "actual_calls": [
+        {
+          "name": "podcast_radio.search",
+          "arguments": {
+            "query": "Tập podcast mẫu"
+          }
+        },
+        {
+          "name": "podcast_radio.queue",
+          "arguments": {
+            "episode_id": "fx_episode_id"
+          }
+        }
+      ],
+      "graph_reads": 1,
+      "graph_events": [
+        {
+          "target_tool": "podcast_radio.queue",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "NEED_READ",
+          "arguments": {},
+          "reason": "Approved missing prerequisite",
+          "read_tool": "podcast_radio.search",
+          "read_arguments": {
+            "query": "Tập podcast mẫu"
+          },
+          "proofs": {},
+          "edge_ids": [
+            "dep:8ba0cf9b47d00e2b57e1"
+          ],
+          "unresolved_slots": [
+            "episode_id"
+          ],
+          "elapsed_ms": 0.051399998483248055
+        },
+        {
+          "target_tool": "podcast_radio.queue",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "episode_id": "fx_episode_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "episode_id": {
+              "source": "tool_observation",
+              "tool": "podcast_radio.search",
+              "path": "episodes[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "title": "Tập podcast mẫu"
+              },
+              "edge_id": "dep:8ba0cf9b47d00e2b57e1"
+            }
+          },
+          "edge_ids": [
+            "dep:8ba0cf9b47d00e2b57e1"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.052600000344682485
+        },
+        {
+          "target_tool": "podcast_radio.queue",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "episode_id": "fx_episode_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "episode_id": {
+              "source": "tool_observation",
+              "tool": "podcast_radio.search",
+              "path": "episodes[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "title": "Tập podcast mẫu"
+              },
+              "edge_id": "dep:8ba0cf9b47d00e2b57e1"
+            }
+          },
+          "edge_ids": [
+            "dep:8ba0cf9b47d00e2b57e1"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.07560000085504726
+        }
+      ],
+      "steps": [
+        {
+          "step_index": 0,
+          "tool_name": "podcast_radio.search",
+          "final_arguments": {
+            "query": "Tập podcast mẫu"
+          },
+          "origin": "b043_graph_read",
+          "graph_resolution": {
+            "status": "NEED_READ",
+            "arguments": {},
+            "reason": "Approved missing prerequisite",
+            "read_tool": "podcast_radio.search",
+            "read_arguments": {
+              "query": "Tập podcast mẫu"
+            },
+            "proofs": {},
+            "edge_ids": [
+              "dep:8ba0cf9b47d00e2b57e1"
+            ],
+            "unresolved_slots": [
+              "episode_id"
+            ],
+            "elapsed_ms": 0.051399998483248055
+          },
+          "reason": "Approved missing prerequisite",
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "episodes": [
+              {
+                "id": "fx_episode_id",
+                "title": "Tập podcast mẫu"
+              }
+            ]
+          },
+          "outcome": "b043_graph_read_executed"
+        },
+        {
+          "step_index": 1,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"call\", \"name\": \"podcast_radio.queue\", \"arguments\": {}}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "call",
+            "name": "podcast_radio.queue",
+            "arguments": {}
+          },
+          "tool_name": "podcast_radio.queue",
+          "safe_optional_cleanup": [],
+          "final_arguments": {
+            "episode_id": "fx_episode_id"
+          },
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "done": true
+          },
+          "outcome": "model_executed"
+        },
+        {
+          "step_index": 2,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"stop\"}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "stop"
+          },
+          "outcome": "model_stop"
+        }
+      ],
+      "validation_audit": [
+        {
+          "name": "podcast_radio.search",
+          "arguments": {
+            "query": "Tập podcast mẫu"
+          },
+          "errors": []
+        },
+        {
+          "name": "podcast_radio.queue",
+          "arguments": {
+            "episode_id": "fx_episode_id"
+          },
+          "errors": []
+        }
+      ]
+    },
+    {
+      "edge_id": "dep:ff8b28456a5b867cd1b2",
+      "producer": "podcast_radio.search",
+      "consumer": "podcast_radio.subscribe",
+      "request": "Thực hiện podcast_radio.subscribe cho Kênh podcast mẫu.",
+      "actual_calls": [
+        {
+          "name": "podcast_radio.search",
+          "arguments": {
+            "query": "Kênh podcast mẫu"
+          }
+        },
+        {
+          "name": "podcast_radio.subscribe",
+          "arguments": {
+            "show_id": "fx_show_id"
+          }
+        }
+      ],
+      "graph_reads": 1,
+      "graph_events": [
+        {
+          "target_tool": "podcast_radio.subscribe",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "NEED_READ",
+          "arguments": {},
+          "reason": "Approved missing prerequisite",
+          "read_tool": "podcast_radio.search",
+          "read_arguments": {
+            "query": "Kênh podcast mẫu"
+          },
+          "proofs": {},
+          "edge_ids": [
+            "dep:ff8b28456a5b867cd1b2"
+          ],
+          "unresolved_slots": [
+            "show_id"
+          ],
+          "elapsed_ms": 0.051099996198900044
+        },
+        {
+          "target_tool": "podcast_radio.subscribe",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "show_id": "fx_show_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "show_id": {
+              "source": "tool_observation",
+              "tool": "podcast_radio.search",
+              "path": "shows[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "name": "Kênh podcast mẫu"
+              },
+              "edge_id": "dep:ff8b28456a5b867cd1b2"
+            }
+          },
+          "edge_ids": [
+            "dep:ff8b28456a5b867cd1b2"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.05099999543745071
+        },
+        {
+          "target_tool": "podcast_radio.subscribe",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "show_id": "fx_show_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "show_id": {
+              "source": "tool_observation",
+              "tool": "podcast_radio.search",
+              "path": "shows[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "name": "Kênh podcast mẫu"
+              },
+              "edge_id": "dep:ff8b28456a5b867cd1b2"
+            }
+          },
+          "edge_ids": [
+            "dep:ff8b28456a5b867cd1b2"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.076299998909235
+        }
+      ],
+      "steps": [
+        {
+          "step_index": 0,
+          "tool_name": "podcast_radio.search",
+          "final_arguments": {
+            "query": "Kênh podcast mẫu"
+          },
+          "origin": "b043_graph_read",
+          "graph_resolution": {
+            "status": "NEED_READ",
+            "arguments": {},
+            "reason": "Approved missing prerequisite",
+            "read_tool": "podcast_radio.search",
+            "read_arguments": {
+              "query": "Kênh podcast mẫu"
+            },
+            "proofs": {},
+            "edge_ids": [
+              "dep:ff8b28456a5b867cd1b2"
+            ],
+            "unresolved_slots": [
+              "show_id"
+            ],
+            "elapsed_ms": 0.051099996198900044
+          },
+          "reason": "Approved missing prerequisite",
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "shows": [
+              {
+                "id": "fx_show_id",
+                "name": "Kênh podcast mẫu"
+              }
+            ]
+          },
+          "outcome": "b043_graph_read_executed"
+        },
+        {
+          "step_index": 1,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"call\", \"name\": \"podcast_radio.subscribe\", \"arguments\": {}}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "call",
+            "name": "podcast_radio.subscribe",
+            "arguments": {}
+          },
+          "tool_name": "podcast_radio.subscribe",
+          "safe_optional_cleanup": [],
+          "final_arguments": {
+            "show_id": "fx_show_id"
+          },
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "done": true
+          },
+          "outcome": "model_executed"
+        },
+        {
+          "step_index": 2,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"stop\"}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "stop"
+          },
+          "outcome": "model_stop"
+        }
+      ],
+      "validation_audit": [
+        {
+          "name": "podcast_radio.search",
+          "arguments": {
+            "query": "Kênh podcast mẫu"
+          },
+          "errors": []
+        },
+        {
+          "name": "podcast_radio.subscribe",
+          "arguments": {
+            "show_id": "fx_show_id"
+          },
+          "errors": []
+        }
+      ]
+    },
+    {
+      "edge_id": "dep:e6ba8b599d054f6a97f6",
+      "producer": "reminders.list",
+      "consumer": "reminders.complete",
+      "request": "Thực hiện reminders.complete cho Việc cần nhớ.",
+      "actual_calls": [
+        {
+          "name": "reminders.list",
+          "arguments": {}
+        },
+        {
+          "name": "reminders.complete",
+          "arguments": {
+            "reminder_id": "fx_reminder_id"
+          }
+        }
+      ],
+      "graph_reads": 1,
+      "graph_events": [
+        {
+          "target_tool": "reminders.complete",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "NEED_READ",
+          "arguments": {},
+          "reason": "Approved missing prerequisite",
+          "read_tool": "reminders.list",
+          "read_arguments": {},
+          "proofs": {},
+          "edge_ids": [
+            "dep:e6ba8b599d054f6a97f6"
+          ],
+          "unresolved_slots": [
+            "reminder_id"
+          ],
+          "elapsed_ms": 0.0661999947624281
+        },
+        {
+          "target_tool": "reminders.complete",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "reminder_id": "fx_reminder_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "reminder_id": {
+              "source": "tool_observation",
+              "tool": "reminders.list",
+              "path": "reminders[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "content": "Việc cần nhớ"
+              },
+              "edge_id": "dep:e6ba8b599d054f6a97f6"
+            }
+          },
+          "edge_ids": [
+            "dep:e6ba8b599d054f6a97f6"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.0501000031363219
+        },
+        {
+          "target_tool": "reminders.complete",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "reminder_id": "fx_reminder_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "reminder_id": {
+              "source": "tool_observation",
+              "tool": "reminders.list",
+              "path": "reminders[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "content": "Việc cần nhớ"
+              },
+              "edge_id": "dep:e6ba8b599d054f6a97f6"
+            }
+          },
+          "edge_ids": [
+            "dep:e6ba8b599d054f6a97f6"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.08029999298742041
+        }
+      ],
+      "steps": [
+        {
+          "step_index": 0,
+          "tool_name": "reminders.list",
+          "final_arguments": {},
+          "origin": "b043_graph_read",
+          "graph_resolution": {
+            "status": "NEED_READ",
+            "arguments": {},
+            "reason": "Approved missing prerequisite",
+            "read_tool": "reminders.list",
+            "read_arguments": {},
+            "proofs": {},
+            "edge_ids": [
+              "dep:e6ba8b599d054f6a97f6"
+            ],
+            "unresolved_slots": [
+              "reminder_id"
+            ],
+            "elapsed_ms": 0.0661999947624281
+          },
+          "reason": "Approved missing prerequisite",
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "reminders": [
+              {
+                "id": "fx_reminder_id",
+                "content": "Việc cần nhớ"
+              }
+            ]
+          },
+          "outcome": "b043_graph_read_executed"
+        },
+        {
+          "step_index": 1,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"call\", \"name\": \"reminders.complete\", \"arguments\": {}}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "call",
+            "name": "reminders.complete",
+            "arguments": {}
+          },
+          "tool_name": "reminders.complete",
+          "safe_optional_cleanup": [],
+          "final_arguments": {
+            "reminder_id": "fx_reminder_id"
+          },
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "done": true
+          },
+          "outcome": "model_executed"
+        },
+        {
+          "step_index": 2,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"stop\"}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "stop"
+          },
+          "outcome": "model_stop"
+        }
+      ],
+      "validation_audit": [
+        {
+          "name": "reminders.list",
+          "arguments": {},
+          "errors": []
+        },
+        {
+          "name": "reminders.complete",
+          "arguments": {
+            "reminder_id": "fx_reminder_id"
+          },
+          "errors": []
+        }
+      ]
+    },
+    {
+      "edge_id": "dep:3f0086bc06acea59db4b",
+      "producer": "shopping_list.get",
+      "consumer": "shopping_list.check",
+      "request": "Thực hiện shopping_list.check cho Sữa.",
+      "actual_calls": [
+        {
+          "name": "shopping_list.get",
+          "arguments": {}
+        },
+        {
+          "name": "shopping_list.check",
+          "arguments": {
+            "item_id": "fx_item_id"
+          }
+        }
+      ],
+      "graph_reads": 1,
+      "graph_events": [
+        {
+          "target_tool": "shopping_list.check",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "NEED_READ",
+          "arguments": {},
+          "reason": "Approved missing prerequisite",
+          "read_tool": "shopping_list.get",
+          "read_arguments": {},
+          "proofs": {},
+          "edge_ids": [
+            "dep:3f0086bc06acea59db4b"
+          ],
+          "unresolved_slots": [
+            "item_id"
+          ],
+          "elapsed_ms": 0.03959999594371766
+        },
+        {
+          "target_tool": "shopping_list.check",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "item_id": "fx_item_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "item_id": {
+              "source": "tool_observation",
+              "tool": "shopping_list.get",
+              "path": "items[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "name": "Sữa"
+              },
+              "edge_id": "dep:3f0086bc06acea59db4b"
+            }
+          },
+          "edge_ids": [
+            "dep:3f0086bc06acea59db4b"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.04569999873638153
+        },
+        {
+          "target_tool": "shopping_list.check",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "item_id": "fx_item_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "item_id": {
+              "source": "tool_observation",
+              "tool": "shopping_list.get",
+              "path": "items[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "name": "Sữa"
+              },
+              "edge_id": "dep:3f0086bc06acea59db4b"
+            }
+          },
+          "edge_ids": [
+            "dep:3f0086bc06acea59db4b"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.07390000246232376
+        }
+      ],
+      "steps": [
+        {
+          "step_index": 0,
+          "tool_name": "shopping_list.get",
+          "final_arguments": {},
+          "origin": "b043_graph_read",
+          "graph_resolution": {
+            "status": "NEED_READ",
+            "arguments": {},
+            "reason": "Approved missing prerequisite",
+            "read_tool": "shopping_list.get",
+            "read_arguments": {},
+            "proofs": {},
+            "edge_ids": [
+              "dep:3f0086bc06acea59db4b"
+            ],
+            "unresolved_slots": [
+              "item_id"
+            ],
+            "elapsed_ms": 0.03959999594371766
+          },
+          "reason": "Approved missing prerequisite",
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "items": [
+              {
+                "id": "fx_item_id",
+                "name": "Sữa"
+              }
+            ]
+          },
+          "outcome": "b043_graph_read_executed"
+        },
+        {
+          "step_index": 1,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"call\", \"name\": \"shopping_list.check\", \"arguments\": {}}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "call",
+            "name": "shopping_list.check",
+            "arguments": {}
+          },
+          "tool_name": "shopping_list.check",
+          "safe_optional_cleanup": [],
+          "final_arguments": {
+            "item_id": "fx_item_id"
+          },
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "done": true
+          },
+          "outcome": "model_executed"
+        },
+        {
+          "step_index": 2,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"stop\"}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "stop"
+          },
+          "outcome": "model_stop"
+        }
+      ],
+      "validation_audit": [
+        {
+          "name": "shopping_list.get",
+          "arguments": {},
+          "errors": []
+        },
+        {
+          "name": "shopping_list.check",
+          "arguments": {
+            "item_id": "fx_item_id"
+          },
+          "errors": []
+        }
+      ]
+    },
+    {
+      "edge_id": "dep:5360101cb187f428ea42",
+      "producer": "tasks.list",
+      "consumer": "tasks.complete",
+      "request": "Thực hiện tasks.complete cho Nhiệm vụ mẫu.",
+      "actual_calls": [
+        {
+          "name": "tasks.list",
+          "arguments": {}
+        },
+        {
+          "name": "tasks.complete",
+          "arguments": {
+            "task_id": "fx_task_id"
+          }
+        }
+      ],
+      "graph_reads": 1,
+      "graph_events": [
+        {
+          "target_tool": "tasks.complete",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "NEED_READ",
+          "arguments": {},
+          "reason": "Approved missing prerequisite",
+          "read_tool": "tasks.list",
+          "read_arguments": {},
+          "proofs": {},
+          "edge_ids": [
+            "dep:5360101cb187f428ea42"
+          ],
+          "unresolved_slots": [
+            "task_id"
+          ],
+          "elapsed_ms": 0.04339999577496201
+        },
+        {
+          "target_tool": "tasks.complete",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "task_id": "fx_task_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "task_id": {
+              "source": "tool_observation",
+              "tool": "tasks.list",
+              "path": "tasks[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "title": "Nhiệm vụ mẫu"
+              },
+              "edge_id": "dep:5360101cb187f428ea42"
+            }
+          },
+          "edge_ids": [
+            "dep:5360101cb187f428ea42"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.04720000288216397
+        },
+        {
+          "target_tool": "tasks.complete",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "task_id": "fx_task_id"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "task_id": {
+              "source": "tool_observation",
+              "tool": "tasks.list",
+              "path": "tasks[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "title": "Nhiệm vụ mẫu"
+              },
+              "edge_id": "dep:5360101cb187f428ea42"
+            }
+          },
+          "edge_ids": [
+            "dep:5360101cb187f428ea42"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.0746000005165115
+        }
+      ],
+      "steps": [
+        {
+          "step_index": 0,
+          "tool_name": "tasks.list",
+          "final_arguments": {},
+          "origin": "b043_graph_read",
+          "graph_resolution": {
+            "status": "NEED_READ",
+            "arguments": {},
+            "reason": "Approved missing prerequisite",
+            "read_tool": "tasks.list",
+            "read_arguments": {},
+            "proofs": {},
+            "edge_ids": [
+              "dep:5360101cb187f428ea42"
+            ],
+            "unresolved_slots": [
+              "task_id"
+            ],
+            "elapsed_ms": 0.04339999577496201
+          },
+          "reason": "Approved missing prerequisite",
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "tasks": [
+              {
+                "id": "fx_task_id",
+                "title": "Nhiệm vụ mẫu"
+              }
+            ]
+          },
+          "outcome": "b043_graph_read_executed"
+        },
+        {
+          "step_index": 1,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"call\", \"name\": \"tasks.complete\", \"arguments\": {}}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "call",
+            "name": "tasks.complete",
+            "arguments": {}
+          },
+          "tool_name": "tasks.complete",
+          "safe_optional_cleanup": [],
+          "final_arguments": {
+            "task_id": "fx_task_id"
+          },
+          "validation": {
+            "ok": true,
+            "errors": []
+          },
+          "tool_seconds": 0.0,
+          "tool_result": {
+            "ok": true,
+            "done": true
+          },
+          "outcome": "model_executed"
+        },
+        {
+          "step_index": 2,
+          "feedback_given": null,
+          "origin": "model_policy",
+          "raw_model_output": "{\"action\": \"stop\"}",
+          "input_tokens": 10,
+          "output_tokens": 10,
+          "model_seconds": 0.001,
+          "parsed_decision": {
+            "action": "stop"
+          },
+          "outcome": "model_stop"
+        }
+      ],
+      "validation_audit": [
+        {
+          "name": "tasks.list",
+          "arguments": {},
+          "errors": []
+        },
+        {
+          "name": "tasks.complete",
+          "arguments": {
+            "task_id": "fx_task_id"
+          },
+          "errors": []
+        }
+      ]
+    }
+  ]
+}

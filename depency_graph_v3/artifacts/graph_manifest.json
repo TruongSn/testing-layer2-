@@ -1,0 +1,76 @@
+{
+  "version": "lifemate-full-dependency-graph-v3.0.0",
+  "source_digests": {
+    "inputs/LifeMate_B042_Progress_Retry_Controller_Kaggle.ipynb": "1e80fe50cab2eb195b665094d8f6560dd5215c09ce5dc001d56fb9403a6e00de",
+    "inputs/Spec.md": "b13ecc83e805c1e5531da6a5aac3f3621fdd12cee40e1814b82711b915bec731",
+    "previous_graph/curated_graph_v21.json": "341c4a63ac8a904c7964821b0516d3b9fd3e982c21dcb8e86de7d36c20c71ec1",
+    "previous_graph/validated_graph.json": "a0baeb44162e7ae4e99fa5da30f5acb97fd66fbad85b3555b60011512a74b46b",
+    "previous_graph/manual_review_queue_v2.csv": "56d5f7717306356c757f04bae558f9b8d6b7f19fcfa0929398bec4060fdeae27",
+    "previous_graph/metadata_value_flow_evidence.csv": "dcdc4a720daf19db474e62adab55f714f6d70d2c64eaa588ea064e17b52e1aa9",
+    "previous_graph/empirical_enrichment_candidates.csv": "ff7a100218ba1ebd33324b5a083900ffb408925ea19c868bd313781cbf6229d6",
+    "previous_graph/schema_fields.csv": "6e57250a231df46b8f3ffdd20cd25d1ff64eab8e67e5c148678b582206106f6a",
+    "previous_graph/one_of_alternatives.json": "47513c30b914a9de482c469afb914094b26c3b0c7cf4aec177c13203b2e2da13",
+    "reference_notebooks/LifeMate_Graph_Validation_v2_Kaggle.ipynb": "79f6ad5e8ba7d747ff23cfb12f87559f68e2e734e058e41fda6548fc9a24cdec",
+    "reference_notebooks/LifeMate_Graph_Curation_v21_Kaggle.ipynb": "12ee465d0a702879548ff782c92f4f4f38d07eef353073dd42130379ec64cee5",
+    "inputs/train_tools_catalog.json": "a994984bb580d7e0d60166641858901d428549682ba3614dbf9269037a33cce0",
+    "inputs/train.jsonl": "24c42c79fbe8db932fe9817d041c0d0ca422ac8177b413cc1be0cda1fd8941a8",
+    "README_RECOVERED.md": "7b33a732045e025f7c6372af24c83bb9d833fa46c2213330624f3668155dc6e1",
+    "manifest.json": "38ef2a91b2126fd337958ddca03bef695909808e39b3192aedf7d1572c25153a"
+  },
+  "artifacts_sha256": {
+    "approved_runtime_graph.json": "a61e0d3d94150c50363129fa1d31f03189411ef898a1a18707e80f5aa2ec0326",
+    "compiled_graph_v3.json": "67f7bf7ec9b5e196d7a50c32f2455ef3a79eece9fd57d147c21cb86aa9675b2d",
+    "full_dependency_graph_v3.json": "37514613a9dfc9d74c5d7aa17a48ae982514a29208c96957cd16c4201bd826bd",
+    "graph_review_queue_v3.csv": "c4b69318ebd2c43515163e8d81ac9190700ac46953c0fa6570bd403d9b2a3ee7",
+    "graph_validation_report.json": "981dd6e242740fce36b2c0c18d4fb4f8c4d4bd973ba1c400ef18a843897e2079",
+    "legacy_provenance_v3.json": "bf5178c8e860fecfc4b605601aa5a4e03d877e79f60244f8831ac53f713c78e4",
+    "source_integrity_report.json": "77090708e794bdb1c932cf1161dc8b5b84b17b1ecfc2f302d613726dbb7d571c",
+    "tool_coverage.csv": "acf09b9c15eed913192eef5f6dbbf99a1a1077de849fdbce44e93aa9c9fe7740",
+    "tool_registry_audit.json": "9bbe1b012cec946f59e5cf74cbef9b3e39c18e337fdc0dea1f3911163e4e0cbd"
+  },
+  "implementation_sha256": {
+    "__init__.py": "aa61a0e3331711980c97561ad8cc3a00bcf7617fdc24c2ba84f91301fb0b11f0",
+    "b043.py": "b1945f93f8caee35bf9294aa11e9c885126aeef7d052034807f7384b41c33565",
+    "builder.py": "c5a8f41652f62011b4935581145a4a1fc8853ce5acd603ca29ec8f4e56f0eca8",
+    "cli.py": "34010c5d426170191ac71433322c2b80d5678bbbb8ab88c38cbf2c73c9e26b6e",
+    "common.py": "6b7209bedf07f68bcecacaccef4482f74df844de967d79a8478501c382ab2072",
+    "compiler.py": "c8e258459594217e0053e231b686fc25a9bead442943c0fc187aac7fdb6adf07",
+    "demo.py": "923cbff62f666079c3ce63742cb8694cb69698fad920364d7bc57483ebd49961",
+    "evaluation.py": "efb459455efa80a1ca95b302418d6613e2e809753c4e78a63710616efe82fa8e",
+    "kaggle.py": "b1fb709eb3525cb9d108baa80b8d55c084bacdb6ff23b5f0bf95ce46d8453833",
+    "runtime.py": "2fae13bd427a30aecec0cfc5f1f6c068fe38fad2c45f002232cd1f216112359e",
+    "validation.py": "83e3e4e6951b5c83eb0954f99467b386e9b1cef9b8538fd847e7629811e66d4a"
+  },
+  "graph_content_sha256": "449fa731f239a4284e5e157a428d37d3872fbed776ca1aa99f28ef7aaab75ce8",
+  "compiled_payload_sha256": "96eccb7b0a9a0afc6c15820c969cdfc3aa5a1e847f172350c77fb365fb1a5049",
+  "graph_discovery_coverage": {
+    "apps": 46,
+    "audited_tools": 147,
+    "total_tools": 147,
+    "candidate_dependencies": 190,
+    "statuses": {
+      "VERIFIED": 72,
+      "NEEDS_REVIEW": 77,
+      "INSUFFICIENT_EVIDENCE": 35,
+      "REJECTED": 6
+    }
+  },
+  "runtime_enabled_coverage": {
+    "dependencies": 0,
+    "consumer_tools": 0,
+    "operator_approval_required": true
+  },
+  "legacy_counts": {
+    "structural_edges": 392,
+    "metadata_candidates": 75,
+    "empirical_candidates": 86,
+    "manual_review_relationships": 161,
+    "curated_edges": 20,
+    "legacy_schema_fields": 143,
+    "legacy_alternative_branches": 12
+  },
+  "execution": {
+    "gpu_tested": false,
+    "toolenv_available_locally": false
+  }
+}

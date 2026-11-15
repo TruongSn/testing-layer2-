@@ -1,0 +1,11 @@
+{
+  "version": "lifemate-full-dependency-graph-v3.0.0",
+  "graph_content_sha256": "7b98f8fb1c3f699a35dea72849c4a8183d441a449698f76ff07c9ce5befd8ad0",
+  "catalog_digest": "a994984bb580d7e0d60166641858901d428549682ba3614dbf9269037a33cce0",
+  "artifacts_sha256": {
+    "candidate_completion.csv": "99d9e4fdb0a7574cda0ca86ac630028d045006341e70c0e3c30241fc152ff678",
+    "full_dependency_graph_v3.json": "7124d08739bbd3526903fb698c0dbe629ac00be9e09a549daa2ad74b3fb8f8bb",
+    "graph_validation_report.json": "7df05b2e1b621ec3f817e888888088f7e89fc47adf97316c3e8e8f4d4ee39b88",
+    "operator_approvals.json": "6f6befb5a682601a2d37f8296a8372298642b486bd8899f4f437cee5276ec33c"
+  }
+}

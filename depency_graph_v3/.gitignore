@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+inputs/
+previous_graph/
+reference_notebooks/
+analysis/
+reports/*PRIVATE*
+kaggle_output/
+*.zip

@@ -1,0 +1,5 @@
+{
+  "status": "NOT_RUN",
+  "gpu_executed": false,
+  "reason": "CPU-only setting or no CUDA GPU"
+}

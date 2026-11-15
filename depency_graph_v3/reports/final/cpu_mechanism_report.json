@@ -1,0 +1,59 @@
+{
+  "scope": "CPU_MECHANISM_ONLY_NOT_QWEN_ACCURACY_LATENCY_OR_OFFICIAL_TOOLENV",
+  "production_runtime_edges": 59,
+  "data_contract_closed_loops": 57,
+  "context_contract_closed_loops": 2,
+  "development_scenarios": 5,
+  "scenarios_with_graph_reads": 5,
+  "graph_reads": 9,
+  "per_case": [
+    {
+      "id": "train_0136",
+      "graph_reads": 3,
+      "executed_tools": [
+        "chat_ott.list_chats",
+        "food_delivery.list_restaurants",
+        "food_delivery.get_menu",
+        "food_delivery.place_order"
+      ]
+    },
+    {
+      "id": "train_0463",
+      "graph_reads": 1,
+      "executed_tools": [
+        "chat_ott.list_chats",
+        "chat_ott.read_chat"
+      ]
+    },
+    {
+      "id": "train_0488",
+      "graph_reads": 1,
+      "executed_tools": [
+        "library.search",
+        "library.reserve"
+      ]
+    },
+    {
+      "id": "train_0557",
+      "graph_reads": 1,
+      "executed_tools": [
+        "music.list_tracks",
+        "music.play"
+      ]
+    },
+    {
+      "id": "train_0951",
+      "graph_reads": 3,
+      "executed_tools": [
+        "chat_ott.list_chats",
+        "chat_ott.read_chat",
+        "music.list_tracks",
+        "music.add_to_playlist"
+      ]
+    }
+  ],
+  "automatic_writes": 0,
+  "compiled_payload_sha256": "c903f0166b60656780a1111aa4db572692e64385c6b37e4da977af83ebdc7622",
+  "qwen_accuracy": null,
+  "gpu_latency": null
+}

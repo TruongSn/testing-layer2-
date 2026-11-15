@@ -1,0 +1,39 @@
+{
+  "status": "READY_FOR_SINGLE_USER_APPROVAL",
+  "graph_rebuilt": false,
+  "graph_content_sha256": "449fa731f239a4284e5e157a428d37d3872fbed776ca1aa99f28ef7aaab75ce8",
+  "source_artifacts_sha256": {
+    "approved_runtime_graph.json": "a61e0d3d94150c50363129fa1d31f03189411ef898a1a18707e80f5aa2ec0326",
+    "compiled_graph_v3.json": "67f7bf7ec9b5e196d7a50c32f2455ef3a79eece9fd57d147c21cb86aa9675b2d",
+    "full_dependency_graph_v3.json": "37514613a9dfc9d74c5d7aa17a48ae982514a29208c96957cd16c4201bd826bd",
+    "graph_review_queue_v3.csv": "c4b69318ebd2c43515163e8d81ac9190700ac46953c0fa6570bd403d9b2a3ee7",
+    "graph_validation_report.json": "981dd6e242740fce36b2c0c18d4fb4f8c4d4bd973ba1c400ef18a843897e2079",
+    "legacy_provenance_v3.json": "bf5178c8e860fecfc4b605601aa5a4e03d877e79f60244f8831ac53f713c78e4",
+    "source_integrity_report.json": "77090708e794bdb1c932cf1161dc8b5b84b17b1ecfc2f302d613726dbb7d571c",
+    "tool_coverage.csv": "acf09b9c15eed913192eef5f6dbbf99a1a1077de849fdbce44e93aa9c9fe7740",
+    "tool_registry_audit.json": "9bbe1b012cec946f59e5cf74cbef9b3e39c18e337fdc0dea1f3911163e4e0cbd"
+  },
+  "catalog_sha256": "a994984bb580d7e0d60166641858901d428549682ba3614dbf9269037a33cce0",
+  "production_approved_edges": 0,
+  "proposal_count": 19,
+  "test_scope": "SYNTHETIC_ONLY / FakeToolEnv / real B043 loop",
+  "runtime_code_sha256": {
+    "__init__.py": "aa61a0e3331711980c97561ad8cc3a00bcf7617fdc24c2ba84f91301fb0b11f0",
+    "b043.py": "a092ee5c26d98bc02b2197051ef193d9a0e01a1b8bf4ff29c9f355c0df17c6ac",
+    "builder.py": "c5a8f41652f62011b4935581145a4a1fc8853ce5acd603ca29ec8f4e56f0eca8",
+    "cli.py": "6cbc8863b265f164fb19d0923463f3b2760e71393b4be687b1ca9dbc2df3ed0f",
+    "common.py": "5a93af5255e8898a5e9b17b7379b11fe459cc0099eea16fb26a2a1a7e7b5df84",
+    "compiler.py": "b206b6143d49cdebc0da7b5af7dd30927da126a27785c6750e6a8089b4770a0d",
+    "demo.py": "923cbff62f666079c3ce63742cb8694cb69698fad920364d7bc57483ebd49961",
+    "evaluation.py": "efb459455efa80a1ca95b302418d6613e2e809753c4e78a63710616efe82fa8e",
+    "kaggle.py": "7140a1e3b222e9fb9e8b54719d8c996dd4374de164cf2d7eb80bd6bd286d872c",
+    "runtime.py": "ecf6edb6e4c8ef60d9c018e51b9c6ee382a9734c00b63b99ed1532895cebb430",
+    "validation.py": "83e3e4e6951b5c83eb0954f99467b386e9b1cef9b8538fd847e7629811e66d4a"
+  },
+  "files_sha256": {
+    "operator_approvals.proposed.json": "956faba8a4db54b48dbd7d830d69107839862b314596e92d573e81121abae253",
+    "runtime_activation_final.csv": "3a480b977b819bf17f6d9ac81ef13c7c375088a745d4f9db1415c5e2bd9f3cd4",
+    "runtime_approval_review.csv": "a89ccecaa9471dd9d9aedef0d831ec94c70244a45b941b7cf2af8c964c2eab59",
+    "reports/ready19_closed_loop.json": "987dfdea59d3c3470f319df29a56264bf00dc9b495c5d8061df2b7c92a9e90d8"
+  }
+}

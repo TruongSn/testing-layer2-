@@ -1,0 +1,3166 @@
+[
+  {
+    "edge_id": "dep:9de64089d9af535aa902",
+    "target_path": "alarm_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "alarms": [
+        {
+          "id": "alm_01",
+          "time": "2026-11-14T06:15:00+07:00",
+          "label": "họp sớm",
+          "repeat": "daily",
+          "enabled": true
+        },
+        {
+          "id": "alm_02",
+          "time": "2026-11-14T07:00:00+07:00",
+          "label": "họp sớm",
+          "repeat": "daily",
+          "enabled": true
+        }
+      ]
+    },
+    "selectors": {
+      "label": "họp sớm",
+      "time": "2026-11-14T06:15:00+07:00"
+    },
+    "consumer_arguments": {},
+    "expected_value": "alm_01"
+  },
+  {
+    "edge_id": "dep:99f298c029ff65fd60d9",
+    "target_path": "alarm_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "alarms": [
+        {
+          "id": "alm_01",
+          "time": "2026-11-14T06:15:00+07:00",
+          "label": "họp sớm",
+          "repeat": "daily",
+          "enabled": true
+        },
+        {
+          "id": "alm_02",
+          "time": "2026-11-14T07:00:00+07:00",
+          "label": "họp sớm",
+          "repeat": "daily",
+          "enabled": true
+        }
+      ]
+    },
+    "selectors": {
+      "label": "họp sớm",
+      "time": "2026-11-14T06:15:00+07:00"
+    },
+    "consumer_arguments": {},
+    "expected_value": "alm_01"
+  },
+  {
+    "edge_id": "dep:2994e8297309d5a23b0f",
+    "target_path": "appliance_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "appliances": [
+        {
+          "id": "appl_01",
+          "name": "máy giặt",
+          "type": "washer",
+          "room": "phòng giặt",
+          "cycles": [
+            "quick",
+            "normal",
+            "eco",
+            "heavy",
+            "wool"
+          ],
+          "cycle_labels": {
+            "quick": "giặt nhanh",
+            "normal": "giặt thường",
+            "eco": "tiết kiệm",
+            "heavy": "đồ dày",
+            "wool": "đồ len"
+          },
+          "state": {
+            "status": "idle",
+            "cycle": null,
+            "delay_minutes": 0
+          }
+        },
+        {
+          "id": "appl_02",
+          "name": "máy rửa bát",
+          "type": "dishwasher",
+          "room": "bếp",
+          "cycles": [
+            "quick",
+            "normal",
+            "eco",
+            "intensive"
+          ],
+          "cycle_labels": {
+            "quick": "rửa nhanh",
+            "normal": "rửa thường",
+            "eco": "tiết kiệm",
+            "intensive": "rửa mạnh"
+          },
+          "state": {
+            "status": "idle",
+            "cycle": null,
+            "delay_minutes": 0
+          }
+        },
+        {
+          "id": "appl_03",
+          "name": "máy sấy quần áo",
+          "type": "dryer",
+          "room": "phòng giặt",
+          "cycles": [
+            "quick",
+            "normal",
+            "delicate"
+          ],
+          "cycle_labels": {
+            "quick": "sấy nhanh",
+            "normal": "sấy thường",
+            "delicate": "đồ mỏng"
+          },
+          "state": {
+            "status": "idle",
+            "cycle": null,
+            "delay_minutes": 0
+          }
+        },
+        {
+          "id": "appl_04",
+          "name": "máy lọc không khí",
+          "type": "air_purifier",
+          "room": "phòng khách",
+          "cycles": [
+            "auto",
+            "sleep",
+            "turbo"
+          ],
+          "cycle_labels": {
+            "auto": "tự động",
+            "sleep": "ngủ",
+            "turbo": "lọc mạnh"
+          },
+          "state": {
+            "status": "idle",
+            "cycle": null,
+            "delay_minutes": 0
+          }
+        },
+        {
+          "id": "appl_05",
+          "name": "lò vi sóng",
+          "type": "microwave",
+          "room": "bếp",
+          "cycles": [
+            "reheat",
+            "defrost",
+            "cook"
+          ],
+          "cycle_labels": {
+            "reheat": "hâm nóng",
+            "defrost": "rã đông",
+            "cook": "nấu"
+          },
+          "state": {
+            "status": "idle",
+            "cycle": null,
+            "delay_minutes": 0
+          }
+        }
+      ]
+    },
+    "selectors": {
+      "name": "máy giặt",
+      "room": "phòng giặt"
+    },
+    "consumer_arguments": {},
+    "expected_value": "appl_01"
+  },
+  {
+    "edge_id": "dep:34a87e9f8997a5bf8c0e",
+    "target_path": "bike_id",
+    "producer_arguments": {
+      "near": "Yên Phụ"
+    },
+    "observation": {
+      "ok": true,
+      "bikes": [
+        {
+          "id": "bike_07",
+          "name": "Xe đạp xanh số 42",
+          "station": "Trạm Yên Phụ",
+          "available": true,
+          "price_per_hour": 10000,
+          "front_basket": true
+        },
+        {
+          "id": "bike_08",
+          "name": "Xe đạp thể thao 108",
+          "station": "Trạm Yên Phụ",
+          "available": true,
+          "price_per_hour": 15000,
+          "front_basket": false
+        }
+      ]
+    },
+    "selectors": {
+      "name": "Xe đạp xanh số 42",
+      "station": "Trạm Yên Phụ"
+    },
+    "consumer_arguments": {},
+    "expected_value": "bike_07"
+  },
+  {
+    "edge_id": "dep:5867b51356889cafc932",
+    "target_path": "event_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "events": [
+        {
+          "id": "evt_01",
+          "title": "chạy bộ",
+          "start": "2026-11-29T08:00:00+07:00",
+          "end": "2026-11-29T09:00:00+07:00",
+          "location": "Sân bóng Mini",
+          "status": "confirmed"
+        },
+        {
+          "id": "evt_02",
+          "title": "đá bóng",
+          "start": "2026-11-29T14:00:00+07:00",
+          "end": "2026-11-29T15:00:00+07:00",
+          "location": "Văn phòng",
+          "status": "confirmed"
+        }
+      ]
+    },
+    "selectors": {
+      "title": "chạy bộ",
+      "start": "2026-11-29T08:00:00+07:00"
+    },
+    "consumer_arguments": {},
+    "expected_value": "evt_01"
+  },
+  {
+    "edge_id": "dep:0d70b3b42e0e1a11db81",
+    "target_path": "event_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "events": [
+        {
+          "id": "evt_01",
+          "title": "chạy bộ",
+          "start": "2026-11-29T08:00:00+07:00",
+          "end": "2026-11-29T09:00:00+07:00",
+          "location": "Sân bóng Mini",
+          "status": "confirmed"
+        },
+        {
+          "id": "evt_02",
+          "title": "đá bóng",
+          "start": "2026-11-29T14:00:00+07:00",
+          "end": "2026-11-29T15:00:00+07:00",
+          "location": "Văn phòng",
+          "status": "confirmed"
+        }
+      ]
+    },
+    "selectors": {
+      "title": "chạy bộ",
+      "start": "2026-11-29T08:00:00+07:00"
+    },
+    "consumer_arguments": {},
+    "expected_value": "evt_01"
+  },
+  {
+    "edge_id": "dep:c11bf819107f9577c994",
+    "target_path": "dropoff",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "events": [
+        {
+          "id": "evt_01",
+          "title": "chạy bộ",
+          "start": "2026-11-29T08:00:00+07:00",
+          "end": "2026-11-29T09:00:00+07:00",
+          "location": "Sân bóng Mini",
+          "status": "confirmed"
+        },
+        {
+          "id": "evt_02",
+          "title": "đá bóng",
+          "start": "2026-11-29T14:00:00+07:00",
+          "end": "2026-11-29T15:00:00+07:00",
+          "location": "Văn phòng",
+          "status": "confirmed"
+        }
+      ]
+    },
+    "selectors": {
+      "title": "chạy bộ",
+      "start": "2026-11-29T08:00:00+07:00"
+    },
+    "consumer_arguments": {
+      "pickup": "fixture value",
+      "vehicle": "bike"
+    },
+    "expected_value": "Sân bóng Mini"
+  },
+  {
+    "edge_id": "dep:25908a2c50ac50c671b5",
+    "target_path": "chat_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "chats": [
+        {
+          "id": "chat_01",
+          "name": "Hương",
+          "type": "direct",
+          "members": [
+            "Hương"
+          ]
+        },
+        {
+          "id": "chat_02",
+          "name": "Mẹ",
+          "type": "direct",
+          "members": [
+            "Mẹ"
+          ]
+        },
+        {
+          "id": "chat_03",
+          "name": "Cô giáo Mai",
+          "type": "direct",
+          "members": [
+            "Cô giáo Mai"
+          ]
+        },
+        {
+          "id": "chat_04",
+          "name": "Bác Ba",
+          "type": "direct",
+          "members": [
+            "Bác Ba"
+          ]
+        },
+        {
+          "id": "chat_05",
+          "name": "Gia đình",
+          "type": "group",
+          "members": [
+            "Mẹ",
+            "Bố",
+            "Lan"
+          ]
+        }
+      ]
+    },
+    "selectors": {
+      "name": "Hương"
+    },
+    "consumer_arguments": {},
+    "expected_value": "chat_01"
+  },
+  {
+    "edge_id": "dep:167320b6f27d9b86421a",
+    "target_path": "chat_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "chats": [
+        {
+          "id": "chat_01",
+          "name": "Hương",
+          "type": "direct",
+          "members": [
+            "Hương"
+          ]
+        },
+        {
+          "id": "chat_02",
+          "name": "Mẹ",
+          "type": "direct",
+          "members": [
+            "Mẹ"
+          ]
+        },
+        {
+          "id": "chat_03",
+          "name": "Cô giáo Mai",
+          "type": "direct",
+          "members": [
+            "Cô giáo Mai"
+          ]
+        },
+        {
+          "id": "chat_04",
+          "name": "Bác Ba",
+          "type": "direct",
+          "members": [
+            "Bác Ba"
+          ]
+        },
+        {
+          "id": "chat_05",
+          "name": "Gia đình",
+          "type": "group",
+          "members": [
+            "Mẹ",
+            "Bố",
+            "Lan"
+          ]
+        }
+      ]
+    },
+    "selectors": {
+      "name": "Hương"
+    },
+    "consumer_arguments": {},
+    "expected_value": "chat_01"
+  },
+  {
+    "edge_id": "dep:fe95457f769ddebf56c5",
+    "target_path": "chat_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "chats": [
+        {
+          "id": "chat_01",
+          "name": "Hương",
+          "type": "direct",
+          "members": [
+            "Hương"
+          ]
+        },
+        {
+          "id": "chat_02",
+          "name": "Mẹ",
+          "type": "direct",
+          "members": [
+            "Mẹ"
+          ]
+        },
+        {
+          "id": "chat_03",
+          "name": "Cô giáo Mai",
+          "type": "direct",
+          "members": [
+            "Cô giáo Mai"
+          ]
+        },
+        {
+          "id": "chat_04",
+          "name": "Bác Ba",
+          "type": "direct",
+          "members": [
+            "Bác Ba"
+          ]
+        },
+        {
+          "id": "chat_05",
+          "name": "Gia đình",
+          "type": "group",
+          "members": [
+            "Mẹ",
+            "Bố",
+            "Lan"
+          ]
+        }
+      ]
+    },
+    "selectors": {
+      "name": "Hương"
+    },
+    "consumer_arguments": {},
+    "expected_value": "chat_01"
+  },
+  {
+    "edge_id": "dep:30390f76b61d1faf7ebe",
+    "target_path": "chat_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "chats": [
+        {
+          "id": "chat_01",
+          "name": "Hương",
+          "type": "direct",
+          "members": [
+            "Hương"
+          ]
+        },
+        {
+          "id": "chat_02",
+          "name": "Mẹ",
+          "type": "direct",
+          "members": [
+            "Mẹ"
+          ]
+        },
+        {
+          "id": "chat_03",
+          "name": "Cô giáo Mai",
+          "type": "direct",
+          "members": [
+            "Cô giáo Mai"
+          ]
+        },
+        {
+          "id": "chat_04",
+          "name": "Bác Ba",
+          "type": "direct",
+          "members": [
+            "Bác Ba"
+          ]
+        },
+        {
+          "id": "chat_05",
+          "name": "Gia đình",
+          "type": "group",
+          "members": [
+            "Mẹ",
+            "Bố",
+            "Lan"
+          ]
+        }
+      ]
+    },
+    "selectors": {
+      "name": "Hương"
+    },
+    "consumer_arguments": {
+      "content": "fixture value"
+    },
+    "expected_value": "chat_01"
+  },
+  {
+    "edge_id": "dep:4ed4fe3e33cabfc99185",
+    "target_path": "contact_id",
+    "producer_arguments": {
+      "query": "Sếp Dũng"
+    },
+    "observation": {
+      "ok": true,
+      "contacts": [
+        {
+          "id": "c_08",
+          "name": "Sếp Dũng",
+          "relation": "sếp",
+          "phone": "09925652941"
+        }
+      ]
+    },
+    "selectors": {
+      "name": "Sếp Dũng"
+    },
+    "consumer_arguments": {},
+    "expected_value": "c_08"
+  },
+  {
+    "edge_id": "dep:53c88b776adfb7fc5cf9",
+    "target_path": "contact_id",
+    "producer_arguments": {
+      "query": "Sếp Dũng"
+    },
+    "observation": {
+      "ok": true,
+      "contacts": [
+        {
+          "id": "c_08",
+          "name": "Sếp Dũng",
+          "relation": "sếp",
+          "phone": "09925652941"
+        }
+      ]
+    },
+    "selectors": {
+      "name": "Sếp Dũng"
+    },
+    "consumer_arguments": {
+      "phone": "0912345678"
+    },
+    "expected_value": "c_08"
+  },
+  {
+    "edge_id": "dep:27323065cc846d864e4b",
+    "target_path": "to[0]",
+    "producer_arguments": {
+      "query": "Thảo"
+    },
+    "observation": {
+      "ok": true,
+      "contacts": [
+        {
+          "id": "c_01",
+          "name": "Hương",
+          "relation": "bạn",
+          "phone": "09910510005"
+        },
+        {
+          "id": "c_02",
+          "name": "Lan",
+          "relation": "vợ",
+          "phone": "09271380774"
+        },
+        {
+          "id": "c_03",
+          "name": "Bố",
+          "relation": "bố",
+          "phone": "09553772345"
+        },
+        {
+          "id": "c_04",
+          "name": "Minh",
+          "relation": "đồng nghiệp",
+          "phone": "09368701734"
+        },
+        {
+          "id": "c_05",
+          "name": "Bác Ba",
+          "relation": "hàng xóm",
+          "phone": "09774271782"
+        },
+        {
+          "id": "c_06",
+          "name": "Sếp Dũng",
+          "relation": "sếp",
+          "phone": "09244222061"
+        },
+        {
+          "id": "c_07",
+          "name": "Thảo",
+          "relation": "trưởng nhóm sản phẩm",
+          "phone": "09382156408",
+          "email": "thao.le@congty.example.test"
+        }
+      ]
+    },
+    "selectors": {
+      "name": "Thảo"
+    },
+    "consumer_arguments": {
+      "to": [],
+      "subject": "fixture value",
+      "body": "fixture value"
+    },
+    "expected_value": "thao.le@congty.example.test"
+  },
+  {
+    "edge_id": "dep:c149f053747a1e3a784e",
+    "target_path": "to[0]",
+    "producer_arguments": {
+      "query": "Thảo"
+    },
+    "observation": {
+      "ok": true,
+      "contacts": [
+        {
+          "id": "c_01",
+          "name": "Hương",
+          "relation": "bạn",
+          "phone": "09910510005"
+        },
+        {
+          "id": "c_02",
+          "name": "Lan",
+          "relation": "vợ",
+          "phone": "09271380774"
+        },
+        {
+          "id": "c_03",
+          "name": "Bố",
+          "relation": "bố",
+          "phone": "09553772345"
+        },
+        {
+          "id": "c_04",
+          "name": "Minh",
+          "relation": "đồng nghiệp",
+          "phone": "09368701734"
+        },
+        {
+          "id": "c_05",
+          "name": "Bác Ba",
+          "relation": "hàng xóm",
+          "phone": "09774271782"
+        },
+        {
+          "id": "c_06",
+          "name": "Sếp Dũng",
+          "relation": "sếp",
+          "phone": "09244222061"
+        },
+        {
+          "id": "c_07",
+          "name": "Thảo",
+          "relation": "trưởng nhóm sản phẩm",
+          "phone": "09382156408",
+          "email": "thao.le@congty.example.test"
+        }
+      ]
+    },
+    "selectors": {
+      "name": "Thảo"
+    },
+    "consumer_arguments": {
+      "to": [],
+      "subject": "fixture value",
+      "body": "fixture value"
+    },
+    "expected_value": "thao.le@congty.example.test"
+  },
+  {
+    "edge_id": "dep:374d04bc31ecac2e33d3",
+    "target_path": "contact_id",
+    "producer_arguments": {
+      "query": "Sếp Dũng"
+    },
+    "observation": {
+      "ok": true,
+      "contacts": [
+        {
+          "id": "c_08",
+          "name": "Sếp Dũng",
+          "relation": "sếp",
+          "phone": "09925652941"
+        }
+      ]
+    },
+    "selectors": {
+      "name": "Sếp Dũng"
+    },
+    "consumer_arguments": {},
+    "expected_value": "c_08"
+  },
+  {
+    "edge_id": "dep:5de495d7fc89a9ddae30",
+    "target_path": "contact_id",
+    "producer_arguments": {
+      "query": "Sếp Dũng"
+    },
+    "observation": {
+      "ok": true,
+      "contacts": [
+        {
+          "id": "c_08",
+          "name": "Sếp Dũng",
+          "relation": "sếp",
+          "phone": "09925652941"
+        }
+      ]
+    },
+    "selectors": {
+      "name": "Sếp Dũng"
+    },
+    "consumer_arguments": {},
+    "expected_value": "c_08"
+  },
+  {
+    "edge_id": "dep:9bd3df08f4ba385afae0",
+    "target_path": "contact_id",
+    "producer_arguments": {
+      "query": "Sếp Dũng"
+    },
+    "observation": {
+      "ok": true,
+      "contacts": [
+        {
+          "id": "c_08",
+          "name": "Sếp Dũng",
+          "relation": "sếp",
+          "phone": "09925652941"
+        }
+      ]
+    },
+    "selectors": {
+      "name": "Sếp Dũng"
+    },
+    "consumer_arguments": {
+      "content": "fixture value"
+    },
+    "expected_value": "c_08"
+  },
+  {
+    "edge_id": "dep:5c14e017dae569031716",
+    "target_path": "attendees[0]",
+    "producer_arguments": {
+      "query": "Sếp Dũng"
+    },
+    "observation": {
+      "ok": true,
+      "contacts": [
+        {
+          "id": "c_08",
+          "name": "Sếp Dũng",
+          "relation": "sếp",
+          "phone": "09925652941"
+        }
+      ]
+    },
+    "selectors": {
+      "name": "Sếp Dũng"
+    },
+    "consumer_arguments": {
+      "title": "fixture value",
+      "start": "2026-12-14T12:00:00+07:00",
+      "attendees": []
+    },
+    "expected_value": "c_08"
+  },
+  {
+    "edge_id": "dep:6e08246abe4e5d15ff81",
+    "target_path": "email_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "emails": [
+        {
+          "id": "mail_06",
+          "from": "xuongin@anhduong.example.test",
+          "from_name": "Xưởng in Ánh Dương",
+          "to": [
+            "me@example.test"
+          ],
+          "subject": "Lịch để bàn của anh Khoa đã in xong",
+          "snippet": "200 cuốn lịch để bàn sẽ đóng thùng xong từ ngày 27/09.",
+          "time": "2026-09-24T07:50:00+07:00",
+          "unread": true,
+          "folder": "inbox"
+        },
+        {
+          "id": "mail_01",
+          "from": "no-reply@muado.example.test",
+          "from_name": "Muado",
+          "to": [
+            "me@example.test"
+          ],
+          "subject": "Đơn hàng đã giao thành công",
+          "snippet": "Đơn hàng của bạn đã được giao.",
+          "time": "2026-09-23T13:30:00+07:00",
+          "unread": true,
+          "folder": "inbox"
+        },
+        {
+          "id": "mail_02",
+          "from": "dung.pham@congty.example.test",
+          "from_name": "Anh Dũng",
+          "to": [
+            "me@example.test"
+          ],
+          "subject": "Hẹn cà phê bàn dự án",
+          "snippet": "Tuần này em rảnh hôm nào mình ngồi cà phê nhé.",
+          "time": "2026-09-23T10:45:00+07:00",
+          "unread": false,
+          "folder": "inbox"
+        },
+        {
+          "id": "mail_03",
+          "from": "vanphong@kimdong.example.test",
+          "from_name": "Trường Tiểu học Kim Đồng",
+          "to": [
+            "me@example.test"
+          ],
+          "subject": "Thư mời họp phụ huynh",
+          "snippet": "Nhà trường kính mời phụ huynh dự họp đầu năm.",
+          "time": "2026-09-22T16:45:00+07:00",
+          "unread": false,
+          "folder": "inbox"
+        },
+        {
+          "id": "mail_04",
+          "from": "thu.tran@congty.example.test",
+          "from_name": "Chị Thu",
+          "to": [
+            "me@example.test"
+          ],
+          "subject": "Gửi lại báo cáo tháng 9",
+          "snippet": "Em gửi lại giúp chị bản báo cáo có số liệu mới nhé.",
+          "time": "2026-09-22T04:30:00+07:00",
+          "unread": true,
+          "folder": "inbox"
+        },
+        {
+          "id": "mail_05",
+          "from": "thongbao@zdv.example.test",
+          "from_name": "Ngân hàng Đại Việt",
+          "to": [
+            "me@example.test"
+          ],
+          "subject": "Sao kê tài khoản tháng 9",
+          "snippet": "Sao kê điện tử tài khoản của quý khách đã sẵn sàng.",
+          "time": "2026-09-21T19:30:00+07:00",
+          "unread": true,
+          "folder": "inbox"
+        }
+      ]
+    },
+    "selectors": {
+      "subject": "Lịch để bàn của anh Khoa đã in xong",
+      "from": "xuongin@anhduong.example.test",
+      "time": "2026-09-24T07:50:00+07:00"
+    },
+    "consumer_arguments": {
+      "action": "archive"
+    },
+    "expected_value": "mail_06"
+  },
+  {
+    "edge_id": "dep:b338cd916f8067caf1ac",
+    "target_path": "email_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "emails": [
+        {
+          "id": "mail_06",
+          "from": "xuongin@anhduong.example.test",
+          "from_name": "Xưởng in Ánh Dương",
+          "to": [
+            "me@example.test"
+          ],
+          "subject": "Lịch để bàn của anh Khoa đã in xong",
+          "snippet": "200 cuốn lịch để bàn sẽ đóng thùng xong từ ngày 27/09.",
+          "time": "2026-09-24T07:50:00+07:00",
+          "unread": true,
+          "folder": "inbox"
+        },
+        {
+          "id": "mail_01",
+          "from": "no-reply@muado.example.test",
+          "from_name": "Muado",
+          "to": [
+            "me@example.test"
+          ],
+          "subject": "Đơn hàng đã giao thành công",
+          "snippet": "Đơn hàng của bạn đã được giao.",
+          "time": "2026-09-23T13:30:00+07:00",
+          "unread": true,
+          "folder": "inbox"
+        },
+        {
+          "id": "mail_02",
+          "from": "dung.pham@congty.example.test",
+          "from_name": "Anh Dũng",
+          "to": [
+            "me@example.test"
+          ],
+          "subject": "Hẹn cà phê bàn dự án",
+          "snippet": "Tuần này em rảnh hôm nào mình ngồi cà phê nhé.",
+          "time": "2026-09-23T10:45:00+07:00",
+          "unread": false,
+          "folder": "inbox"
+        },
+        {
+          "id": "mail_03",
+          "from": "vanphong@kimdong.example.test",
+          "from_name": "Trường Tiểu học Kim Đồng",
+          "to": [
+            "me@example.test"
+          ],
+          "subject": "Thư mời họp phụ huynh",
+          "snippet": "Nhà trường kính mời phụ huynh dự họp đầu năm.",
+          "time": "2026-09-22T16:45:00+07:00",
+          "unread": false,
+          "folder": "inbox"
+        },
+        {
+          "id": "mail_04",
+          "from": "thu.tran@congty.example.test",
+          "from_name": "Chị Thu",
+          "to": [
+            "me@example.test"
+          ],
+          "subject": "Gửi lại báo cáo tháng 9",
+          "snippet": "Em gửi lại giúp chị bản báo cáo có số liệu mới nhé.",
+          "time": "2026-09-22T04:30:00+07:00",
+          "unread": true,
+          "folder": "inbox"
+        },
+        {
+          "id": "mail_05",
+          "from": "thongbao@zdv.example.test",
+          "from_name": "Ngân hàng Đại Việt",
+          "to": [
+            "me@example.test"
+          ],
+          "subject": "Sao kê tài khoản tháng 9",
+          "snippet": "Sao kê điện tử tài khoản của quý khách đã sẵn sàng.",
+          "time": "2026-09-21T19:30:00+07:00",
+          "unread": true,
+          "folder": "inbox"
+        }
+      ]
+    },
+    "selectors": {
+      "subject": "Lịch để bàn của anh Khoa đã in xong"
+    },
+    "consumer_arguments": {},
+    "expected_value": "mail_06"
+  },
+  {
+    "edge_id": "dep:eea4ed636c19a955070d",
+    "target_path": "email_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "emails": [
+        {
+          "id": "mail_06",
+          "from": "xuongin@anhduong.example.test",
+          "from_name": "Xưởng in Ánh Dương",
+          "to": [
+            "me@example.test"
+          ],
+          "subject": "Lịch để bàn của anh Khoa đã in xong",
+          "snippet": "200 cuốn lịch để bàn sẽ đóng thùng xong từ ngày 27/09.",
+          "time": "2026-09-24T07:50:00+07:00",
+          "unread": true,
+          "folder": "inbox"
+        },
+        {
+          "id": "mail_01",
+          "from": "no-reply@muado.example.test",
+          "from_name": "Muado",
+          "to": [
+            "me@example.test"
+          ],
+          "subject": "Đơn hàng đã giao thành công",
+          "snippet": "Đơn hàng của bạn đã được giao.",
+          "time": "2026-09-23T13:30:00+07:00",
+          "unread": true,
+          "folder": "inbox"
+        },
+        {
+          "id": "mail_02",
+          "from": "dung.pham@congty.example.test",
+          "from_name": "Anh Dũng",
+          "to": [
+            "me@example.test"
+          ],
+          "subject": "Hẹn cà phê bàn dự án",
+          "snippet": "Tuần này em rảnh hôm nào mình ngồi cà phê nhé.",
+          "time": "2026-09-23T10:45:00+07:00",
+          "unread": false,
+          "folder": "inbox"
+        },
+        {
+          "id": "mail_03",
+          "from": "vanphong@kimdong.example.test",
+          "from_name": "Trường Tiểu học Kim Đồng",
+          "to": [
+            "me@example.test"
+          ],
+          "subject": "Thư mời họp phụ huynh",
+          "snippet": "Nhà trường kính mời phụ huynh dự họp đầu năm.",
+          "time": "2026-09-22T16:45:00+07:00",
+          "unread": false,
+          "folder": "inbox"
+        },
+        {
+          "id": "mail_04",
+          "from": "thu.tran@congty.example.test",
+          "from_name": "Chị Thu",
+          "to": [
+            "me@example.test"
+          ],
+          "subject": "Gửi lại báo cáo tháng 9",
+          "snippet": "Em gửi lại giúp chị bản báo cáo có số liệu mới nhé.",
+          "time": "2026-09-22T04:30:00+07:00",
+          "unread": true,
+          "folder": "inbox"
+        },
+        {
+          "id": "mail_05",
+          "from": "thongbao@zdv.example.test",
+          "from_name": "Ngân hàng Đại Việt",
+          "to": [
+            "me@example.test"
+          ],
+          "subject": "Sao kê tài khoản tháng 9",
+          "snippet": "Sao kê điện tử tài khoản của quý khách đã sẵn sàng.",
+          "time": "2026-09-21T19:30:00+07:00",
+          "unread": true,
+          "folder": "inbox"
+        }
+      ]
+    },
+    "selectors": {
+      "subject": "Lịch để bàn của anh Khoa đã in xong",
+      "from": "xuongin@anhduong.example.test"
+    },
+    "consumer_arguments": {
+      "body": "fixture value"
+    },
+    "expected_value": "mail_06"
+  },
+  {
+    "edge_id": "dep:3e6d5d0f6afa0a2c2d31",
+    "target_path": "booking_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "bookings": [
+        {
+          "id": "bk_731",
+          "flight_id": "fl_5207",
+          "passengers": 1,
+          "seat_class": "economy",
+          "status": "confirmed",
+          "flight": {
+            "origin": "DAD",
+            "destination": "SGN",
+            "date": "2026-10-24",
+            "depart": "05:45",
+            "arrive": "07:10",
+            "airline": "Rồng Việt Air"
+          }
+        }
+      ]
+    },
+    "selectors": {
+      "flight.origin": "DAD",
+      "flight.destination": "SGN",
+      "flight.date": "2026-10-24",
+      "flight.depart": "05:45"
+    },
+    "consumer_arguments": {},
+    "expected_value": "bk_731"
+  },
+  {
+    "edge_id": "dep:2a9ccb3cb358a0f43f77",
+    "target_path": "booking_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "bookings": [
+        {
+          "id": "bk_731",
+          "flight_id": "fl_5207",
+          "passengers": 1,
+          "seat_class": "economy",
+          "status": "confirmed",
+          "flight": {
+            "origin": "DAD",
+            "destination": "SGN",
+            "date": "2026-10-24",
+            "depart": "05:45",
+            "arrive": "07:10",
+            "airline": "Rồng Việt Air"
+          }
+        }
+      ]
+    },
+    "selectors": {
+      "flight.origin": "DAD",
+      "flight.destination": "SGN",
+      "flight.date": "2026-10-24",
+      "flight.depart": "05:45"
+    },
+    "consumer_arguments": {},
+    "expected_value": "bk_731"
+  },
+  {
+    "edge_id": "dep:d5785c350c46f4015331",
+    "target_path": "flight_id",
+    "producer_arguments": {
+      "origin": "HAN",
+      "destination": "HUI",
+      "date": "2026-09-25",
+      "passengers": 2
+    },
+    "observation": {
+      "ok": true,
+      "flights": [
+        {
+          "id": "fl_01",
+          "flight_no": "RV107",
+          "origin": "HAN",
+          "destination": "HUI",
+          "date": "2026-09-25",
+          "depart": "07:15",
+          "arrive": "08:25",
+          "airline": "Rồng Việt Air",
+          "price": 1850000
+        },
+        {
+          "id": "fl_02",
+          "flight_no": "RV111",
+          "origin": "HAN",
+          "destination": "HUI",
+          "date": "2026-09-25",
+          "depart": "09:00",
+          "arrive": "10:10",
+          "airline": "Rồng Việt Air",
+          "price": 1690000
+        },
+        {
+          "id": "fl_03",
+          "flight_no": "JX571",
+          "origin": "HAN",
+          "destination": "HUI",
+          "date": "2026-09-25",
+          "depart": "11:30",
+          "arrive": "12:40",
+          "airline": "JetXanh",
+          "price": 1190000
+        },
+        {
+          "id": "fl_04",
+          "flight_no": "SA1023",
+          "origin": "HAN",
+          "destination": "HUI",
+          "date": "2026-09-25",
+          "depart": "15:40",
+          "arrive": "16:50",
+          "airline": "Sen Air",
+          "price": 1420000
+        }
+      ]
+    },
+    "selectors": {
+      "flight_no": "RV107",
+      "date": "2026-09-25"
+    },
+    "consumer_arguments": {
+      "passengers": 1
+    },
+    "expected_value": "fl_01"
+  },
+  {
+    "edge_id": "dep:a03bc3e5ab4d5f3b330e",
+    "target_path": "items[0].item_id",
+    "producer_arguments": {
+      "restaurant_id": "rest_01"
+    },
+    "observation": {
+      "ok": true,
+      "menu": [
+        {
+          "id": "rest_01_m1",
+          "name": "Bún bò Huế đặc biệt",
+          "price": 55000
+        },
+        {
+          "id": "rest_01_m2",
+          "name": "Bún bò giò",
+          "price": 45000
+        },
+        {
+          "id": "rest_01_m3",
+          "name": "Chả cua",
+          "price": 15000
+        }
+      ]
+    },
+    "selectors": {
+      "name": "Bún bò Huế đặc biệt"
+    },
+    "consumer_arguments": {
+      "restaurant_id": "rest_01",
+      "items": [
+        {
+          "quantity": 1
+        }
+      ]
+    },
+    "expected_value": "rest_01_m1"
+  },
+  {
+    "edge_id": "dep:29fb23b97b4e120d82a4",
+    "target_path": "restaurant_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "restaurants": [
+        {
+          "id": "rest_01",
+          "name": "Bún bò Huế Cô Ba",
+          "tags": [
+            "bún bò",
+            "món Huế"
+          ],
+          "rating": 4.5
+        },
+        {
+          "id": "rest_02",
+          "name": "Cơm tấm Sài Gòn 168",
+          "tags": [
+            "cơm tấm",
+            "cơm"
+          ],
+          "rating": 4.5
+        },
+        {
+          "id": "rest_03",
+          "name": "Pizza Nhà Làm",
+          "tags": [
+            "pizza",
+            "món Ý"
+          ],
+          "rating": 4.5
+        },
+        {
+          "id": "rest_04",
+          "name": "Trà sữa Nhà Mèo",
+          "tags": [
+            "trà sữa",
+            "đồ uống"
+          ],
+          "rating": 4.5
+        }
+      ]
+    },
+    "selectors": {
+      "name": "Bún bò Huế Cô Ba"
+    },
+    "consumer_arguments": {},
+    "expected_value": "rest_01"
+  },
+  {
+    "edge_id": "dep:55700ed6e434f916ca46",
+    "target_path": "restaurant_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "restaurants": [
+        {
+          "id": "rest_01",
+          "name": "Bún bò Huế Cô Ba",
+          "tags": [
+            "bún bò",
+            "món Huế"
+          ],
+          "rating": 4.5
+        },
+        {
+          "id": "rest_02",
+          "name": "Cơm tấm Sài Gòn 168",
+          "tags": [
+            "cơm tấm",
+            "cơm"
+          ],
+          "rating": 4.5
+        },
+        {
+          "id": "rest_03",
+          "name": "Pizza Nhà Làm",
+          "tags": [
+            "pizza",
+            "món Ý"
+          ],
+          "rating": 4.5
+        },
+        {
+          "id": "rest_04",
+          "name": "Trà sữa Nhà Mèo",
+          "tags": [
+            "trà sữa",
+            "đồ uống"
+          ],
+          "rating": 4.5
+        }
+      ]
+    },
+    "selectors": {
+      "name": "Bún bò Huế Cô Ba"
+    },
+    "consumer_arguments": {
+      "items": []
+    },
+    "expected_value": "rest_01"
+  },
+  {
+    "edge_id": "dep:f3d2ebb566613eecd790",
+    "target_path": "rule_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "rules": [
+        {
+          "id": "rule_01",
+          "device_id": "light_living",
+          "action": "on",
+          "time": "18:30",
+          "title": "Bật đèn phòng khách buổi tối",
+          "enabled": true
+        },
+        {
+          "id": "rule_02",
+          "device_id": "light_living",
+          "action": "off",
+          "time": "23:00",
+          "title": "Tắt đèn phòng khách khi đi ngủ",
+          "enabled": true
+        },
+        {
+          "id": "rule_03",
+          "device_id": "light_kitchen",
+          "action": "off",
+          "time": "22:00",
+          "title": "Tắt đèn bếp buổi tối",
+          "enabled": false
+        },
+        {
+          "id": "rule_04",
+          "device_id": "ac_bedroom",
+          "action": "on",
+          "time": "21:30",
+          "title": "Bật điều hoà phòng ngủ trước giờ ngủ",
+          "enabled": true
+        },
+        {
+          "id": "rule_05",
+          "device_id": "plug_balcony",
+          "action": "on",
+          "time": "06:30",
+          "title": "Tưới luống rau ban công",
+          "enabled": true
+        }
+      ]
+    },
+    "selectors": {
+      "title": "Bật đèn phòng khách buổi tối",
+      "time": "18:30"
+    },
+    "consumer_arguments": {},
+    "expected_value": "rule_01"
+  },
+  {
+    "edge_id": "dep:f1a40960cf8230114e0a",
+    "target_path": "course_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "courses": [
+        {
+          "id": "course_01",
+          "name": "Nhiếp ảnh điện thoại",
+          "provider": "Edura",
+          "enrolled": true,
+          "lessons_total": 12,
+          "progress_minutes": 120,
+          "start_date": "2026-08-10"
+        },
+        {
+          "id": "course_02",
+          "name": "Tiếng Nhật N5",
+          "provider": "Dũng Haru",
+          "enrolled": true,
+          "lessons_total": 30,
+          "progress_minutes": 45,
+          "start_date": "2026-07-01"
+        },
+        {
+          "id": "course_03",
+          "name": "Tiếng Anh giao tiếp cơ bản",
+          "provider": "Speako",
+          "enrolled": false,
+          "lessons_total": 24,
+          "progress_minutes": 0,
+          "start_date": "2026-10-12",
+          "seats_left": 15
+        },
+        {
+          "id": "course_04",
+          "name": "Kể chuyện bằng dữ liệu",
+          "provider": "Học Hội",
+          "enrolled": false,
+          "lessons_total": 8,
+          "progress_minutes": 0,
+          "start_date": "2026-10-05",
+          "seats_left": 6
+        },
+        {
+          "id": "course_05",
+          "name": "Trực quan hoá dữ liệu với Power BI",
+          "provider": "Khóa Việt",
+          "enrolled": false,
+          "lessons_total": 10,
+          "progress_minutes": 0,
+          "start_date": "2026-10-19",
+          "seats_left": 20
+        }
+      ]
+    },
+    "selectors": {
+      "name": "Nhiếp ảnh điện thoại"
+    },
+    "consumer_arguments": {},
+    "expected_value": "course_01"
+  },
+  {
+    "edge_id": "dep:7b288e9221651ae63745",
+    "target_path": "course_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "courses": [
+        {
+          "id": "course_01",
+          "name": "Nhiếp ảnh điện thoại",
+          "provider": "Edura",
+          "enrolled": true,
+          "lessons_total": 12,
+          "progress_minutes": 120,
+          "start_date": "2026-08-10"
+        },
+        {
+          "id": "course_02",
+          "name": "Tiếng Nhật N5",
+          "provider": "Dũng Haru",
+          "enrolled": true,
+          "lessons_total": 30,
+          "progress_minutes": 45,
+          "start_date": "2026-07-01"
+        },
+        {
+          "id": "course_03",
+          "name": "Tiếng Anh giao tiếp cơ bản",
+          "provider": "Speako",
+          "enrolled": false,
+          "lessons_total": 24,
+          "progress_minutes": 0,
+          "start_date": "2026-10-12",
+          "seats_left": 15
+        },
+        {
+          "id": "course_04",
+          "name": "Kể chuyện bằng dữ liệu",
+          "provider": "Học Hội",
+          "enrolled": false,
+          "lessons_total": 8,
+          "progress_minutes": 0,
+          "start_date": "2026-10-05",
+          "seats_left": 6
+        },
+        {
+          "id": "course_05",
+          "name": "Trực quan hoá dữ liệu với Power BI",
+          "provider": "Khóa Việt",
+          "enrolled": false,
+          "lessons_total": 10,
+          "progress_minutes": 0,
+          "start_date": "2026-10-19",
+          "seats_left": 20
+        }
+      ]
+    },
+    "selectors": {
+      "name": "Nhiếp ảnh điện thoại"
+    },
+    "consumer_arguments": {
+      "minutes": 1
+    },
+    "expected_value": "course_01"
+  },
+  {
+    "edge_id": "dep:ce5c801a74de86789c12",
+    "target_path": "course_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "courses": [
+        {
+          "id": "course_01",
+          "name": "Nhiếp ảnh điện thoại",
+          "provider": "Edura",
+          "enrolled": true,
+          "lessons_total": 12,
+          "progress_minutes": 120,
+          "start_date": "2026-08-10"
+        },
+        {
+          "id": "course_02",
+          "name": "Tiếng Nhật N5",
+          "provider": "Dũng Haru",
+          "enrolled": true,
+          "lessons_total": 30,
+          "progress_minutes": 45,
+          "start_date": "2026-07-01"
+        },
+        {
+          "id": "course_03",
+          "name": "Tiếng Anh giao tiếp cơ bản",
+          "provider": "Speako",
+          "enrolled": false,
+          "lessons_total": 24,
+          "progress_minutes": 0,
+          "start_date": "2026-10-12",
+          "seats_left": 15
+        },
+        {
+          "id": "course_04",
+          "name": "Kể chuyện bằng dữ liệu",
+          "provider": "Học Hội",
+          "enrolled": false,
+          "lessons_total": 8,
+          "progress_minutes": 0,
+          "start_date": "2026-10-05",
+          "seats_left": 6
+        },
+        {
+          "id": "course_05",
+          "name": "Trực quan hoá dữ liệu với Power BI",
+          "provider": "Khóa Việt",
+          "enrolled": false,
+          "lessons_total": 10,
+          "progress_minutes": 0,
+          "start_date": "2026-10-19",
+          "seats_left": 20
+        }
+      ]
+    },
+    "selectors": {
+      "name": "Nhiếp ảnh điện thoại"
+    },
+    "consumer_arguments": {
+      "time": "2026-12-14T12:00:00+07:00"
+    },
+    "expected_value": "course_01"
+  },
+  {
+    "edge_id": "dep:3230b7d988b2a5a1d11d",
+    "target_path": "book_id",
+    "producer_arguments": {
+      "query": "Khu vườn trên ban công"
+    },
+    "observation": {
+      "ok": true,
+      "books": [
+        {
+          "id": "book_05",
+          "title": "Khu vườn trên ban công",
+          "author": "Trần Thu Trang",
+          "available": true
+        }
+      ]
+    },
+    "selectors": {
+      "title": "Khu vườn trên ban công"
+    },
+    "consumer_arguments": {},
+    "expected_value": "book_05"
+  },
+  {
+    "edge_id": "dep:dcef86a1d29246d7cdc9",
+    "target_path": "place_id",
+    "producer_arguments": {
+      "query": "Thư viện Đại học Quốc gia Hà Nội"
+    },
+    "observation": {
+      "ok": true,
+      "places": [
+        {
+          "id": "place_07",
+          "name": "Thư viện Đại học Quốc gia Hà Nội",
+          "address": "144 Xuân Thủy, Cầu Giấy, Hà Nội",
+          "category": "library"
+        },
+        {
+          "id": "place_08",
+          "name": "Thư viện Quốc gia Việt Nam",
+          "address": "31 Tràng Thi, Hoàn Kiếm, Hà Nội",
+          "category": "library",
+          "detail": "Cách Hồ Gươm khoảng 500 m"
+        },
+        {
+          "id": "place_05",
+          "name": "Bệnh viện Bạch Mai",
+          "address": "78 Giải Phóng, Đống Đa, Hà Nội",
+          "category": "hospital"
+        }
+      ]
+    },
+    "selectors": {
+      "name": "Thư viện Đại học Quốc gia Hà Nội"
+    },
+    "consumer_arguments": {
+      "label": "fixture value"
+    },
+    "expected_value": "place_07"
+  },
+  {
+    "edge_id": "dep:01982c9c796feada0aaf",
+    "target_path": "playlist_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "tracks": [
+        {
+          "id": "trk_01",
+          "title": "Nơi này có anh",
+          "artist": "Sơn Tùng M-TP"
+        },
+        {
+          "id": "trk_02",
+          "title": "Có chắc yêu là đây",
+          "artist": "Sơn Tùng M-TP"
+        },
+        {
+          "id": "trk_03",
+          "title": "Bước qua nhau",
+          "artist": "Vũ."
+        },
+        {
+          "id": "trk_04",
+          "title": "Hoa nở không màu",
+          "artist": "Hoài Lâm"
+        },
+        {
+          "id": "trk_05",
+          "title": "Chúng ta của hiện tại",
+          "artist": "Sơn Tùng M-TP"
+        },
+        {
+          "id": "trk_06",
+          "title": "Ngày đầu tiên",
+          "artist": "Đức Phúc"
+        }
+      ],
+      "playlists": [
+        {
+          "id": "pl_01",
+          "name": "Nhạc chill buổi tối"
+        },
+        {
+          "id": "pl_02",
+          "name": "Nhạc tập gym"
+        }
+      ]
+    },
+    "selectors": {
+      "name": "Nhạc chill buổi tối"
+    },
+    "consumer_arguments": {
+      "track_id": "fixture value"
+    },
+    "expected_value": "pl_01"
+  },
+  {
+    "edge_id": "dep:1bea69b98068677fcdb5",
+    "target_path": "track_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "tracks": [
+        {
+          "id": "trk_01",
+          "title": "Nơi này có anh",
+          "artist": "Sơn Tùng M-TP"
+        },
+        {
+          "id": "trk_02",
+          "title": "Có chắc yêu là đây",
+          "artist": "Sơn Tùng M-TP"
+        },
+        {
+          "id": "trk_03",
+          "title": "Bước qua nhau",
+          "artist": "Vũ."
+        },
+        {
+          "id": "trk_04",
+          "title": "Hoa nở không màu",
+          "artist": "Hoài Lâm"
+        },
+        {
+          "id": "trk_05",
+          "title": "Chúng ta của hiện tại",
+          "artist": "Sơn Tùng M-TP"
+        },
+        {
+          "id": "trk_06",
+          "title": "Ngày đầu tiên",
+          "artist": "Đức Phúc"
+        }
+      ],
+      "playlists": [
+        {
+          "id": "pl_01",
+          "name": "Nhạc chill buổi tối"
+        },
+        {
+          "id": "pl_02",
+          "name": "Nhạc tập gym"
+        }
+      ]
+    },
+    "selectors": {
+      "title": "Nơi này có anh"
+    },
+    "consumer_arguments": {
+      "playlist_id": "fixture value"
+    },
+    "expected_value": "trk_01"
+  },
+  {
+    "edge_id": "dep:cd4e089fabac42496834",
+    "target_path": "playlist_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "tracks": [
+        {
+          "id": "trk_01",
+          "title": "Nơi này có anh",
+          "artist": "Sơn Tùng M-TP"
+        },
+        {
+          "id": "trk_02",
+          "title": "Có chắc yêu là đây",
+          "artist": "Sơn Tùng M-TP"
+        },
+        {
+          "id": "trk_03",
+          "title": "Bước qua nhau",
+          "artist": "Vũ."
+        },
+        {
+          "id": "trk_04",
+          "title": "Hoa nở không màu",
+          "artist": "Hoài Lâm"
+        },
+        {
+          "id": "trk_05",
+          "title": "Chúng ta của hiện tại",
+          "artist": "Sơn Tùng M-TP"
+        },
+        {
+          "id": "trk_06",
+          "title": "Ngày đầu tiên",
+          "artist": "Đức Phúc"
+        }
+      ],
+      "playlists": [
+        {
+          "id": "pl_01",
+          "name": "Nhạc chill buổi tối"
+        },
+        {
+          "id": "pl_02",
+          "name": "Nhạc tập gym"
+        }
+      ]
+    },
+    "selectors": {
+      "name": "Nhạc chill buổi tối"
+    },
+    "consumer_arguments": {},
+    "expected_value": "pl_01"
+  },
+  {
+    "edge_id": "dep:a40a9d89d6218083cb85",
+    "target_path": "track_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "tracks": [
+        {
+          "id": "trk_01",
+          "title": "Nơi này có anh",
+          "artist": "Sơn Tùng M-TP"
+        },
+        {
+          "id": "trk_02",
+          "title": "Có chắc yêu là đây",
+          "artist": "Sơn Tùng M-TP"
+        },
+        {
+          "id": "trk_03",
+          "title": "Bước qua nhau",
+          "artist": "Vũ."
+        },
+        {
+          "id": "trk_04",
+          "title": "Hoa nở không màu",
+          "artist": "Hoài Lâm"
+        },
+        {
+          "id": "trk_05",
+          "title": "Chúng ta của hiện tại",
+          "artist": "Sơn Tùng M-TP"
+        },
+        {
+          "id": "trk_06",
+          "title": "Ngày đầu tiên",
+          "artist": "Đức Phúc"
+        }
+      ],
+      "playlists": [
+        {
+          "id": "pl_01",
+          "name": "Nhạc chill buổi tối"
+        },
+        {
+          "id": "pl_02",
+          "name": "Nhạc tập gym"
+        }
+      ]
+    },
+    "selectors": {
+      "title": "Nơi này có anh"
+    },
+    "consumer_arguments": {},
+    "expected_value": "trk_01"
+  },
+  {
+    "edge_id": "dep:29ca53ea8511a207c06a",
+    "target_path": "article_id",
+    "producer_arguments": {
+      "query": "Thiên văn tuần này"
+    },
+    "observation": {
+      "ok": true,
+      "articles": [
+        {
+          "id": "art_07",
+          "title": "Thiên văn tuần này",
+          "topic": "general",
+          "source": "TinViệt",
+          "published_at": "2026-09-24T06:30:00+07:00",
+          "summary": "Sao Mộc lên cao và sáng rõ nhất năm vào cuối tháng, có thể quan sát bằng mắt thường sau 21 giờ."
+        }
+      ]
+    },
+    "selectors": {
+      "title": "Thiên văn tuần này"
+    },
+    "consumer_arguments": {},
+    "expected_value": "art_07"
+  },
+  {
+    "edge_id": "dep:a16db1ceeff849448088",
+    "target_path": "note_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "notes": [
+        {
+          "id": "note_01",
+          "title": "Mật khẩu wifi nhà ngoại",
+          "content": "Mạng NhaNgoai_5G, hỏi cậu Hai đổi lại pass"
+        },
+        {
+          "id": "note_02",
+          "title": "Họp phụ huynh",
+          "content": "Hỏi cô về điểm toán học kỳ một, đóng tiền quỹ lớp"
+        },
+        {
+          "id": "note_03",
+          "title": "Ý tưởng du lịch Tết",
+          "content": "Đà Lạt 3 ngày 2 đêm hoặc Hạ Long ngủ du thuyền"
+        },
+        {
+          "id": "note_04",
+          "title": "Quà sinh nhật mẹ",
+          "content": "Khăn lụa, máy massage cầm tay, đặt bánh kem ở tiệm quen"
+        },
+        {
+          "id": "note_05",
+          "title": "Chia tiền lẩu tối thứ hai",
+          "content": "Lẩu Nấm Sơn Mai tối thứ hai 21/9: tổng 900 nghìn, 5 người, mỗi người 180 nghìn. Tuấn trả trước, mọi người gửi lại Tuấn."
+        }
+      ]
+    },
+    "selectors": {
+      "title": "Mật khẩu wifi nhà ngoại"
+    },
+    "consumer_arguments": {
+      "content": "fixture value"
+    },
+    "expected_value": "note_01"
+  },
+  {
+    "edge_id": "dep:1fb248f67cd061e44032",
+    "target_path": "tracking_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "shipments": [
+        {
+          "id": "shp_929",
+          "tracking_id": "MDXVN487086839",
+          "carrier": "MDX Express",
+          "name": "Bộ chăn ga gối",
+          "status": "out_for_delivery",
+          "eta": "2026-11-22T14:00:00+07:00"
+        },
+        {
+          "id": "shp_8835",
+          "tracking_id": "EV272319947",
+          "carrier": "VNPost",
+          "name": "Ốp lưng điện thoại",
+          "status": "out_for_delivery",
+          "eta": "2026-11-22T16:30:00+07:00"
+        },
+        {
+          "id": "shp_4471",
+          "tracking_id": "GST519337204",
+          "carrier": "Giao Siêu Tốc",
+          "name": "Bình giữ nhiệt Lock&Lock",
+          "status": "out_for_delivery",
+          "eta": "2026-11-22T18:30:00+07:00"
+        },
+        {
+          "id": "shp_314",
+          "tracking_id": "GST730518842",
+          "carrier": "Giao Siêu Tốc",
+          "name": "Nồi chiên không dầu",
+          "status": "in_transit",
+          "eta": "2026-11-23T10:00:00+07:00"
+        }
+      ]
+    },
+    "selectors": {
+      "name": "Bộ chăn ga gối",
+      "carrier": "MDX Express"
+    },
+    "consumer_arguments": {
+      "time": "fixture value"
+    },
+    "expected_value": "MDXVN487086839"
+  },
+  {
+    "edge_id": "dep:7a22a9bb078a43f8cca2",
+    "target_path": "episode_id",
+    "producer_arguments": {
+      "query": "Số 10: Rác thải nhựa ở đô thị"
+    },
+    "observation": {
+      "ok": true,
+      "shows": [
+        {
+          "id": "show_02",
+          "name": "Thành phố xanh",
+          "host": "Minh Đức",
+          "category": "môi trường"
+        }
+      ],
+      "episodes": [
+        {
+          "id": "ep_04",
+          "show_id": "show_02",
+          "title": "Số 10: Rác thải nhựa ở đô thị",
+          "number": 10,
+          "duration_min": 32,
+          "published": "2026-09-04"
+        },
+        {
+          "id": "ep_05",
+          "show_id": "show_02",
+          "title": "Số 11: Công viên cho phố đông",
+          "number": 11,
+          "duration_min": 25,
+          "published": "2026-09-11"
+        },
+        {
+          "id": "ep_06",
+          "show_id": "show_02",
+          "title": "Số 12: Đi xe đạp đi làm",
+          "number": 12,
+          "duration_min": 32,
+          "published": "2026-09-18"
+        }
+      ],
+      "stations": []
+    },
+    "selectors": {
+      "title": "Số 10: Rác thải nhựa ở đô thị"
+    },
+    "consumer_arguments": {},
+    "expected_value": "ep_04"
+  },
+  {
+    "edge_id": "dep:8ba0cf9b47d00e2b57e1",
+    "target_path": "episode_id",
+    "producer_arguments": {
+      "query": "Số 10: Rác thải nhựa ở đô thị"
+    },
+    "observation": {
+      "ok": true,
+      "shows": [
+        {
+          "id": "show_02",
+          "name": "Thành phố xanh",
+          "host": "Minh Đức",
+          "category": "môi trường"
+        }
+      ],
+      "episodes": [
+        {
+          "id": "ep_04",
+          "show_id": "show_02",
+          "title": "Số 10: Rác thải nhựa ở đô thị",
+          "number": 10,
+          "duration_min": 32,
+          "published": "2026-09-04"
+        },
+        {
+          "id": "ep_05",
+          "show_id": "show_02",
+          "title": "Số 11: Công viên cho phố đông",
+          "number": 11,
+          "duration_min": 25,
+          "published": "2026-09-11"
+        },
+        {
+          "id": "ep_06",
+          "show_id": "show_02",
+          "title": "Số 12: Đi xe đạp đi làm",
+          "number": 12,
+          "duration_min": 32,
+          "published": "2026-09-18"
+        }
+      ],
+      "stations": []
+    },
+    "selectors": {
+      "title": "Số 10: Rác thải nhựa ở đô thị"
+    },
+    "consumer_arguments": {},
+    "expected_value": "ep_04"
+  },
+  {
+    "edge_id": "dep:ff8b28456a5b867cd1b2",
+    "target_path": "show_id",
+    "producer_arguments": {
+      "query": "Thành phố xanh"
+    },
+    "observation": {
+      "ok": true,
+      "shows": [
+        {
+          "id": "show_02",
+          "name": "Thành phố xanh",
+          "host": "Minh Đức",
+          "category": "môi trường"
+        }
+      ],
+      "episodes": [
+        {
+          "id": "ep_04",
+          "show_id": "show_02",
+          "title": "Số 10: Rác thải nhựa ở đô thị",
+          "number": 10,
+          "duration_min": 32,
+          "published": "2026-09-04"
+        },
+        {
+          "id": "ep_05",
+          "show_id": "show_02",
+          "title": "Số 11: Công viên cho phố đông",
+          "number": 11,
+          "duration_min": 25,
+          "published": "2026-09-11"
+        },
+        {
+          "id": "ep_06",
+          "show_id": "show_02",
+          "title": "Số 12: Đi xe đạp đi làm",
+          "number": 12,
+          "duration_min": 32,
+          "published": "2026-09-18"
+        }
+      ],
+      "stations": []
+    },
+    "selectors": {
+      "name": "Thành phố xanh"
+    },
+    "consumer_arguments": {},
+    "expected_value": "show_02"
+  },
+  {
+    "edge_id": "dep:e6ba8b599d054f6a97f6",
+    "target_path": "reminder_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "reminders": [
+        {
+          "id": "rem_340",
+          "content": "nhắc ông xã uống thuốc huyết áp",
+          "time": "2026-11-01T21:00:00+07:00",
+          "repeat": "daily",
+          "done": false
+        },
+        {
+          "id": "rem_715",
+          "content": "đặt pizza cho Thảo",
+          "time": "2026-11-01T17:30:00+07:00",
+          "repeat": "once",
+          "done": false
+        },
+        {
+          "id": "rem_1143",
+          "content": "đặt chè Liên cho Bà Sáu",
+          "time": "2026-11-01T19:30:00+07:00",
+          "repeat": "once",
+          "done": false
+        },
+        {
+          "id": "rem_208",
+          "content": "đặt bún bò Huế Cô Ba cho ông xã",
+          "time": "2026-11-01T17:00:00+07:00",
+          "repeat": "once",
+          "done": false
+        },
+        {
+          "id": "rem_96",
+          "content": "đặt bún bò Huế Cô Ba cho ông xã",
+          "time": "2026-11-07T17:00:00+07:00",
+          "repeat": "once",
+          "done": false
+        }
+      ]
+    },
+    "selectors": {
+      "content": "nhắc ông xã uống thuốc huyết áp"
+    },
+    "consumer_arguments": {},
+    "expected_value": "rem_340"
+  },
+  {
+    "edge_id": "dep:39a153db422a963f39e1",
+    "target_path": "reminder_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "reminders": [
+        {
+          "id": "rem_340",
+          "content": "nhắc ông xã uống thuốc huyết áp",
+          "time": "2026-11-01T21:00:00+07:00",
+          "repeat": "daily",
+          "done": false
+        },
+        {
+          "id": "rem_715",
+          "content": "đặt pizza cho Thảo",
+          "time": "2026-11-01T17:30:00+07:00",
+          "repeat": "once",
+          "done": false
+        },
+        {
+          "id": "rem_1143",
+          "content": "đặt chè Liên cho Bà Sáu",
+          "time": "2026-11-01T19:30:00+07:00",
+          "repeat": "once",
+          "done": false
+        },
+        {
+          "id": "rem_208",
+          "content": "đặt bún bò Huế Cô Ba cho ông xã",
+          "time": "2026-11-01T17:00:00+07:00",
+          "repeat": "once",
+          "done": false
+        },
+        {
+          "id": "rem_96",
+          "content": "đặt bún bò Huế Cô Ba cho ông xã",
+          "time": "2026-11-07T17:00:00+07:00",
+          "repeat": "once",
+          "done": false
+        }
+      ]
+    },
+    "selectors": {
+      "content": "nhắc ông xã uống thuốc huyết áp",
+      "time": "2026-11-01T21:00:00+07:00"
+    },
+    "consumer_arguments": {},
+    "expected_value": "rem_340"
+  },
+  {
+    "edge_id": "dep:43cd164b35e82a22bbfc",
+    "target_path": "ride_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "ride": {
+        "id": "ride_6694",
+        "status": "booked",
+        "pickup": "17 Nguyễn Huệ, Phú Nhuận, Huế",
+        "dropoff": "Bến xe phía Nam, 97 An Dương Vương, Huế",
+        "vehicle": "bike",
+        "schedule_time": "2026-10-28T06:15:00+07:00",
+        "payment": "cash"
+      }
+    },
+    "selectors": {
+      "pickup": "17 Nguyễn Huệ, Phú Nhuận, Huế",
+      "dropoff": "Bến xe phía Nam, 97 An Dương Vương, Huế",
+      "schedule_time": "2026-10-28T06:15:00+07:00"
+    },
+    "consumer_arguments": {},
+    "expected_value": "ride_6694"
+  },
+  {
+    "edge_id": "dep:3f0086bc06acea59db4b",
+    "target_path": "item_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "items": [
+        {
+          "id": "item_336",
+          "name": "sữa tươi không đường",
+          "quantity": 2,
+          "checked": false
+        },
+        {
+          "id": "item_825",
+          "name": "hành tây",
+          "quantity": 3,
+          "checked": true
+        },
+        {
+          "id": "item_1698",
+          "name": "táo",
+          "quantity": 4,
+          "checked": false
+        },
+        {
+          "id": "item_706",
+          "name": "dầu ăn",
+          "quantity": 1,
+          "checked": false
+        },
+        {
+          "id": "item_464",
+          "name": "nước mắm",
+          "quantity": 1,
+          "checked": false
+        },
+        {
+          "id": "item_06",
+          "checked": false,
+          "name": "cam",
+          "quantity": 2
+        }
+      ]
+    },
+    "selectors": {
+      "name": "sữa tươi không đường"
+    },
+    "consumer_arguments": {},
+    "expected_value": "item_336"
+  },
+  {
+    "edge_id": "dep:b12fb41b4e6cf87b6869",
+    "target_path": "item_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "items": [
+        {
+          "id": "item_336",
+          "name": "sữa tươi không đường",
+          "quantity": 2,
+          "checked": false
+        },
+        {
+          "id": "item_825",
+          "name": "hành tây",
+          "quantity": 3,
+          "checked": true
+        },
+        {
+          "id": "item_1698",
+          "name": "táo",
+          "quantity": 4,
+          "checked": false
+        },
+        {
+          "id": "item_706",
+          "name": "dầu ăn",
+          "quantity": 1,
+          "checked": false
+        },
+        {
+          "id": "item_464",
+          "name": "nước mắm",
+          "quantity": 1,
+          "checked": false
+        },
+        {
+          "id": "item_06",
+          "checked": false,
+          "name": "cam",
+          "quantity": 2
+        }
+      ]
+    },
+    "selectors": {
+      "name": "sữa tươi không đường"
+    },
+    "consumer_arguments": {},
+    "expected_value": "item_336"
+  },
+  {
+    "edge_id": "dep:4e15659d7529fe66deac",
+    "target_path": "device_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "devices": [
+        {
+          "id": "light_living",
+          "name": "đèn phòng khách",
+          "type": "light",
+          "room": "phòng khách",
+          "floor": 1,
+          "state": {
+            "power": "on",
+            "brightness": 40
+          }
+        },
+        {
+          "id": "ac_living",
+          "name": "điều hoà phòng khách",
+          "type": "climate",
+          "room": "phòng khách",
+          "floor": 1,
+          "state": {
+            "mode": "off"
+          }
+        },
+        {
+          "id": "fan_living",
+          "name": "quạt phòng khách",
+          "type": "fan",
+          "room": "phòng khách",
+          "floor": 1,
+          "state": {
+            "power": "off",
+            "speed": 2
+          }
+        },
+        {
+          "id": "light_kitchen",
+          "name": "đèn bếp",
+          "type": "light",
+          "room": "bếp",
+          "floor": 1,
+          "state": {
+            "power": "on",
+            "brightness": 40
+          }
+        },
+        {
+          "id": "light_bedroom",
+          "name": "đèn phòng ngủ",
+          "type": "light",
+          "room": "phòng ngủ",
+          "floor": 2,
+          "state": {
+            "power": "on",
+            "brightness": 40
+          }
+        },
+        {
+          "id": "ac_bedroom",
+          "name": "điều hoà phòng ngủ",
+          "type": "climate",
+          "room": "phòng ngủ",
+          "floor": 2,
+          "state": {
+            "mode": "off"
+          }
+        },
+        {
+          "id": "light_office",
+          "name": "đèn phòng làm việc",
+          "type": "light",
+          "room": "phòng làm việc",
+          "floor": 2,
+          "state": {
+            "power": "off",
+            "brightness": 100
+          }
+        },
+        {
+          "id": "fan_office",
+          "name": "quạt phòng làm việc",
+          "type": "fan",
+          "room": "phòng làm việc",
+          "floor": 2,
+          "state": {
+            "power": "off",
+            "speed": 2
+          }
+        },
+        {
+          "id": "light_bedroom2",
+          "name": "đèn phòng ngủ nhỏ",
+          "type": "light",
+          "room": "phòng ngủ nhỏ",
+          "floor": 2,
+          "state": {
+            "power": "on",
+            "brightness": 100
+          }
+        }
+      ]
+    },
+    "selectors": {
+      "name": "điều hoà phòng khách",
+      "room": "phòng khách"
+    },
+    "consumer_arguments": {
+      "mode": "cool"
+    },
+    "expected_value": "ac_living"
+  },
+  {
+    "edge_id": "dep:2080970d1916e745e400",
+    "target_path": "device_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "devices": [
+        {
+          "id": "light_living",
+          "name": "đèn phòng khách",
+          "type": "light",
+          "room": "phòng khách",
+          "floor": 1,
+          "state": {
+            "power": "on",
+            "brightness": 40
+          }
+        },
+        {
+          "id": "ac_living",
+          "name": "điều hoà phòng khách",
+          "type": "climate",
+          "room": "phòng khách",
+          "floor": 1,
+          "state": {
+            "mode": "off"
+          }
+        },
+        {
+          "id": "fan_living",
+          "name": "quạt phòng khách",
+          "type": "fan",
+          "room": "phòng khách",
+          "floor": 1,
+          "state": {
+            "power": "off",
+            "speed": 2
+          }
+        },
+        {
+          "id": "light_kitchen",
+          "name": "đèn bếp",
+          "type": "light",
+          "room": "bếp",
+          "floor": 1,
+          "state": {
+            "power": "on",
+            "brightness": 40
+          }
+        },
+        {
+          "id": "light_bedroom",
+          "name": "đèn phòng ngủ",
+          "type": "light",
+          "room": "phòng ngủ",
+          "floor": 2,
+          "state": {
+            "power": "on",
+            "brightness": 40
+          }
+        },
+        {
+          "id": "ac_bedroom",
+          "name": "điều hoà phòng ngủ",
+          "type": "climate",
+          "room": "phòng ngủ",
+          "floor": 2,
+          "state": {
+            "mode": "off"
+          }
+        },
+        {
+          "id": "light_office",
+          "name": "đèn phòng làm việc",
+          "type": "light",
+          "room": "phòng làm việc",
+          "floor": 2,
+          "state": {
+            "power": "off",
+            "brightness": 100
+          }
+        },
+        {
+          "id": "fan_office",
+          "name": "quạt phòng làm việc",
+          "type": "fan",
+          "room": "phòng làm việc",
+          "floor": 2,
+          "state": {
+            "power": "off",
+            "speed": 2
+          }
+        },
+        {
+          "id": "light_bedroom2",
+          "name": "đèn phòng ngủ nhỏ",
+          "type": "light",
+          "room": "phòng ngủ nhỏ",
+          "floor": 2,
+          "state": {
+            "power": "on",
+            "brightness": 100
+          }
+        }
+      ]
+    },
+    "selectors": {
+      "name": "quạt phòng khách",
+      "room": "phòng khách"
+    },
+    "consumer_arguments": {},
+    "expected_value": "fan_living"
+  },
+  {
+    "edge_id": "dep:e881525d821570b8cb3e",
+    "target_path": "device_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "devices": [
+        {
+          "id": "light_living",
+          "name": "đèn phòng khách",
+          "type": "light",
+          "room": "phòng khách",
+          "floor": 1,
+          "state": {
+            "power": "on",
+            "brightness": 40
+          }
+        },
+        {
+          "id": "ac_living",
+          "name": "điều hoà phòng khách",
+          "type": "climate",
+          "room": "phòng khách",
+          "floor": 1,
+          "state": {
+            "mode": "off"
+          }
+        },
+        {
+          "id": "fan_living",
+          "name": "quạt phòng khách",
+          "type": "fan",
+          "room": "phòng khách",
+          "floor": 1,
+          "state": {
+            "power": "off",
+            "speed": 2
+          }
+        },
+        {
+          "id": "light_kitchen",
+          "name": "đèn bếp",
+          "type": "light",
+          "room": "bếp",
+          "floor": 1,
+          "state": {
+            "power": "on",
+            "brightness": 40
+          }
+        },
+        {
+          "id": "light_bedroom",
+          "name": "đèn phòng ngủ",
+          "type": "light",
+          "room": "phòng ngủ",
+          "floor": 2,
+          "state": {
+            "power": "on",
+            "brightness": 40
+          }
+        },
+        {
+          "id": "ac_bedroom",
+          "name": "điều hoà phòng ngủ",
+          "type": "climate",
+          "room": "phòng ngủ",
+          "floor": 2,
+          "state": {
+            "mode": "off"
+          }
+        },
+        {
+          "id": "light_office",
+          "name": "đèn phòng làm việc",
+          "type": "light",
+          "room": "phòng làm việc",
+          "floor": 2,
+          "state": {
+            "power": "off",
+            "brightness": 100
+          }
+        },
+        {
+          "id": "fan_office",
+          "name": "quạt phòng làm việc",
+          "type": "fan",
+          "room": "phòng làm việc",
+          "floor": 2,
+          "state": {
+            "power": "off",
+            "speed": 2
+          }
+        },
+        {
+          "id": "light_bedroom2",
+          "name": "đèn phòng ngủ nhỏ",
+          "type": "light",
+          "room": "phòng ngủ nhỏ",
+          "floor": 2,
+          "state": {
+            "power": "on",
+            "brightness": 100
+          }
+        }
+      ]
+    },
+    "selectors": {
+      "name": "đèn phòng khách",
+      "room": "phòng khách"
+    },
+    "consumer_arguments": {},
+    "expected_value": "light_living"
+  },
+  {
+    "edge_id": "dep:4b97fb39358f08d86853",
+    "target_path": "scene_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "devices": [
+        {
+          "id": "light_bedroom2",
+          "name": "đèn phòng ngủ nhỏ",
+          "type": "light",
+          "room": "phòng ngủ nhỏ",
+          "floor": 2,
+          "state": {
+            "power": "off",
+            "brightness": 80
+          }
+        },
+        {
+          "id": "light_kitchen",
+          "name": "đèn bếp",
+          "type": "light",
+          "room": "bếp",
+          "floor": 1,
+          "state": {
+            "power": "off",
+            "brightness": 60
+          }
+        },
+        {
+          "id": "fan_office",
+          "name": "quạt phòng làm việc",
+          "type": "fan",
+          "room": "phòng làm việc",
+          "floor": 2,
+          "state": {
+            "power": "off",
+            "speed": 2
+          }
+        },
+        {
+          "id": "light_living",
+          "name": "đèn phòng khách",
+          "type": "light",
+          "room": "phòng khách",
+          "floor": 1,
+          "state": {
+            "power": "off",
+            "brightness": 100
+          }
+        },
+        {
+          "id": "ac_bedroom",
+          "name": "điều hoà phòng ngủ",
+          "type": "climate",
+          "room": "phòng ngủ",
+          "floor": 2,
+          "state": {
+            "mode": "off"
+          }
+        },
+        {
+          "id": "light_bedroom",
+          "name": "đèn phòng ngủ",
+          "type": "light",
+          "room": "phòng ngủ",
+          "floor": 2,
+          "state": {
+            "power": "off",
+            "brightness": 80
+          }
+        },
+        {
+          "id": "ac_living",
+          "name": "điều hoà phòng khách",
+          "type": "climate",
+          "room": "phòng khách",
+          "floor": 1,
+          "state": {
+            "mode": "off"
+          }
+        },
+        {
+          "id": "fan_living",
+          "name": "quạt phòng khách",
+          "type": "fan",
+          "room": "phòng khách",
+          "floor": 1,
+          "state": {
+            "power": "off",
+            "speed": 2
+          }
+        },
+        {
+          "id": "light_office",
+          "name": "đèn phòng làm việc",
+          "type": "light",
+          "room": "phòng làm việc",
+          "floor": 2,
+          "state": {
+            "power": "on",
+            "brightness": 60
+          }
+        }
+      ],
+      "scenes": [
+        {
+          "id": "scn_41",
+          "name": "Buổi sáng"
+        },
+        {
+          "id": "scn_73",
+          "name": "Tiếp khách"
+        },
+        {
+          "id": "scn_156",
+          "name": "Đi ngủ"
+        },
+        {
+          "id": "scn_208",
+          "name": "Ra vựa"
+        }
+      ]
+    },
+    "selectors": {
+      "name": "Buổi sáng"
+    },
+    "consumer_arguments": {},
+    "expected_value": "scn_41"
+  },
+  {
+    "edge_id": "dep:fd407c25faa6449dd2b7",
+    "target_path": "device_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "devices": [
+        {
+          "id": "light_living",
+          "name": "đèn phòng khách",
+          "type": "light",
+          "room": "phòng khách",
+          "floor": 1,
+          "state": {
+            "power": "off",
+            "brightness": 100
+          }
+        },
+        {
+          "id": "ac_living",
+          "name": "điều hoà phòng khách",
+          "type": "climate",
+          "room": "phòng khách",
+          "floor": 1,
+          "state": {
+            "mode": "off"
+          }
+        },
+        {
+          "id": "fan_living",
+          "name": "quạt phòng khách",
+          "type": "fan",
+          "room": "phòng khách",
+          "floor": 1,
+          "state": {
+            "power": "off",
+            "speed": 2
+          }
+        },
+        {
+          "id": "light_kitchen",
+          "name": "đèn bếp",
+          "type": "light",
+          "room": "bếp",
+          "floor": 1,
+          "state": {
+            "power": "on",
+            "brightness": 40
+          }
+        },
+        {
+          "id": "light_bedroom",
+          "name": "đèn phòng ngủ",
+          "type": "light",
+          "room": "phòng ngủ",
+          "floor": 2,
+          "state": {
+            "power": "off",
+            "brightness": 100
+          }
+        },
+        {
+          "id": "ac_bedroom",
+          "name": "điều hoà phòng ngủ",
+          "type": "climate",
+          "room": "phòng ngủ",
+          "floor": 2,
+          "state": {
+            "mode": "off"
+          }
+        },
+        {
+          "id": "light_office",
+          "name": "đèn phòng làm việc",
+          "type": "light",
+          "room": "phòng làm việc",
+          "floor": 2,
+          "state": {
+            "power": "on",
+            "brightness": 80
+          }
+        },
+        {
+          "id": "fan_office",
+          "name": "quạt phòng làm việc",
+          "type": "fan",
+          "room": "phòng làm việc",
+          "floor": 2,
+          "state": {
+            "power": "off",
+            "speed": 2
+          }
+        },
+        {
+          "id": "light_bedroom2",
+          "name": "đèn phòng ngủ nhỏ",
+          "type": "light",
+          "room": "phòng ngủ nhỏ",
+          "floor": 2,
+          "state": {
+            "power": "on",
+            "brightness": 40
+          }
+        },
+        {
+          "id": "plug_living",
+          "name": "ổ cắm thiết bị phụ",
+          "type": "plug",
+          "room": "phòng khách",
+          "floor": 1,
+          "state": {
+            "power": "off"
+          }
+        }
+      ]
+    },
+    "selectors": {
+      "name": "ổ cắm thiết bị phụ",
+      "room": "phòng khách"
+    },
+    "consumer_arguments": {
+      "power": "on"
+    },
+    "expected_value": "plug_living"
+  },
+  {
+    "edge_id": "dep:5360101cb187f428ea42",
+    "target_path": "task_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "tasks": [
+        {
+          "id": "task_840",
+          "title": "Trả sách thư viện",
+          "due": "2026-11-02T17:30:00+07:00",
+          "priority": "high",
+          "done": false
+        },
+        {
+          "id": "task_517",
+          "title": "Gửi báo cáo tuần cho sếp Dũng",
+          "due": "2026-11-03T22:00:00+07:00",
+          "priority": "high",
+          "done": false
+        },
+        {
+          "id": "task_346",
+          "title": "Chuẩn bị slide họp quý",
+          "due": "2026-11-02T20:00:00+07:00",
+          "priority": "high",
+          "done": true
+        },
+        {
+          "id": "task_9214",
+          "title": "Đặt lịch khám răng",
+          "due": "2026-11-03T17:00:00+07:00",
+          "priority": "low",
+          "done": true
+        },
+        {
+          "id": "task_2088",
+          "title": "Gửi báo cáo chi phí dự án cho kế toán",
+          "due": "2026-11-03T22:00:00+07:00",
+          "priority": "high",
+          "done": false
+        }
+      ]
+    },
+    "selectors": {
+      "title": "Trả sách thư viện"
+    },
+    "consumer_arguments": {},
+    "expected_value": "task_840"
+  },
+  {
+    "edge_id": "dep:4192c8c80543966daed4",
+    "target_path": "program_id",
+    "producer_arguments": {
+      "channel": "S+ Sport"
+    },
+    "observation": {
+      "ok": true,
+      "programs": [
+        {
+          "id": "prg_412",
+          "channel": "S+ Sport",
+          "title": "Ngoại hạng Anh: Arsenal - Chelsea",
+          "start": "2026-12-14T18:30:00+07:00",
+          "end": "2026-12-14T20:00:00+07:00"
+        },
+        {
+          "id": "prg_437",
+          "channel": "S+ Sport",
+          "title": "La Liga: Real Madrid - Sevilla",
+          "start": "2026-12-14T20:00:00+07:00",
+          "end": "2026-12-14T22:00:00+07:00"
+        },
+        {
+          "id": "prg_459",
+          "channel": "S+ Sport",
+          "title": "Bình luận bóng đá cuối tuần",
+          "start": "2026-12-14T22:00:00+07:00",
+          "end": "2026-12-14T23:30:00+07:00"
+        }
+      ],
+      "channels": [
+        "VTV1",
+        "VTV3",
+        "VTV6",
+        "HTV7",
+        "S+ Sport",
+        "SCTV9"
+      ]
+    },
+    "selectors": {
+      "title": "Ngoại hạng Anh: Arsenal - Chelsea",
+      "channel": "S+ Sport",
+      "start": "2026-12-14T18:30:00+07:00"
+    },
+    "consumer_arguments": {},
+    "expected_value": "prg_412"
+  },
+  {
+    "edge_id": "dep:04a8073b0342b6618317",
+    "target_path": "meeting_id",
+    "producer_arguments": {},
+    "observation": {
+      "ok": true,
+      "meetings": [
+        {
+          "id": "meet_357",
+          "title": "Họp lớp online",
+          "start": "2026-12-11T08:30:00+07:00",
+          "link": "https://meet.example.test/fak-dbus-qvu",
+          "attendees": [],
+          "status": "scheduled"
+        },
+        {
+          "id": "meet_2864",
+          "title": "Gặp khách hàng Bình Dương",
+          "start": "2026-12-11T10:00:00+07:00",
+          "link": "https://meet.example.test/qhz-wtek-pom",
+          "attendees": [],
+          "status": "scheduled"
+        },
+        {
+          "id": "meet_732",
+          "title": "Gặp khách hàng Đồng Nai",
+          "start": "2026-12-11T14:30:00+07:00",
+          "link": "https://meet.example.test/svl-zdwc-xgr",
+          "attendees": [],
+          "status": "scheduled"
+        },
+        {
+          "id": "meet_641",
+          "title": "Họp nhóm đồ án",
+          "start": "2026-12-12T08:30:00+07:00",
+          "link": "https://meet.example.test/kkr-yhse-pvx",
+          "attendees": [],
+          "status": "scheduled"
+        },
+        {
+          "id": "meet_472",
+          "title": "Phỏng vấn ứng viên frontend",
+          "start": "2026-12-12T10:30:00+07:00",
+          "link": "https://meet.example.test/iko-mcne-jwm",
+          "attendees": [],
+          "status": "scheduled"
+        }
+      ]
+    },
+    "selectors": {
+      "title": "Họp lớp online",
+      "start": "2026-12-11T08:30:00+07:00"
+    },
+    "consumer_arguments": {},
+    "expected_value": "meet_357"
+  }
+]

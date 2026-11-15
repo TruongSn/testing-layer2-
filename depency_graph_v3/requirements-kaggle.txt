@@ -1,0 +1,9 @@
+# Same model-loading family as supplied B042; exact resolved versions saved per run.
+# GPU installation is performed only by the preserved B042 ensure_packages().
+transformers>=5.0.0,<6.0.0
+accelerate
+bitsandbytes
+huggingface-hub
+safetensors
+sentencepiece
+# torch is supplied by the Kaggle GPU image; the graph CPU package has no dependencies.

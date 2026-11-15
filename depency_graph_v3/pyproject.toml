@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lifemate-graph-v3"
+version = "3.0.0"
+description = "Offline dependency discovery and fail-closed graph assistance for B043"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+lifemate-graph = "lifemate_graph.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["lifemate_graph*"]

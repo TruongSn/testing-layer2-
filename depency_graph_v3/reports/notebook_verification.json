@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "executed_code_cells": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "cpu_tests": 132,
+  "skipped": [
+    [
+      "tests.test_build.SourceAndBuildTests.test_build_is_byte_reproducible",
+      "Raw train is intentionally not embedded in the standalone Kaggle notebook"
+    ],
+    [
+      "tests.test_build.SourceAndBuildTests.test_jsonl_schema_audit_is_complete_and_honest",
+      "Raw train is intentionally not embedded in the standalone Kaggle notebook"
+    ],
+    [
+      "tests.test_build.SourceAndBuildTests.test_original_manifest_and_data_unchanged",
+      "Raw train is intentionally not embedded in the standalone Kaggle notebook"
+    ]
+  ],
+  "gpu_tested": false,
+  "zip_path": "E:\\Hackathon\\depency_graph_v3\\reports\\notebook_verification\\LifeMate_B043_final_outputs.zip"
+}

@@ -1,0 +1,7 @@
+{
+  "graph_content_sha256": "COPY graph_content_sha256 FROM artifacts/graph_manifest.json AFTER REVIEW",
+  "reviewer": "operator name",
+  "scope": "PRODUCTION",
+  "decisions": [],
+  "instructions": "Copy a VERIFIED edge_id and its exact source_output_path, review allowed selector_keys, read_cost LOW/NORMAL/HIGH, producer_argument_bindings and reason before adding decision APPROVED. No decisions are prefilled. Rebuild using --approvals into a new output directory."
+}

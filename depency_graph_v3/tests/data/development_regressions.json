@@ -1,0 +1,965 @@
+{
+  "train_0136": {
+    "input": {
+      "id": "train_0136",
+      "audio_text": "Cho mình đặt bún bò giò ở quán Bún bò Huế Cô Ba, nhóm chat Gia đình có mấy người thì đặt đúng mấy phần, không tính mình nhé.",
+      "context": {
+        "current_time": "2026-11-17T21:30:00+07:00",
+        "timezone": "Asia/Ho_Chi_Minh",
+        "location": {
+          "lat": 16.0544,
+          "lng": 108.2022
+        },
+        "user_profile": {
+          "name": "Anh Khoa",
+          "home_address": "88 Nguyễn Văn Linh, Hải Châu, Đà Nẵng",
+          "work_address": "Công viên phần mềm, Hải Châu, Đà Nẵng",
+          "city": "Đà Nẵng"
+        },
+        "installed_apps": {
+          "food_delivery": {
+            "tools": [
+              "food_delivery.list_restaurants",
+              "food_delivery.get_menu",
+              "food_delivery.order_history",
+              "food_delivery.place_order",
+              "food_delivery.cancel_order"
+            ]
+          },
+          "chat_ott": {
+            "tools": [
+              "chat_ott.list_chats",
+              "chat_ott.read_chat",
+              "chat_ott.send_message",
+              "chat_ott.send_location",
+              "chat_ott.call"
+            ]
+          },
+          "contacts": {
+            "tools": [
+              "contacts.search",
+              "contacts.get",
+              "contacts.update"
+            ]
+          },
+          "reminders": {
+            "tools": [
+              "reminders.list",
+              "reminders.create",
+              "reminders.complete",
+              "reminders.delete"
+            ]
+          },
+          "ride_hailing": {
+            "tools": [
+              "ride_hailing.get_quotes",
+              "ride_hailing.book",
+              "ride_hailing.cancel",
+              "ride_hailing.get_ride"
+            ]
+          },
+          "fuel_price": {
+            "tools": [
+              "fuel_price.get_price"
+            ]
+          },
+          "medication": {
+            "tools": [
+              "medication.list",
+              "medication.add",
+              "medication.log_taken",
+              "medication.remove"
+            ]
+          },
+          "phone": {
+            "tools": [
+              "phone.call",
+              "phone.recent_calls"
+            ]
+          },
+          "ewallet": {
+            "tools": [
+              "ewallet.get_balance",
+              "ewallet.transfer",
+              "ewallet.topup_mobile",
+              "ewallet.pay_qr"
+            ]
+          },
+          "music": {
+            "tools": [
+              "music.list_tracks",
+              "music.play",
+              "music.control",
+              "music.add_to_playlist"
+            ]
+          },
+          "weather": {
+            "tools": [
+              "weather.get_current",
+              "weather.get_forecast"
+            ]
+          }
+        }
+      },
+      "history": []
+    },
+    "recorded_tool_responses": {
+      "chat_ott.list_chats": {
+        "ok": true,
+        "chats": [
+          {
+            "id": "chat_01",
+            "name": "Bác Ba",
+            "type": "direct",
+            "members": [
+              "Bác Ba"
+            ]
+          },
+          {
+            "id": "chat_02",
+            "name": "Tuấn",
+            "type": "direct",
+            "members": [
+              "Tuấn"
+            ]
+          },
+          {
+            "id": "chat_03",
+            "name": "Mẹ",
+            "type": "direct",
+            "members": [
+              "Mẹ"
+            ]
+          },
+          {
+            "id": "chat_04",
+            "name": "Lan",
+            "type": "direct",
+            "members": [
+              "Lan"
+            ]
+          },
+          {
+            "id": "chat_05",
+            "name": "Gia đình",
+            "type": "group",
+            "members": [
+              "Mẹ",
+              "Bố",
+              "Lan"
+            ]
+          }
+        ]
+      },
+      "food_delivery.list_restaurants": {
+        "ok": true,
+        "restaurants": [
+          {
+            "id": "rest_01",
+            "name": "Bún bò Huế Cô Ba",
+            "tags": [
+              "bún bò",
+              "món Huế"
+            ],
+            "rating": 4.5
+          },
+          {
+            "id": "rest_02",
+            "name": "Cơm tấm Sài Gòn 168",
+            "tags": [
+              "cơm tấm",
+              "cơm"
+            ],
+            "rating": 4.5
+          },
+          {
+            "id": "rest_03",
+            "name": "Pizza Nhà Làm",
+            "tags": [
+              "pizza",
+              "món Ý"
+            ],
+            "rating": 4.5
+          },
+          {
+            "id": "rest_04",
+            "name": "Trà sữa Nhà Mèo",
+            "tags": [
+              "trà sữa",
+              "đồ uống"
+            ],
+            "rating": 4.5
+          }
+        ]
+      },
+      "food_delivery.get_menu": {
+        "ok": true,
+        "menu": [
+          {
+            "id": "rest_01_m1",
+            "name": "Bún bò Huế đặc biệt",
+            "price": 55000
+          },
+          {
+            "id": "rest_01_m2",
+            "name": "Bún bò giò",
+            "price": 45000
+          },
+          {
+            "id": "rest_01_m3",
+            "name": "Chả cua",
+            "price": 15000
+          }
+        ]
+      },
+      "food_delivery.place_order": {
+        "ok": true,
+        "order": {
+          "id": "ord_01",
+          "restaurant_id": "rest_01",
+          "items": [
+            {
+              "item_id": "rest_01_m2",
+              "name": "Bún bò giò",
+              "quantity": 3,
+              "note": null
+            }
+          ],
+          "total": 135000,
+          "address": null,
+          "payment": "cash",
+          "status": "placed"
+        }
+      }
+    },
+    "evaluation_expected_calls": [
+      {
+        "name": "chat_ott.list_chats",
+        "arguments": {}
+      },
+      {
+        "name": "food_delivery.list_restaurants",
+        "arguments": {}
+      },
+      {
+        "name": "food_delivery.get_menu",
+        "arguments": {
+          "restaurant_id": "rest_01"
+        }
+      },
+      {
+        "name": "food_delivery.place_order",
+        "arguments": {
+          "restaurant_id": "rest_01",
+          "items": [
+            {
+              "item_id": "rest_01_m2",
+              "quantity": 3
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "train_0463": {
+    "input": {
+      "id": "train_0463",
+      "audio_text": "Mở giúp em đoạn chat Zalo với chị Lan, em muốn đọc lại tin nhắn chị ấy gửi.",
+      "context": {
+        "current_time": "2026-09-25T09:00:00+07:00",
+        "timezone": "Asia/Ho_Chi_Minh",
+        "location": {
+          "lat": 21.0285,
+          "lng": 105.8542
+        },
+        "user_profile": {
+          "name": "Em Linh",
+          "home_address": "25 Láng Hạ, Đống Đa, Hà Nội",
+          "work_address": "Tòa nhà Kim Cương, Nam Từ Liêm, Hà Nội",
+          "city": "Hà Nội"
+        },
+        "installed_apps": {
+          "chat_ott": {
+            "tools": [
+              "chat_ott.list_chats",
+              "chat_ott.read_chat",
+              "chat_ott.send_message",
+              "chat_ott.send_location",
+              "chat_ott.call"
+            ]
+          },
+          "calendar": {
+            "tools": [
+              "calendar.list_events",
+              "calendar.create_event",
+              "calendar.update_event",
+              "calendar.cancel_event"
+            ]
+          },
+          "email": {
+            "tools": [
+              "email.list",
+              "email.read",
+              "email.send",
+              "email.create_draft",
+              "email.reply",
+              "email.archive"
+            ]
+          },
+          "notes": {
+            "tools": [
+              "notes.list",
+              "notes.create",
+              "notes.append"
+            ]
+          },
+          "tasks": {
+            "tools": [
+              "tasks.list",
+              "tasks.add",
+              "tasks.complete"
+            ]
+          },
+          "contacts": {
+            "tools": [
+              "contacts.search",
+              "contacts.get",
+              "contacts.update"
+            ]
+          }
+        }
+      },
+      "history": []
+    },
+    "recorded_tool_responses": {
+      "chat_ott.list_chats": {
+        "ok": true,
+        "chats": [
+          {
+            "id": "chat_01",
+            "name": "Cô giáo Mai",
+            "type": "direct",
+            "members": [
+              "Cô giáo Mai"
+            ]
+          },
+          {
+            "id": "chat_02",
+            "name": "Tuấn",
+            "type": "direct",
+            "members": [
+              "Tuấn"
+            ]
+          },
+          {
+            "id": "chat_03",
+            "name": "Lan",
+            "type": "direct",
+            "members": [
+              "Lan"
+            ]
+          },
+          {
+            "id": "chat_04",
+            "name": "Bác Ba",
+            "type": "direct",
+            "members": [
+              "Bác Ba"
+            ]
+          },
+          {
+            "id": "chat_05",
+            "name": "Gia đình",
+            "type": "group",
+            "members": [
+              "Mẹ",
+              "Bố",
+              "Lan"
+            ]
+          },
+          {
+            "id": "chat_06",
+            "name": "Mẹ",
+            "type": "direct",
+            "members": [
+              "Mẹ"
+            ]
+          }
+        ]
+      },
+      "chat_ott.read_chat": {
+        "ok": true,
+        "messages": [
+          {
+            "from": "Lan",
+            "content": "Chiều nay em rảnh không, đi cà phê với chị nhé?"
+          },
+          {
+            "from": "me",
+            "content": "Dạ được chị, khoảng 4 giờ nha."
+          },
+          {
+            "from": "Lan",
+            "content": "Ok em, chỗ cũ nhé."
+          }
+        ]
+      }
+    },
+    "evaluation_expected_calls": [
+      {
+        "name": "chat_ott.list_chats",
+        "arguments": {}
+      },
+      {
+        "name": "chat_ott.read_chat",
+        "arguments": {
+          "chat_id": "chat_03"
+        }
+      }
+    ]
+  },
+  "train_0488": {
+    "input": {
+      "id": "train_0488",
+      "audio_text": "Dạ thôi lấy cuốn Dòng sông mùa hạ đi ạ.",
+      "context": {
+        "current_time": "2026-09-25T09:00:00+07:00",
+        "timezone": "Asia/Ho_Chi_Minh",
+        "location": {
+          "lat": 21.0285,
+          "lng": 105.8542
+        },
+        "user_profile": {
+          "name": "Em Linh",
+          "home_address": "25 Láng Hạ, Đống Đa, Hà Nội",
+          "work_address": "Tòa nhà Kim Cương, Nam Từ Liêm, Hà Nội",
+          "city": "Hà Nội"
+        },
+        "installed_apps": {
+          "library": {
+            "tools": [
+              "library.search",
+              "library.reserve"
+            ]
+          },
+          "learning": {
+            "tools": [
+              "learning.list_courses",
+              "learning.enroll",
+              "learning.schedule_lesson",
+              "learning.log_progress"
+            ]
+          },
+          "notes": {
+            "tools": [
+              "notes.list",
+              "notes.create",
+              "notes.append"
+            ]
+          },
+          "tasks": {
+            "tools": [
+              "tasks.list",
+              "tasks.add",
+              "tasks.complete"
+            ]
+          },
+          "reminders": {
+            "tools": [
+              "reminders.list",
+              "reminders.create",
+              "reminders.complete",
+              "reminders.delete"
+            ]
+          }
+        }
+      },
+      "history": [
+        {
+          "role": "user",
+          "audio_text": "Em muốn mượn một cuốn truyện về tuổi thơ á, mà đang phân vân giữa Dòng sông mùa hạ với Mùa hè bên triền đê."
+        },
+        {
+          "role": "assistant",
+          "text": "Linh muốn mượn cuốn nào trong hai cuốn đó để mình đặt giữ ạ?",
+          "tool_calls": []
+        }
+      ]
+    },
+    "recorded_tool_responses": {
+      "library.search": {
+        "ok": true,
+        "books": [
+          {
+            "id": "book_05",
+            "title": "Dòng sông mùa hạ",
+            "author": "Trần Thanh Bình",
+            "available": true
+          }
+        ]
+      },
+      "library.reserve": {
+        "ok": true,
+        "reservation": {
+          "id": "res_01",
+          "book_id": "book_05",
+          "status": "ready"
+        }
+      }
+    },
+    "evaluation_expected_calls": [
+      {
+        "name": "library.search",
+        "arguments": {
+          "query": "Dòng sông mùa hạ"
+        }
+      },
+      {
+        "name": "library.reserve",
+        "arguments": {
+          "book_id": "book_05"
+        }
+      }
+    ]
+  },
+  "train_0557": {
+    "input": {
+      "id": "train_0557",
+      "audio_text": "Ừ, bài Sớm mai ngoài hiên đi em.",
+      "context": {
+        "current_time": "2026-09-25T09:00:00+07:00",
+        "timezone": "Asia/Ho_Chi_Minh",
+        "location": {
+          "lat": 21.0285,
+          "lng": 105.8542
+        },
+        "user_profile": {
+          "name": "Chị Hoa",
+          "home_address": "25 Láng Hạ, Đống Đa, Hà Nội",
+          "work_address": "Tòa nhà Kim Cương, Nam Từ Liêm, Hà Nội",
+          "city": "Hà Nội"
+        },
+        "installed_apps": {
+          "music": {
+            "tools": [
+              "music.list_tracks",
+              "music.play",
+              "music.control",
+              "music.add_to_playlist"
+            ]
+          },
+          "podcast_radio": {
+            "tools": [
+              "podcast_radio.search",
+              "podcast_radio.play",
+              "podcast_radio.subscribe",
+              "podcast_radio.queue"
+            ]
+          },
+          "library": {
+            "tools": [
+              "library.search",
+              "library.reserve"
+            ]
+          },
+          "news": {
+            "tools": [
+              "news.headlines",
+              "news.search",
+              "news.save"
+            ]
+          },
+          "notes": {
+            "tools": [
+              "notes.list",
+              "notes.create",
+              "notes.append"
+            ]
+          }
+        }
+      },
+      "history": [
+        {
+          "role": "user",
+          "audio_text": "Mở cho chị bài gì nhẹ nhàng nghe với, chị đang phân vân giữa Sớm mai ngoài hiên với Gió qua ô cửa."
+        },
+        {
+          "role": "assistant",
+          "text": "Dạ chị muốn nghe bài nào trước ạ?",
+          "tool_calls": [
+            {
+              "name": "sys.ask_missing_info",
+              "arguments": {
+                "tool_name": "music.play",
+                "params": [
+                  "track_id"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "ok": true,
+              "waiting_for_user": true
+            }
+          ]
+        }
+      ]
+    },
+    "recorded_tool_responses": {
+      "music.list_tracks": {
+        "ok": true,
+        "tracks": [
+          {
+            "id": "trk_01",
+            "title": "Nơi này có anh",
+            "artist": "Sơn Tùng M-TP"
+          },
+          {
+            "id": "trk_02",
+            "title": "Có chắc yêu là đây",
+            "artist": "Sơn Tùng M-TP"
+          },
+          {
+            "id": "trk_03",
+            "title": "Bước qua nhau",
+            "artist": "Vũ."
+          },
+          {
+            "id": "trk_04",
+            "title": "Hoa nở không màu",
+            "artist": "Hoài Lâm"
+          },
+          {
+            "id": "trk_05",
+            "title": "Chúng ta của hiện tại",
+            "artist": "Sơn Tùng M-TP"
+          },
+          {
+            "id": "trk_06",
+            "title": "Ngày đầu tiên",
+            "artist": "Đức Phúc"
+          },
+          {
+            "id": "trk_07",
+            "title": "Sớm mai ngoài hiên",
+            "artist": "Hà Anh Tuấn"
+          },
+          {
+            "id": "trk_08",
+            "title": "Gió qua ô cửa",
+            "artist": "Vũ Cát Tường"
+          }
+        ],
+        "playlists": [
+          {
+            "id": "pl_01",
+            "name": "Nhạc chill buổi tối"
+          },
+          {
+            "id": "pl_02",
+            "name": "Nhạc tập gym"
+          }
+        ]
+      },
+      "music.play": {
+        "ok": true,
+        "now_playing": {
+          "track_id": "trk_07",
+          "title": "Sớm mai ngoài hiên",
+          "status": "playing"
+        }
+      }
+    },
+    "evaluation_expected_calls": [
+      {
+        "name": "music.list_tracks",
+        "arguments": {}
+      },
+      {
+        "name": "music.play",
+        "arguments": {
+          "track_id": "trk_07"
+        }
+      }
+    ]
+  },
+  "train_0951": {
+    "input": {
+      "id": "train_0951",
+      "audio_text": "Ờ em ơi, cái bài thằng Minh gửi Zalo tối qua ấy, cho vào nhạc tập gym, à không, nhạc chill buổi tối cơ.",
+      "context": {
+        "current_time": "2026-12-14T15:20:00+07:00",
+        "timezone": "Asia/Ho_Chi_Minh",
+        "location": {
+          "lat": 21.0285,
+          "lng": 105.8542
+        },
+        "user_profile": {
+          "name": "Chị Hạnh",
+          "home_address": "12 Nguyễn Trãi, Thanh Xuân, Hà Nội",
+          "work_address": "Trường THCS Thanh Xuân, Hà Nội",
+          "city": "Hà Nội"
+        },
+        "installed_apps": {
+          "food_delivery": {
+            "tools": [
+              "food_delivery.list_restaurants",
+              "food_delivery.get_menu",
+              "food_delivery.order_history",
+              "food_delivery.place_order",
+              "food_delivery.cancel_order"
+            ]
+          },
+          "contacts": {
+            "tools": [
+              "contacts.search",
+              "contacts.get",
+              "contacts.update"
+            ]
+          },
+          "banking": {
+            "tools": [
+              "banking.get_balance",
+              "banking.list_transactions",
+              "banking.list_beneficiaries",
+              "banking.transfer",
+              "banking.open_savings"
+            ]
+          },
+          "weather": {
+            "tools": [
+              "weather.get_current",
+              "weather.get_forecast"
+            ]
+          },
+          "music": {
+            "tools": [
+              "music.list_tracks",
+              "music.play",
+              "music.control",
+              "music.add_to_playlist"
+            ]
+          },
+          "home_security": {
+            "tools": [
+              "home_security.list_alerts",
+              "home_security.get_camera",
+              "home_security.arm",
+              "home_security.acknowledge_alert"
+            ]
+          },
+          "podcast_radio": {
+            "tools": [
+              "podcast_radio.search",
+              "podcast_radio.play",
+              "podcast_radio.subscribe",
+              "podcast_radio.queue"
+            ]
+          },
+          "maps": {
+            "tools": [
+              "maps.search_place",
+              "maps.get_route",
+              "maps.save_place"
+            ]
+          },
+          "chat_ott": {
+            "tools": [
+              "chat_ott.list_chats",
+              "chat_ott.read_chat",
+              "chat_ott.send_message",
+              "chat_ott.send_location",
+              "chat_ott.call"
+            ]
+          },
+          "phone": {
+            "tools": [
+              "phone.call",
+              "phone.recent_calls"
+            ]
+          }
+        }
+      },
+      "history": []
+    },
+    "recorded_tool_responses": {
+      "chat_ott.list_chats": {
+        "ok": true,
+        "chats": [
+          {
+            "id": "chat_453",
+            "name": "Minh",
+            "type": "direct",
+            "members": [
+              "Minh"
+            ]
+          },
+          {
+            "id": "chat_93",
+            "name": "Chị Yến",
+            "type": "direct",
+            "members": [
+              "Chị Yến"
+            ]
+          },
+          {
+            "id": "chat_118",
+            "name": "Anh Thành",
+            "type": "direct",
+            "members": [
+              "Anh Thành"
+            ]
+          },
+          {
+            "id": "chat_973",
+            "name": "Gia đình",
+            "type": "group",
+            "members": [
+              "Mẹ",
+              "Bố",
+              "Lan"
+            ]
+          },
+          {
+            "id": "chat_516",
+            "name": "Bố",
+            "type": "direct",
+            "members": [
+              "Bố"
+            ]
+          }
+        ]
+      },
+      "chat_ott.read_chat": {
+        "ok": true,
+        "messages": [
+          {
+            "from": "Minh",
+            "content": "Mẹ ơi nghe thử bài Ngày đầu tiên của Đức Phúc đi, nhẹ nhàng lắm, tối mẹ chấm bài nghe cho đỡ mỏi.",
+            "time": "2026-12-13T20:40:00+07:00"
+          },
+          {
+            "from": "me",
+            "content": "Ừ để mẹ nghe thử.",
+            "time": "2026-12-13T20:52:00+07:00"
+          }
+        ]
+      },
+      "music.list_tracks": {
+        "ok": true,
+        "tracks": [
+          {
+            "id": "trk_860",
+            "title": "Chúng ta của hiện tại",
+            "artist": "Sơn Tùng M-TP",
+            "playlists": [
+              {
+                "id": "pl_6148",
+                "name": "Nhạc tập gym"
+              }
+            ]
+          },
+          {
+            "id": "trk_88",
+            "title": "Hoa nở không màu",
+            "artist": "Hoài Lâm",
+            "playlists": [
+              {
+                "id": "pl_850",
+                "name": "Nhạc chill buổi tối"
+              }
+            ]
+          },
+          {
+            "id": "trk_6594",
+            "title": "Có chắc yêu là đây",
+            "artist": "Sơn Tùng M-TP",
+            "playlists": []
+          },
+          {
+            "id": "trk_867",
+            "title": "Ngày đầu tiên",
+            "artist": "Đức Phúc",
+            "playlists": []
+          },
+          {
+            "id": "trk_90",
+            "title": "Bước qua nhau",
+            "artist": "Vũ.",
+            "playlists": [
+              {
+                "id": "pl_850",
+                "name": "Nhạc chill buổi tối"
+              }
+            ]
+          },
+          {
+            "id": "trk_656",
+            "title": "Nơi này có anh",
+            "artist": "Sơn Tùng M-TP",
+            "playlists": [
+              {
+                "id": "pl_6148",
+                "name": "Nhạc tập gym"
+              }
+            ]
+          }
+        ],
+        "playlists": [
+          {
+            "id": "pl_850",
+            "name": "Nhạc chill buổi tối",
+            "track_ids": [
+              "trk_88",
+              "trk_90"
+            ]
+          },
+          {
+            "id": "pl_6148",
+            "name": "Nhạc tập gym",
+            "track_ids": [
+              "trk_860",
+              "trk_656"
+            ]
+          }
+        ]
+      },
+      "music.add_to_playlist": {
+        "ok": true,
+        "playlist": {
+          "id": "pl_850",
+          "name": "Nhạc chill buổi tối",
+          "track_ids": [
+            "trk_88",
+            "trk_90",
+            "trk_867"
+          ]
+        }
+      }
+    },
+    "evaluation_expected_calls": [
+      {
+        "name": "chat_ott.list_chats",
+        "arguments": {}
+      },
+      {
+        "name": "chat_ott.read_chat",
+        "arguments": {
+          "chat_id": "chat_453"
+        }
+      },
+      {
+        "name": "music.list_tracks",
+        "arguments": {}
+      },
+      {
+        "name": "music.add_to_playlist",
+        "arguments": {
+          "track_id": "trk_867",
+          "playlist_id": "pl_850"
+        }
+      }
+    ]
+  }
+}

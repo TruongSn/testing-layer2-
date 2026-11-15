@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "tests_run": 4,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "test_scope": "Pre-approval review artifacts and integrity only; no reviewed graph functional execution",
+  "notebook_unchanged": true,
+  "runtime_approved_edges": 0,
+  "operator_approval_created": false,
+  "reviewed_graph_compiled": false,
+  "new_files_sha256": {
+    "runtime_approval_review.csv": "6fa4e663be55238685fd801743e17c7f4c1c482f1909c046fe8bb12a1a047042",
+    "operator_approvals.proposed.json": "880a4ff7713f76af28c17f41e3c1e97cef024cca66ddf571e8c0d552d3bb0179",
+    "B043_RUNTIME_ACTIVATION_REPORT.md": "43e7681556507e0232c8d91c7929dafdfbee39f38788d1481aded7e2e1f24232",
+    "B043_KAGGLE_ACTIVE_GRAPH_GUIDE.md": "4df250eee5de570938c16245a512c2380b082a61195cbc2f51d7d2dce632ce5d",
+    "scripts/review_runtime_approvals.py": "23b6d9522439e3c600e96d7adcd7c514ad17d357d1d9a68c3e4a6e3c3bd2aba1",
+    "tests/test_runtime_approval_review.py": "994606fed64a85f6397d987aeb3b4711338861cbea8421977f7f105846d4093c"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "status": "NOT_RUN",
+  "gpu_executed": false,
+  "reason": "Local torch/transformers/zaic_tools and Kaggle execution credentials are unavailable; supplied notebook runs the real paired GPU evaluation.",
+  "arms": {
+    "GRAPH_DISABLED": {
+      "accuracy": null,
+      "latency_seconds": null
+    },
+    "GRAPH_ASSISTED_SAFE_READ": {
+      "accuracy": null,
+      "latency_seconds": null
+    }
+  },
+  "state_match": null,
+  "official_challenge_score": null,
+  "cpu_mechanism_report": "cpu_mechanism_report.json",
+  "known_reported_gpu_failures": [
+    "train_0136",
+    "train_0463",
+    "train_0488",
+    "train_0557",
+    "train_0951"
+  ],
+  "next_run": "Run All LifeMate_B043_Full_Graph_Resolver_Kaggle.ipynb: five-case graph smoke followed by representative paired 40 cases",
+  "state_match_prerequisite": "Independent authoritative full-state reference hashes; train partial final_state is insufficient"
+}

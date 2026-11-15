@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "validator": "jsonschema 4.25.0",
+  "schema_sha256": "783ee394acd27277554c1203976ef7419f26a26903e8986b265970ad9ca662e2",
+  "graph_file_sha256": "7124d08739bbd3526903fb698c0dbe629ac00be9e09a549daa2ad74b3fb8f8bb",
+  "nodes": 1609,
+  "relations": 1643,
+  "dependencies": 190
+}

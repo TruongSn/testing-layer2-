@@ -1,0 +1,8 @@
+{
+  "file": "B043_Runtime_Graph_Reviewed.zip",
+  "sha256": "1de360adae8483b039d34877624302dd4c7bf6740ef068ee81f8f5dd6ade3c2b",
+  "bytes": 57521,
+  "runtime_approved_edges": 19,
+  "graph_rebuilt": false,
+  "cpu_status": "PASS"
+}

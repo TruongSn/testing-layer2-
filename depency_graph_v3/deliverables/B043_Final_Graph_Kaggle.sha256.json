@@ -1,0 +1,17 @@
+{
+  "archives": {
+    "B043_Final_Graph_Kaggle.zip": {
+      "sha256": "9772f0cec29ca6df37afe4070d28e0f79668519e1b0fac1167deed1bf24f1831",
+      "bytes": 1582311,
+      "files": 115
+    },
+    "B043_Runtime_Graph_Final.zip": {
+      "sha256": "1bfc9734d6dfde4b3148b0a0eb9634702c5288cdbc234efb1ceb889c5b9b545d",
+      "bytes": 211079,
+      "files": 12
+    }
+  },
+  "notebook_sha256": "663ca50d6f13417b25f8ef872cdee44c93e67b10c3ce5a75888b73d319500571",
+  "compiled_payload_sha256": "c903f0166b60656780a1111aa4db572692e64385c6b37e4da977af83ebdc7622",
+  "embedded_payload_sha256": "b696d3032d99f5790da925a609d285ec91afff4eee44516dd1a9858d9dcd9cfb"
+}

@@ -1,0 +1,365 @@
+{
+  "status": "PASS",
+  "environment": "CPU scripted policy / FakeToolEnv / real B042 loop with B043 hooks",
+  "production_edges_approved": 0,
+  "synthetic_only": true,
+  "scenarios": {
+    "baseline": {
+      "calls": [],
+      "stop_reason": "tool_validation_or_execution_error",
+      "graph_reads": 0,
+      "graph_events": []
+    },
+    "shadow": {
+      "calls": [],
+      "stop_reason": "tool_validation_or_execution_error",
+      "graph_reads": 0,
+      "graph_events": [
+        {
+          "target_tool": "demo.send",
+          "mode": "GRAPH_SHADOW",
+          "status": "NEED_READ",
+          "arguments": {
+            "content": "hello"
+          },
+          "reason": "Approved missing prerequisite",
+          "read_tool": "demo.people",
+          "read_arguments": {
+            "query": "Mai"
+          },
+          "proofs": {},
+          "edge_ids": [
+            "fixture:865e0ee5778d"
+          ],
+          "unresolved_slots": [
+            "contact_id"
+          ],
+          "elapsed_ms": 0.17409999418305233
+        }
+      ]
+    },
+    "assisted": {
+      "calls": [
+        {
+          "name": "demo.people",
+          "arguments": {
+            "query": "Mai"
+          }
+        },
+        {
+          "name": "demo.send",
+          "arguments": {
+            "content": "hello",
+            "contact_id": "p_mai"
+          }
+        }
+      ],
+      "stop_reason": "model_stop",
+      "graph_reads": 1,
+      "graph_events": [
+        {
+          "target_tool": "demo.send",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "NEED_READ",
+          "arguments": {},
+          "reason": "Approved missing prerequisite",
+          "read_tool": "demo.people",
+          "read_arguments": {
+            "query": "Mai"
+          },
+          "proofs": {},
+          "edge_ids": [
+            "fixture:865e0ee5778d"
+          ],
+          "unresolved_slots": [
+            "contact_id"
+          ],
+          "elapsed_ms": 0.06110000686021522
+        },
+        {
+          "target_tool": "demo.send",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "UNRESOLVED",
+          "arguments": {
+            "contact_id": "p_mai"
+          },
+          "reason": "Missing slots with no approved graph route",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {},
+          "edge_ids": [],
+          "unresolved_slots": [
+            "content"
+          ],
+          "elapsed_ms": 0.06479999865405262
+        },
+        {
+          "target_tool": "demo.send",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "SATISFIED",
+          "arguments": {
+            "content": "hello",
+            "contact_id": "p_mai"
+          },
+          "reason": "Schema/approved dependencies satisfied; validators must still run",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {
+            "contact_id": {
+              "source": "tool_observation",
+              "tool": "demo.people",
+              "path": "people[].id",
+              "goal_id": "g1",
+              "epoch": 0,
+              "observation_sequence": 0,
+              "observed_goal_id": "g1",
+              "selectors": {
+                "name": "Mai"
+              },
+              "edge_id": "fixture:865e0ee5778d"
+            }
+          },
+          "edge_ids": [
+            "fixture:865e0ee5778d"
+          ],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.08230000094044954
+        }
+      ]
+    },
+    "ambiguous": {
+      "calls": [
+        {
+          "name": "demo.people",
+          "arguments": {
+            "query": "Mai"
+          }
+        }
+      ],
+      "stop_reason": "model_stop",
+      "graph_reads": 1,
+      "graph_events": [
+        {
+          "target_tool": "demo.send",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "NEED_READ",
+          "arguments": {},
+          "reason": "Approved missing prerequisite",
+          "read_tool": "demo.people",
+          "read_arguments": {
+            "query": "Mai"
+          },
+          "proofs": {},
+          "edge_ids": [
+            "fixture:865e0ee5778d"
+          ],
+          "unresolved_slots": [
+            "contact_id"
+          ],
+          "elapsed_ms": 0.06379999831551686
+        },
+        {
+          "target_tool": "demo.send",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "AMBIGUOUS",
+          "arguments": {},
+          "reason": "Multiple records match explicit subject",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {},
+          "edge_ids": [],
+          "unresolved_slots": [
+            "contact_id"
+          ],
+          "elapsed_ms": 0.11770000128308311
+        },
+        {
+          "target_tool": "demo.send",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "AMBIGUOUS",
+          "arguments": {
+            "content": "hello"
+          },
+          "reason": "Multiple records match explicit subject",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {},
+          "edge_ids": [],
+          "unresolved_slots": [
+            "contact_id"
+          ],
+          "elapsed_ms": 0.07840000034775585
+        },
+        {
+          "target_tool": "demo.send",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "AMBIGUOUS",
+          "arguments": {},
+          "reason": "Multiple records match explicit subject",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {},
+          "edge_ids": [],
+          "unresolved_slots": [
+            "contact_id"
+          ],
+          "elapsed_ms": 0.06550000398419797
+        }
+      ]
+    },
+    "empty": {
+      "calls": [
+        {
+          "name": "demo.people",
+          "arguments": {
+            "query": "Mai"
+          }
+        }
+      ],
+      "stop_reason": "model_stop",
+      "graph_reads": 1,
+      "graph_events": [
+        {
+          "target_tool": "demo.send",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "NEED_READ",
+          "arguments": {},
+          "reason": "Approved missing prerequisite",
+          "read_tool": "demo.people",
+          "read_arguments": {
+            "query": "Mai"
+          },
+          "proofs": {},
+          "edge_ids": [
+            "fixture:865e0ee5778d"
+          ],
+          "unresolved_slots": [
+            "contact_id"
+          ],
+          "elapsed_ms": 0.05919999966863543
+        },
+        {
+          "target_tool": "demo.send",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "UNRESOLVED",
+          "arguments": {},
+          "reason": "Read already attempted; failed, empty, or no matching subject",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {},
+          "edge_ids": [],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.09869999485090375
+        },
+        {
+          "target_tool": "demo.send",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "UNRESOLVED",
+          "arguments": {
+            "content": "hello"
+          },
+          "reason": "Read already attempted; failed, empty, or no matching subject",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {},
+          "edge_ids": [],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.08189999789465219
+        },
+        {
+          "target_tool": "demo.send",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "UNRESOLVED",
+          "arguments": {},
+          "reason": "Read already attempted; failed, empty, or no matching subject",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {},
+          "edge_ids": [],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.07370000093942508
+        }
+      ]
+    },
+    "failed": {
+      "calls": [
+        {
+          "name": "demo.people",
+          "arguments": {
+            "query": "Mai"
+          }
+        }
+      ],
+      "stop_reason": "model_stop",
+      "graph_reads": 1,
+      "graph_events": [
+        {
+          "target_tool": "demo.send",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "NEED_READ",
+          "arguments": {},
+          "reason": "Approved missing prerequisite",
+          "read_tool": "demo.people",
+          "read_arguments": {
+            "query": "Mai"
+          },
+          "proofs": {},
+          "edge_ids": [
+            "fixture:865e0ee5778d"
+          ],
+          "unresolved_slots": [
+            "contact_id"
+          ],
+          "elapsed_ms": 0.06299999949987978
+        },
+        {
+          "target_tool": "demo.send",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "UNRESOLVED",
+          "arguments": {},
+          "reason": "Read already attempted; failed, empty, or no matching subject",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {},
+          "edge_ids": [],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.06949999806238338
+        },
+        {
+          "target_tool": "demo.send",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "UNRESOLVED",
+          "arguments": {
+            "content": "hello"
+          },
+          "reason": "Read already attempted; failed, empty, or no matching subject",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {},
+          "edge_ids": [],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.0883999964571558
+        },
+        {
+          "target_tool": "demo.send",
+          "mode": "GRAPH_ASSISTED_SAFE_READ",
+          "status": "UNRESOLVED",
+          "arguments": {},
+          "reason": "Read already attempted; failed, empty, or no matching subject",
+          "read_tool": null,
+          "read_arguments": {},
+          "proofs": {},
+          "edge_ids": [],
+          "unresolved_slots": [],
+          "elapsed_ms": 0.06959999882383272
+        }
+      ]
+    }
+  },
+  "claims": {
+    "graph_generated_read": true,
+    "evidence_reused_after_read": true,
+    "gpu_accuracy_improvement_measured": false,
+    "real_toolenv_tested": false
+  }
+}

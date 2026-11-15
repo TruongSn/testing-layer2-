@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "approved_edges": 19,
+  "runtime_enabled_edges": 19,
+  "graph_rebuilt": false,
+  "files": {
+    "deliverables/B043_Runtime_Graph_Reviewed.zip": {
+      "sha256": "1de360adae8483b039d34877624302dd4c7bf6740ef068ee81f8f5dd6ade3c2b",
+      "bytes": 57521
+    },
+    "LifeMate_B043_Full_Graph_Resolver_Kaggle.ipynb": {
+      "sha256": "68b35cb23ff67df27260be5ee5b9c85df23c94180bef58dfbf557e2e315afe0a",
+      "bytes": 633620
+    },
+    "B043_KAGGLE_ACTIVE_GRAPH_GUIDE.md": {
+      "sha256": "6e63145919b3fc03b72de5f1fa5dd8610ebf7e98e1f0040f27a81af40b499374",
+      "bytes": 2687
+    },
+    "B043_RUNTIME_ACTIVATION_REPORT.md": {
+      "sha256": "141a5bad2710c1875e8fba224792af43b2c0d115c78bc1ac1555ba6a1b2af6a7",
+      "bytes": 3119
+    }
+  },
+  "notebook_payload_sha256": "d02092c793dd9a389d1d2011e23395a1ff6df5f9443455d65f31b1d91e9c9e1d",
+  "notebook_payload_files_verified": 65,
+  "compiled_graph_file_sha256": "728c99798c2600a88fad6e8fa4afb1141b47e206248307f2abb3106a4ad0d0a7",
+  "compiled_payload_sha256": "ad7a10901094748b561dc07b9822d0db67743c0edae2648f54606eee754d7712",
+  "graph_content_sha256": "449fa731f239a4284e5e157a428d37d3872fbed776ca1aa99f28ef7aaab75ce8",
+  "catalog_sha256": "a994984bb580d7e0d60166641858901d428549682ba3614dbf9269037a33cce0",
+  "source_bundle_sha256": "67a09dfda5a501d90e6cae1014c9dfb1914fe46ac691c73557658f3689ed7125",
+  "cpu": {
+    "total": 109,
+    "passed": 108,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 1
+  },
+  "notebook_cpu": {
+    "total": 109,
+    "passed": 106,
+    "failed": 0,
+    "skipped": 3
+  },
+  "production_gates_passed": 16,
+  "production_closed_loops_passed": 19,
+  "active_gpu_tested": false
+}

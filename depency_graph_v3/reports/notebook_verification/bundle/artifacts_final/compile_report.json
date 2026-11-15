@@ -1,0 +1,303 @@
+{
+  "status": "PASS",
+  "graph_rebuilt": false,
+  "decisions": [
+    {
+      "edge_id": "dep:9de64089d9af535aa902",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:99f298c029ff65fd60d9",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:2994e8297309d5a23b0f",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:34a87e9f8997a5bf8c0e",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:5867b51356889cafc932",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:0d70b3b42e0e1a11db81",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:c11bf819107f9577c994",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:25908a2c50ac50c671b5",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:167320b6f27d9b86421a",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:fe95457f769ddebf56c5",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:30390f76b61d1faf7ebe",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:b0e8bf6b27832196a4ac",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:5a66399ba2a7c82041de",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:4ed4fe3e33cabfc99185",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:53c88b776adfb7fc5cf9",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:27323065cc846d864e4b",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:c149f053747a1e3a784e",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:374d04bc31ecac2e33d3",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:5de495d7fc89a9ddae30",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:9bd3df08f4ba385afae0",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:5c14e017dae569031716",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:6e08246abe4e5d15ff81",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:b338cd916f8067caf1ac",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:eea4ed636c19a955070d",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:3e6d5d0f6afa0a2c2d31",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:2a9ccb3cb358a0f43f77",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:d5785c350c46f4015331",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:a03bc3e5ab4d5f3b330e",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:29fb23b97b4e120d82a4",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:55700ed6e434f916ca46",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:f3d2ebb566613eecd790",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:f1a40960cf8230114e0a",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:7b288e9221651ae63745",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:ce5c801a74de86789c12",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:3230b7d988b2a5a1d11d",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:dcef86a1d29246d7cdc9",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:01982c9c796feada0aaf",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:1bea69b98068677fcdb5",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:cd4e089fabac42496834",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:a40a9d89d6218083cb85",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:29ca53ea8511a207c06a",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:a16db1ceeff849448088",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:1fb248f67cd061e44032",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:7a22a9bb078a43f8cca2",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:8ba0cf9b47d00e2b57e1",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:ff8b28456a5b867cd1b2",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:e6ba8b599d054f6a97f6",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:39a153db422a963f39e1",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:43cd164b35e82a22bbfc",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:3f0086bc06acea59db4b",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:b12fb41b4e6cf87b6869",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:4e15659d7529fe66deac",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:2080970d1916e745e400",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:e881525d821570b8cb3e",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:4b97fb39358f08d86853",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:fd407c25faa6449dd2b7",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:5360101cb187f428ea42",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:4192c8c80543966daed4",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    },
+    {
+      "edge_id": "dep:04a8073b0342b6618317",
+      "decision": "APPROVED",
+      "scope": "PRODUCTION"
+    }
+  ],
+  "runtime_approved_edges": 59,
+  "source_graph_sha256": "7124d08739bbd3526903fb698c0dbe629ac00be9e09a549daa2ad74b3fb8f8bb"
+}

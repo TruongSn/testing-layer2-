@@ -1,0 +1,68 @@
+[
+  {
+    "path": "dependency_graph_v3/inputs/LifeMate_B042_Progress_Retry_Controller_Kaggle.ipynb",
+    "source_file": "LifeMate_B042_Progress_Retry_Controller_Kaggle(2).ipynb",
+    "bytes": 255589,
+    "sha256": "1e80fe50cab2eb195b665094d8f6560dd5215c09ce5dc001d56fb9403a6e00de"
+  },
+  {
+    "path": "dependency_graph_v3/inputs/Spec.md",
+    "source_file": "Spec.md",
+    "bytes": 75453,
+    "sha256": "b13ecc83e805c1e5531da6a5aac3f3621fdd12cee40e1814b82711b915bec731"
+  },
+  {
+    "path": "dependency_graph_v3/previous_graph/curated_graph_v21.json",
+    "source_file": "curated_graph_v21.json",
+    "bytes": 25804,
+    "sha256": "341c4a63ac8a904c7964821b0516d3b9fd3e982c21dcb8e86de7d36c20c71ec1"
+  },
+  {
+    "path": "dependency_graph_v3/previous_graph/validated_graph.json",
+    "source_file": "validated_graph_2.json",
+    "bytes": 183942,
+    "sha256": "a0baeb44162e7ae4e99fa5da30f5acb97fd66fbad85b3555b60011512a74b46b"
+  },
+  {
+    "path": "dependency_graph_v3/previous_graph/manual_review_queue_v2.csv",
+    "source_file": "manual_review_queue_v2.csv",
+    "bytes": 36903,
+    "sha256": "56d5f7717306356c757f04bae558f9b8d6b7f19fcfa0929398bec4060fdeae27"
+  },
+  {
+    "path": "dependency_graph_v3/previous_graph/metadata_value_flow_evidence.csv",
+    "source_file": "metadata_value_flow_evidence.csv",
+    "bytes": 19051,
+    "sha256": "dcdc4a720daf19db474e62adab55f714f6d70d2c64eaa588ea064e17b52e1aa9"
+  },
+  {
+    "path": "dependency_graph_v3/previous_graph/empirical_enrichment_candidates.csv",
+    "source_file": "empirical_enrichment_candidates.csv",
+    "bytes": 12660,
+    "sha256": "ff7a100218ba1ebd33324b5a083900ffb408925ea19c868bd313781cbf6229d6"
+  },
+  {
+    "path": "dependency_graph_v3/previous_graph/schema_fields.csv",
+    "source_file": "schema_fields.csv",
+    "bytes": 9216,
+    "sha256": "6e57250a231df46b8f3ffdd20cd25d1ff64eab8e67e5c148678b582206106f6a"
+  },
+  {
+    "path": "dependency_graph_v3/previous_graph/one_of_alternatives.json",
+    "source_file": "one_of_alternatives.json",
+    "bytes": 1197,
+    "sha256": "47513c30b914a9de482c469afb914094b26c3b0c7cf4aec177c13203b2e2da13"
+  },
+  {
+    "path": "dependency_graph_v3/reference_notebooks/LifeMate_Graph_Validation_v2_Kaggle.ipynb",
+    "source_file": "LifeMate_Graph_Validation_v2_Kaggle.ipynb",
+    "bytes": 35094,
+    "sha256": "79f6ad5e8ba7d747ff23cfb12f87559f68e2e734e058e41fda6548fc9a24cdec"
+  },
+  {
+    "path": "dependency_graph_v3/reference_notebooks/LifeMate_Graph_Curation_v21_Kaggle.ipynb",
+    "source_file": "LifeMate_Graph_Curation_v21_Kaggle.ipynb",
+    "bytes": 53746,
+    "sha256": "12ee465d0a702879548ff782c92f4f4f38d07eef353073dd42130379ec64cee5"
+  }
+]

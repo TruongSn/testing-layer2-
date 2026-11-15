@@ -1,0 +1,8 @@
+{
+  "version": "lifemate-full-dependency-graph-v3.0.0",
+  "graph_content_sha256": "449fa731f239a4284e5e157a428d37d3872fbed776ca1aa99f28ef7aaab75ce8",
+  "scope": "PRODUCTION",
+  "dependencies": [],
+  "approval_overlay": null,
+  "note": "Empty until an operator reviews explicit source path, subject keys, cost and argument bindings."
+}

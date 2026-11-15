@@ -1,0 +1,314 @@
+{
+  "graph_content_sha256": "449fa731f239a4284e5e157a428d37d3872fbed776ca1aa99f28ef7aaab75ce8",
+  "reviewer": null,
+  "scope": "PRODUCTION",
+  "decisions": [
+    {
+      "edge_id": "dep:01982c9c796feada0aaf",
+      "decision": "PENDING",
+      "source_output_path": "playlists[].id",
+      "selector_keys": [
+        "name"
+      ],
+      "required_selector_keys": [
+        "name"
+      ],
+      "read_cost": "NORMAL",
+      "producer_argument_bindings": {},
+      "reason": "Playlist name và track title phải nằm trong hai slot riêng cùng goal; cùng observation có thể cung cấp cả hai ID."
+    },
+    {
+      "edge_id": "dep:167320b6f27d9b86421a",
+      "decision": "PENDING",
+      "source_output_path": "chats[].id",
+      "selector_keys": [
+        "name"
+      ],
+      "required_selector_keys": [
+        "name"
+      ],
+      "read_cost": "LOW",
+      "producer_argument_bindings": {},
+      "reason": "Tên chat/nhóm được nêu rõ; source ID scalar; không có alternative branch hay producer arguments bắt buộc."
+    },
+    {
+      "edge_id": "dep:1bea69b98068677fcdb5",
+      "decision": "PENDING",
+      "source_output_path": "tracks[].id",
+      "selector_keys": [
+        "title"
+      ],
+      "required_selector_keys": [
+        "title"
+      ],
+      "read_cost": "NORMAL",
+      "producer_argument_bindings": {},
+      "reason": "Track title exact duy nhất; paired playlist_id có subject riêng; không dùng artist hoặc vị trí danh sách để đoán track."
+    },
+    {
+      "edge_id": "dep:29ca53ea8511a207c06a",
+      "decision": "PENDING",
+      "source_output_path": "articles[].id",
+      "selector_keys": [
+        "title"
+      ],
+      "required_selector_keys": [
+        "title"
+      ],
+      "read_cost": "LOW",
+      "producer_argument_bindings": {
+        "query": {
+          "subject_key": "title"
+        }
+      },
+      "reason": "Query title user nêu và exact-bind kết quả; chỉ dùng một producer route, không đồng bật news.headlines cho cùng slot."
+    },
+    {
+      "edge_id": "dep:29fb23b97b4e120d82a4",
+      "decision": "PENDING",
+      "source_output_path": "restaurants[].id",
+      "selector_keys": [
+        "name"
+      ],
+      "required_selector_keys": [
+        "name"
+      ],
+      "read_cost": "LOW",
+      "producer_argument_bindings": {},
+      "reason": "Tên quán exact và duy nhất; producer không cần arguments; consumer READ menu, không đặt món."
+    },
+    {
+      "edge_id": "dep:3230b7d988b2a5a1d11d",
+      "decision": "PENDING",
+      "source_output_path": "books[].id",
+      "selector_keys": [
+        "title"
+      ],
+      "required_selector_keys": [
+        "title"
+      ],
+      "read_cost": "LOW",
+      "producer_argument_bindings": {
+        "query": {
+          "subject_key": "title"
+        }
+      },
+      "reason": "Có thể query bằng title user nêu và abstain nếu nhiều sách cùng title; reservation vẫn do Policy."
+    },
+    {
+      "edge_id": "dep:3f0086bc06acea59db4b",
+      "decision": "PENDING",
+      "source_output_path": "items[].id",
+      "selector_keys": [
+        "name"
+      ],
+      "required_selector_keys": [
+        "name"
+      ],
+      "read_cost": "LOW",
+      "producer_argument_bindings": {},
+      "reason": "Item name exact duy nhất; không xóa item và không dùng quantity làm identity; Policy quyết định đánh dấu."
+    },
+    {
+      "edge_id": "dep:4ed4fe3e33cabfc99185",
+      "decision": "PENDING",
+      "source_output_path": "contacts[].id",
+      "selector_keys": [
+        "name"
+      ],
+      "required_selector_keys": [
+        "name"
+      ],
+      "read_cost": "LOW",
+      "producer_argument_bindings": {
+        "query": {
+          "subject_key": "name"
+        }
+      },
+      "reason": "Tra cứu giới hạn bằng đúng tên user; unique exact contact name; consumer chỉ READ chi tiết."
+    },
+    {
+      "edge_id": "dep:5360101cb187f428ea42",
+      "decision": "PENDING",
+      "source_output_path": "tasks[].id",
+      "selector_keys": [
+        "title"
+      ],
+      "required_selector_keys": [
+        "title"
+      ],
+      "read_cost": "NORMAL",
+      "producer_argument_bindings": {},
+      "reason": "Task title exact duy nhất; không suy task từ priority hoặc ordinal; Policy quyết định complete."
+    },
+    {
+      "edge_id": "dep:5de495d7fc89a9ddae30",
+      "decision": "PENDING",
+      "source_output_path": "contacts[].id",
+      "selector_keys": [
+        "name"
+      ],
+      "required_selector_keys": [
+        "name"
+      ],
+      "read_cost": "LOW",
+      "producer_argument_bindings": {
+        "query": {
+          "subject_key": "name"
+        }
+      },
+      "reason": "Chỉ resolve bộ lọc contact_id khi goal khai báo required_optional hoặc Policy đã đề xuất field; không tự thêm bộ lọc cho yêu cầu đọc SMS chung."
+    },
+    {
+      "edge_id": "dep:7b288e9221651ae63745",
+      "decision": "PENDING",
+      "source_output_path": "courses[].id",
+      "selector_keys": [
+        "name"
+      ],
+      "required_selector_keys": [
+        "name"
+      ],
+      "read_cost": "LOW",
+      "producer_argument_bindings": {},
+      "reason": "Khóa học có tên exact duy nhất; chỉ bổ sung course_id; minutes và WRITE phải từ Policy và đúng goal.",
+      "consumer_input_requirements": [
+        "minutes"
+      ]
+    },
+    {
+      "edge_id": "dep:8ba0cf9b47d00e2b57e1",
+      "decision": "PENDING",
+      "source_output_path": "episodes[].id",
+      "selector_keys": [
+        "title"
+      ],
+      "required_selector_keys": [
+        "title"
+      ],
+      "read_cost": "LOW",
+      "producer_argument_bindings": {
+        "query": {
+          "subject_key": "title"
+        }
+      },
+      "reason": "Episode title exact duy nhất với query grounded; nếu cần phân biệt show bằng join thì ngoài phạm vi này và phải abstain."
+    },
+    {
+      "edge_id": "dep:a16db1ceeff849448088",
+      "decision": "PENDING",
+      "source_output_path": "notes[].id",
+      "selector_keys": [
+        "title"
+      ],
+      "required_selector_keys": [
+        "title"
+      ],
+      "read_cost": "NORMAL",
+      "producer_argument_bindings": {},
+      "reason": "Note title exact duy nhất; chỉ resolve note_id, nội dung append phải do Policy và goal-scoped binding.",
+      "consumer_input_requirements": [
+        "content"
+      ]
+    },
+    {
+      "edge_id": "dep:a40a9d89d6218083cb85",
+      "decision": "PENDING",
+      "source_output_path": "tracks[].id",
+      "selector_keys": [
+        "title"
+      ],
+      "required_selector_keys": [
+        "title"
+      ],
+      "read_cost": "NORMAL",
+      "producer_argument_bindings": {},
+      "reason": "Chỉ branch track_id được goal chọn rõ; playlist alternative hợp lệ đã đáp ứng thì không đọc thêm."
+    },
+    {
+      "edge_id": "dep:b338cd916f8067caf1ac",
+      "decision": "PENDING",
+      "source_output_path": "emails[].id",
+      "selector_keys": [
+        "subject"
+      ],
+      "required_selector_keys": [
+        "subject"
+      ],
+      "read_cost": "NORMAL",
+      "producer_argument_bindings": {},
+      "reason": "Subject email được user nêu nguyên văn và duy nhất; không tự chọn email mới nhất hoặc đầu tiên."
+    },
+    {
+      "edge_id": "dep:cd4e089fabac42496834",
+      "decision": "PENDING",
+      "source_output_path": "playlists[].id",
+      "selector_keys": [
+        "name"
+      ],
+      "required_selector_keys": [
+        "name"
+      ],
+      "read_cost": "NORMAL",
+      "producer_argument_bindings": {},
+      "reason": "Resolver hỗ trợ explicit selected_alternatives; nếu cả hai branch cùng khả dụng mà chưa chọn branch thì abstain."
+    },
+    {
+      "edge_id": "dep:dcef86a1d29246d7cdc9",
+      "decision": "PENDING",
+      "source_output_path": "places[].id",
+      "selector_keys": [
+        "name"
+      ],
+      "required_selector_keys": [
+        "name"
+      ],
+      "read_cost": "LOW",
+      "producer_argument_bindings": {
+        "query": {
+          "subject_key": "name"
+        }
+      },
+      "reason": "Có query name grounded; chỉ lưu địa điểm exact duy nhất; yêu cầu thêm khu vực/địa chỉ cần binding rõ, không chọn theo rank.",
+      "consumer_input_requirements": [
+        "label"
+      ]
+    },
+    {
+      "edge_id": "dep:e6ba8b599d054f6a97f6",
+      "decision": "PENDING",
+      "source_output_path": "reminders[].id",
+      "selector_keys": [
+        "content"
+      ],
+      "required_selector_keys": [
+        "content"
+      ],
+      "read_cost": "NORMAL",
+      "producer_argument_bindings": {},
+      "reason": "Reminder content exact duy nhất; không chọn theo thứ tự hay relative time; completion WRITE từ Policy."
+    },
+    {
+      "edge_id": "dep:ff8b28456a5b867cd1b2",
+      "decision": "PENDING",
+      "source_output_path": "shows[].id",
+      "selector_keys": [
+        "name"
+      ],
+      "required_selector_keys": [
+        "name"
+      ],
+      "read_cost": "LOW",
+      "producer_argument_bindings": {
+        "query": {
+          "subject_key": "name"
+        }
+      },
+      "reason": "Show name exact duy nhất với query grounded; subscribe vẫn là Policy WRITE, không phải graph action."
+    }
+  ],
+  "proposal_status": "AWAITING_SINGLE_USER_APPROVAL",
+  "proposed_edge_count": 19,
+  "catalog_sha256": "a994984bb580d7e0d60166641858901d428549682ba3614dbf9269037a33cce0",
+  "instructions": "Pending final proposal. No operator authority. After explicit approval create operator_approvals.json for exactly the authorized edges; compile-only, no discovery."
+}

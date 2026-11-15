@@ -1,0 +1,55 @@
+{
+  "status": "ACTIVE_GRAPH_COMPILED_CPU_VERIFIED",
+  "authorization_scope": "PRODUCTION",
+  "operator_attribution": "User: explicit approval in the FINAL ACTIVATION: 19 DEPENDENCY EDGES prompt",
+  "approved_edges": 19,
+  "runtime_enabled_edges": 19,
+  "consumer_tools": 17,
+  "producer_tools": 14,
+  "graph_rebuilt": false,
+  "candidate_graph_unchanged": true,
+  "original_artifact_hashes_verified": true,
+  "cpu_tests": {
+    "total": 109,
+    "passed": 108,
+    "failed": 0,
+    "errors": 0,
+    "skipped": [
+      [
+        "tests.test_build.SourceAndBuildTests.test_build_is_byte_reproducible",
+        "Frozen-graph activation does not rebuild discovery; set LIFEMATE_RUN_OFFLINE_BUILD=1 for the offline build test"
+      ]
+    ]
+  },
+  "production_gate_tests_passed": 16,
+  "production_closed_loop_cases_passed": 19,
+  "hashes": {
+    "source_graph_file_sha256": "37514613a9dfc9d74c5d7aa17a48ae982514a29208c96957cd16c4201bd826bd",
+    "graph_content_sha256": "449fa731f239a4284e5e157a428d37d3872fbed776ca1aa99f28ef7aaab75ce8",
+    "catalog_sha256": "a994984bb580d7e0d60166641858901d428549682ba3614dbf9269037a33cce0",
+    "compiled_graph_file_sha256": "728c99798c2600a88fad6e8fa4afb1141b47e206248307f2abb3106a4ad0d0a7",
+    "compiled_payload_sha256": "ad7a10901094748b561dc07b9822d0db67743c0edae2648f54606eee754d7712",
+    "operator_approvals_sha256": "d52aa19f511d499b7547772346dcdf15978865f944a2dee8b745df17ef4dd861",
+    "runtime_source_bundle_sha256": "67a09dfda5a501d90e6cae1014c9dfb1914fe46ac691c73557658f3689ed7125"
+  },
+  "runtime_implementation_sha256": {
+    "__init__.py": "aa61a0e3331711980c97561ad8cc3a00bcf7617fdc24c2ba84f91301fb0b11f0",
+    "b043.py": "a092ee5c26d98bc02b2197051ef193d9a0e01a1b8bf4ff29c9f355c0df17c6ac",
+    "builder.py": "c5a8f41652f62011b4935581145a4a1fc8853ce5acd603ca29ec8f4e56f0eca8",
+    "cli.py": "6cbc8863b265f164fb19d0923463f3b2760e71393b4be687b1ca9dbc2df3ed0f",
+    "common.py": "5a93af5255e8898a5e9b17b7379b11fe459cc0099eea16fb26a2a1a7e7b5df84",
+    "compiler.py": "0900458317177ab54cf09afae869a3c650ac8a04826b3d7f42ab2d57ec1729ff",
+    "demo.py": "923cbff62f666079c3ce63742cb8694cb69698fad920364d7bc57483ebd49961",
+    "evaluation.py": "efb459455efa80a1ca95b302418d6613e2e809753c4e78a63710616efe82fa8e",
+    "kaggle.py": "7140a1e3b222e9fb9e8b54719d8c996dd4374de164cf2d7eb80bd6bd286d872c",
+    "runtime.py": "964e3814d4a8bc83b87315ca80a6504cda1d1eb27f79ca2eb604c440073e42de",
+    "validation.py": "83e3e4e6951b5c83eb0954f99467b386e9b1cef9b8538fd847e7629811e66d4a"
+  },
+  "limits": [
+    "New active GPU/Qwen execution not run locally; prior disabled/shadow smoke was user-reported PASS.",
+    "CPU gates use real production approval with FakeToolEnv and scripted Policy; not official ToolEnv/GPU results.",
+    "Only these 19 dependencies may run; remaining candidates remain disabled/unapproved.",
+    "Exact selectors and goal spans required; semantic aliases/relative references may abstain.",
+    "No claim of accuracy/latency improvement or official state/semantic correctness before GPU pilot."
+  ]
+}
